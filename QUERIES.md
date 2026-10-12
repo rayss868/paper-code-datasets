@@ -1,20 +1,17 @@
-# Query pencarian siap pakai
+# Search queries you can paste
 
-Copy-paste ke mesin pencari. Ganti `JUDUL PAPER`, `NAMA ALGORITMA`, `TOPIK`,
-dan `DOI` dengan milikmu.
-
-## Alur dasar
+Replace `PAPER TITLE`, `ALGORITHM`, `TOPIC`, and `DOI` with your own.
 
 ```
-1.  "JUDUL PAPER PERSIS" github
-2.  "JUDUL PAPER PERSIS" "code availability"
-3.  "JUDUL PAPER PERSIS" "replication package"
-4.  "JUDUL PAPER PERSIS" source code dataset
-5.  "NAMA ALGORITMA" "official implementation"
-6.  "NAMA ALGORITMA" reproduce experiment
-7.  site:github.com "JUDUL PAPER" "train.py"
-8.  site:zenodo.org "JUDUL PAPER" software
-9.  site:osf.io "JUDUL PAPER" code
+1.  "PAPER TITLE" github
+2.  "PAPER TITLE" "code availability"
+3.  "PAPER TITLE" "replication package"
+4.  "PAPER TITLE" source code dataset
+5.  "ALGORITHM" "official implementation"
+6.  "ALGORITHM" reproduce experiment
+7.  site:github.com "PAPER TITLE" "train.py"
+8.  site:zenodo.org "PAPER TITLE" software
+9.  site:osf.io "PAPER TITLE" code
 10. site:github.com "DOI" "README"
 11. site:papers.miccai.org "SEGMENTATION" code
 12. site:secartifacts.github.io "intrusion detection"
@@ -23,36 +20,33 @@ dan `DOI` dengan milikmu.
 15. site:github.com "cybersecurity" "paper" "code"
 16. site:github.com "intrusion detection" dataset preprocessing
 17. site:github.com "benchmark" "reproduce results"
-18. site:openreview.net "TOPIK" "code"
-19. site:proceedings.mlr.press "TOPIK" supplementary
-20. "JUDUL PAPER" (github OR gitlab OR zenodo)
+18. site:openreview.net "TOPIC" "code"
+19. site:proceedings.mlr.press "TOPIC" supplementary
+20. "PAPER TITLE" (github OR gitlab OR zenodo)
 ```
 
-## Modifier yang berguna
+## Modifiers that narrow things down
 
-Tambahkan ke query mana pun untuk mempersempit:
-
-| Modifier | Efek |
+| Modifier | What it does |
 |---|---|
-| `filetype:pdf` | Langsung ke dokumen |
-| `site:github.com` | Batasi ke GitHub |
-| `-survey` | Buang paper survei (kamu cari implementasi) |
-| `"replication package"` | Paket replikasi eksplisit |
-| `"code available at"` | Frasa khas bagian availability |
-| `after:2023` | Batasi tahun terbit |
+| `filetype:pdf` | Jumps straight to documents |
+| `site:github.com` | Confines the search to GitHub |
+| `-survey` | Drops survey papers, which you rarely want when hunting code |
+| `"replication package"` | Finds explicit replication bundles |
+| `"code available at"` | The phrasing availability statements tend to use |
+| `after:2023` | Limits by publication year |
 
-## Alternatif: lewat API
+## When to skip search engines entirely
 
-Daripada mesin pencari, untuk pencarian massal pakai sumber metadata
-(lihat bagian **06 · Untuk AI Agent** di README):
+For bulk work, query the metadata endpoints instead. They are faster, they rate-limit in a knowable way, and they return structured results. See stage **05 · For agents and automation** in the README.
 
 ```bash
-# OpenAlex — cari paper, ambil DOI & metadata
-curl -s "https://api.openalex.org/works?search=JUDUL%20PAPER&per-page=5"
+# OpenAlex: paper metadata
+curl -s "https://api.openalex.org/works?search=PAPER%20TITLE&per-page=5"
 
-# DataCite — cari software dengan DOI
-curl -s "https://api.datacite.org/dois?query=JUDUL%20PAPER&resource-type-id=software"
+# DataCite: software registered with a DOI
+curl -s "https://api.datacite.org/dois?query=PAPER%20TITLE&resource-type-id=software"
 
-# Papers With Code data archive (lokal, setelah clone)
-jq -r '.[] | select(.title | test("JUDUL"; "i"))' paperswithcode-data/links.json
+# Papers With Code archive, after cloning it locally
+jq -r '.[] | select(.title | test("TITLE"; "i"))' paperswithcode-data/links.json
 ```

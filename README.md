@@ -1,228 +1,171 @@
-# Paper → Code → Dataset → Reproduksi
+# Paper, code, data, reproduction
 
-**Direktori 200 sumber terverifikasi untuk menemukan implementasi kode, dataset,
-dan paket reproduksi dari paper ilmiah.**
+A directory of **200 sources** for the work that sits between "I found an interesting paper" and "I have its implementation running on my machine."
 
-Bukan daftar link biasa. Setiap sumber dikelompokkan menurut **tahap alur kerja
-penulisan paper**, diverifikasi statusnya lewat audit otomatis, dan tersedia
-dalam format terstruktur (JSON/CSV) supaya bisa dipakai manusia maupun agent.
+Finding the paper is the easy part. Finding the code the authors actually wrote, the dataset they trained it on, the environment that makes the numbers come out the same, and a citation for each of those as a separate object, that is where the hours go. This repo collects the places that shorten the search.
 
 ```
-Cari paper  →  Cari kode  →  Cari dataset  →  Reproduksi  →  Sitasi
-   01             02             03              04            05
+find the paper  →  find the code  →  find the data  →  reproduce  →  automate
+      01               02                03               04           05
 ```
 
----
+## What is different here
 
-## Kenapa repo ini beda
+Three things, and they matter more than the size of the list.
 
-Tiga hal yang membedakan dari ratusan daftar "awesome" lainnya:
+1. **It is sorted by what you are trying to do.** The original compilation grouped sources into alphabetical sections A through T. That grouping served whoever assembled it, not the reader. Here everything sits in five workflow stages, so a concrete question ("where is the code for this paper?") points at one section instead of the whole list.
+2. **The links were actually checked.** [`scripts/audit_links.py`](scripts/audit_links.py) probes all 200 URLs and classifies each one. The results carry a date and live in [`audit/liveness.md`](audit/liveness.md). Anyone can rerun it and get the same picture, and a GitHub Action does exactly that every Monday so the list does not quietly rot.
+3. **The content is data, not just prose.** [`data/sources.json`](data/sources.json) and the CSV beside it hold everything the markdown pages hold, plus audit fields, so you can filter it, load it into another tool, or hand it to an agent. A list you cannot query is a list you read once and forget.
 
-1. **Diurutkan menurut alur kerja, bukan abjad.** Kalau kamu punya satu
-   pertanyaan konkret ("cara cari kode dari paper ini gimana?"), kamu langsung
-   tahu harus ke bagian mana.
-2. **Status setiap tautan dicek, bukan diklaim.** [`scripts/audit_links.py`](scripts/audit_links.py)
-   menjalankan probe HTTP ke seluruh 200 URL dan menandai hasilnya
-   `alive` / `redirected` / `bot_walled` / `dead`. Siapa pun bisa menjalankannya
-   ulang dan mendapat klasifikasi yang sama.
-3. **Tersedia sebagai data.** [`data/sources.json`](data/sources.json) dan
-   [`data/sources.csv`](data/sources.csv) bisa di-import ke alat lain, dipakai
-   untuk membangun pencarian sendiri, atau dijadikan basis agent.
-
----
-
-## Status audit
+## Audit status
 
 <!-- AUDIT-TABLE-START -->
-**Audit terakhir: 2026-10-12** — 200 URL diprobe otomatis
-(`scripts/audit_links.py`, timeout 15s).
+**Last audit: 2026-10-12.** All 200 URLs probed by `scripts/audit_links.py`, 15s timeout, 24 workers.
 
-| Status | Jumlah | Arti |
+| Status | Count | Meaning |
 |---|---:|---|
-| `alive` | 171 | Aktif dan menyajikan konten |
-| `redirected` | 3 | Pindah host — URL di daftar sudah usang |
-| `bot_walled` | 17 | Menolak klien otomatis — **normal di browser** |
-| `rate_limited` | 6 | HTTP 429 saat audit — coba lagi nanti |
-| `timeout` | 3 | Tidak terjangkau dari host audit |
-| `dead` | 0 | — |
-| `error` | 0 | — |
+| `alive` | 171 | Reachable and serving content |
+| `redirected` | 3 | Has moved to another host, so the listed URL is stale |
+| `bot_walled` | 17 | Refuses automated clients; **normal in a browser** |
+| `rate_limited` | 6 | HTTP 429 during the audit; retry later |
+| `timeout` | 3 | Not reachable from the audit host |
+| `dead` | 0 | Not applicable |
+| `error` | 0 | Not applicable |
 
-Temuan yang perlu diketahui:
+Read that table with two things in mind, because the raw counts mislead on their own.
 
-- **25 sumber (`bot_walled` + `rate_limited` + `timeout`) tidak gagal.**
-  `bot_walled` hampir selalu berarti situs normal di browser (Cloudflare dsb.);
-  `timeout` sering karena host audit diblokir, bukan tautannya mati. Contoh:
-  *Journal of Open Research Software* timeout dari sini, tetapi jelas aktif
-  (artikel terbit Sep 2026).
-- **4 tautan dikoreksi** hasil audit — lihat field `correction` di
-  `data/sources.json` (Bioconductor 404 → path baru; CSDMS 404 → halaman resmi;
-  Wizwand rebranding ke sota2.com; MICCAI OA pindah halaman).
-- **`paperswithcode.com` → `huggingface.co/papers/trending`** terkonfirmasi:
-  situsnya memang dihentikan Juli 2025. Pakai arsip datanya (entri 138).
+**Twenty-five sources did not fail, they resisted the probe.** `bot_walled` means a Cloudflare-style wall, or a 403 aimed at scripts, and the page opens fine for a person. `timeout` usually means the audit host is filtered out rather than the site being gone. *Journal of Open Research Software* times out from here and is plainly alive, with articles published in September 2026.
 
-Rincian per tautan: [`audit/liveness.md`](audit/liveness.md).
-<!-- AUDIT-TABLE-END -->
+**Four links were corrected** once the probe found them broken. Each fix is recorded in the `correction` field of `data/sources.json` instead of being silently swapped, so you can see what changed and when. Bioconductor and CSDMS had both moved to new paths, Wizwand now redirects to sota2.com, and the MICCAI open access index moved within miccai.org. Separately, `paperswithcode.com` redirects to Hugging Face, which confirms Meta shut the site down in July 2025; use the archived dataset (entry 138) rather than the old portal.
 
-**Legenda status** — ini penting sebelum menyimpulkan sesuatu rusak:
+**Status legend**, worth reading before you conclude something is broken:
 
-- `alive` — aktif, konten tersaji, host sama seperti yang terdaftar.
-- `redirected` — bisa diakses tapi mengarah ke host lain. URL di daftar sudah
-  usang, situsnya pindah. Contoh nyata: `paperswithcode.com` → `huggingface.co`.
-- `bot_walled` — menolak klien otomatis (401/403 atau halaman challenge
-  Cloudflare). **Bukan berarti mati** — hampir selalu normal saat dibuka di
-  browser biasa. Jangan laporkan sebagai tautan rusak.
-- `rate_limited` — HTTP 429, sementara membatasi. Cek ulang nanti.
-- `dead` — HTTP 404/410, sumbernya sudah hilang.
-- `error` / `timeout` — gagal transport (DNS, TLS, koneksi di-refuse).
+- `alive`: reachable, serves content, same host as listed.
+- `redirected`: reachable but on a different host. The listed URL is stale. Real example: `paperswithcode.com` to `huggingface.co`.
+- `bot_walled`: refuses automated clients, whether by 401/403 or a challenge page. **Not dead.** Almost always fine in a normal browser, and should not be reported as a broken link.
+- `rate_limited`: HTTP 429, temporarily throttling. Check again later.
+- `dead`: HTTP 404 or 410, the resource is gone.
+- `error` / `timeout`: transport failure: DNS, TLS, refused connection, or no answer in time.
 
----
+## Contents
 
-## Daftar isi
+- [01 · Find the paper](#01--find-the-paper-31-sources), 31 sources
+- [02 · Find the code](#02--find-the-code-100-sources), 100 sources
+- [03 · Find the data](#03--find-the-data-17-sources), 17 sources
+- [04 · Reproduce the experiment](#04--reproduce-the-experiment-43-sources), 43 sources
+- [05 · For agents and automation](#05--for-agents-and-automation-9-sources), 9 sources
+- [Where to start](#where-to-start)
+- [The six-step workflow](#the-six-step-workflow)
+- [Supporting files](#supporting-files)
+- [Contributing](#contributing)
+- [What is verified, and what is not](#what-is-verified-and-what-is-not)
 
-- [01 · Cari Paper](#01--cari-paper-31-sumber) — 31 sumber
-- [02 · Cari Source Code](#02--cari-source-code-100-sumber) — 100 sumber
-- [03 · Cari Dataset](#03--cari-dataset-17-sumber) — 17 sumber
-- [04 · Reproduksi Eksperimen](#04--reproduksi-eksperimen-43-sumber) — 43 sumber
-- [06 · Untuk AI Agent & Otomasi](#06--untuk-ai-agent--otomasi-9-sumber) — 9 sumber
-- [Pilih dari mana — 10 pintu masuk terbaik](#pilih-dari-mana--10-pintu-masuk-terbaik)
-- [Alur 6 langkah](#alur-6-langkah-menulis-paper-dengan-kode)
-- [Berkas pendukung](#berkas-pendukung)
-- [Cara berkontribusi](#cara-berkontribusi)
-- [Disclaimer & keterbatasan](#disclaimer--keterbatasan)
+Full detail on all 200 entries, each with its type, field, what to look for, how to use it, and where it falls short, is in **[DIRECTORY.md](DIRECTORY.md)**.
 
-**Detail lengkap 200 entri** — setiap entri dengan `Jenis`, `Bidang`,
-`Yang dicari`, `Cara pakai`, dan `Catatan` — ada di **[DIRECTORY.md](DIRECTORY.md)**.
+## 01 · Find the paper (31 sources)
 
----
+Preprints, proceedings, search engines, and the citation-graph tools that let you work backwards from one good paper.
 
-## 01 · Cari Paper (31 sumber)
+This is where you start, nearly always. arXiv covers CS, ML, math, and physics. OpenReview shows you the reviews next to the submission, which is often more informative than the paper. PMLR, NeurIPS Proceedings, CVF Open Access, and ACL Anthology are the canonical venues for ML, vision, and NLP in that order. For security, USENIX Security and NDSS matter, and both run artifact policies that make code more likely to exist at all.
 
-Preprint, prosiding, mesin pencari, peta literatur.
+Biomedical work routes through PubMed Central and Europe PMC. If you need to know what a venue or funder expects before you commit, PLOS Computational Biology publishes its code availability policy and Nature Scientific Data does the same for data.
 
-| Kategori | Sumber |
-|---|---|
-| Preprint & prosiding | arXiv, OpenReview, PMLR, NeurIPS Proceedings, CVF Open Access, ACL Anthology, USENIX Security, NDSS Symposium, MICCAI Open Access |
-| Mesin pencari | Semantic Scholar, Google Scholar, OpenAIRE Explore, CORE, INSPIRE-HEP |
-| Peta literatur | Connected Papers, ResearchRabbit |
-| Biomedis | PubMed Central, Europe PMC, PLOS Comp Biol (Code Availability), Nature Scientific Data |
-| Penerbit | IEEE Xplore, ACM Digital Library, F1000Research |
-| Katalog lab | Ai2 Research Papers, Google Research Publications, Hugging Face Papers |
+For graph exploration rather than keyword search, Connected Papers and ResearchRabbit both let you seed a collection from one paper and see what it cites and what cites it.
 
-## 02 · Cari Source Code (100 sumber)
+## 02 · Find the code (100 sources)
 
-Jurnal software, indeks kode, hub kode, kurasi komunitas.
+The largest group by far, and where you will spend most of your time. It splits into a few kinds of place, and they are not equally trustworthy.
 
-| Kategori | Sumber |
-|---|---|
-| Jurnal software (kode = bagian publikasi) | JOSS, JMLR MLOSS, Journal of Statistical Software, The R Journal, SoftwareX, Journal of Open Research Software, SciPost Physics Codebases, IPOL, JOSE |
-| Paper-to-code search | **CatalyzeX**, **Code Ocean Capsules**, Papers With Code Data Archive |
-| Hub kode & model | GitHub Code Search, GitLab, Codeberg, Hugging Face Models/Spaces, PyPI, CRAN, Bioconductor, R-universe, Zenodo |
-| Implementasi resmi lab | Google Research, Google DeepMind, Meta Research, TensorFlow Model Garden, PyTorch Examples, timm, Detectron2, MMDetection, OpenMMLab, fairseq, OpenNMT |
-| Arsip algoritma & model | CALGO/Netlib, ModelDB, BioModels, CoMSES, Physiome, NetLogo, ACM |
-| Registry per bidang | bio.tools, SciCrunch, ASCL (astronomi), PhysioNet, NITRC (neuroimaging), Galaxy Tool Shed, Materials Project |
-| Kurasi komunitas GitHub | 10× direktori "Awesome" & "…-Papers-with-Code" (CVPR, MICCAI, cybersecurity) |
+**Software journals**, where the code is the publication rather than an appendix: JOSS, JMLR MLOSS, Journal of Statistical Software, The R Journal, SoftwareX, Journal of Open Research Software, SciPost Physics Codebases, IPOL, and JOSE. If the paper you care about appeared in one of these, the repository link is on the article page by construction. These are the highest-confidence sources in the directory.
 
-## 03 · Cari Dataset (17 sumber)
+**Paper-to-code lookups**: CatalyzeX (paste a title, get a repository), Code Ocean Capsules (code plus the execution environment), and the Papers With Code data archive. That last one deserves a note. The site is gone, but the data dump is not, and it is the only remaining way to do a bulk offline lookup of paper-to-repository links.
 
-| Kategori | Sumber |
-|---|---|
-| Repositori umum + DOI | **Harvard Dataverse**, Zenodo, Figshare, Dryad, Mendeley Data, OSF, UCI ML Repository |
-| Dataverse regional | DataverseNO, Borealis (Kanada), 4TU.ResearchData |
-| Bidang khusus | PANGAEA (bumi), CERN Open Data (fisika), HEPData (HEP), GigaDB (bioinformatika), Materials Cloud (material), NOMAD (material) |
-| Hub dataset | Hugging Face Datasets, OpenML |
-| Arsip studi | EMBL-EBI BioStudies |
+**Code and model hubs**: GitHub code search, GitLab, Codeberg, Hugging Face models and Spaces, PyPI, CRAN, Bioconductor, R-universe, Zenodo. Check `created_at` and `pushed_at` before you commit to anything here. Star counts mean almost nothing on their own.
 
-## 04 · Reproduksi Eksperimen (43 sumber)
+**Official lab repositories**, when you want the implementation the authors released themselves: Google Research, Google DeepMind, Meta Research, TensorFlow Model Garden, PyTorch Examples, timm, Detectron2, MMDetection, OpenMMLab, fairseq, OpenNMT. Watch the age. Several carry papers from years back and pin old framework versions.
 
-Artifact evaluation, benchmark, paket replikasi, model zoo.
+**Curated lists**, ten of them, mostly "Awesome X" collections and conference-specific paper-with-code indexes for CVPR, MICCAI, and AI security. Useful for a first pass, unreliable as a final answer, because a "code available" badge often points at a project page or a demo rather than training code.
 
-| Kategori | Sumber |
-|---|---|
-| Artifact evaluation konferensi | Security Research Artifacts, SIGMOD Reproducibility, ICSE/ISSTA/POPL/PLDI/ICFP/EuroSys/CCS/ISCA 2026 |
-| Jurnal artefak | **DARTS** (Dagstuhl — artefak dievaluasi, bukan sekadar diunggah) |
-| Paket replikasi | ReScience C, Renku, Whole Tale, Code Ocean, WorkflowHub, Dockstore, nf-core |
-| Benchmark & leaderboard | MLCommons/MLPerf, Codabench, AIcrowd, EvalAI, Grand Challenge, DrivenData, Kaggle, OGB, DataPerf, NAB, TimeEval, Monash Forecasting |
-| Model zoo | MONAI, BioImage, MMDetection |
-| Evaluasi LLM | EleutherAI LM Evaluation Harness |
-| Grafis | GRSI, Graphics Replicability Database |
-| Discovery pengganti PWC | HyperAI, CodeSOTA, Wizwand, NLP Progress, Time Series Classification |
+## 03 · Find the data (17 sources)
 
-## 06 · Untuk AI Agent & Otomasi (9 sumber)
+DOI-bearing repositories first: Harvard Dataverse, Zenodo, Figshare, Dryad, Mendeley Data, OSF, and the UCI Machine Learning Repository. The regional Dataverse instances (DataverseNO, Borealis, 4TU.ResearchData) hold a lot that never surfaces in a general search.
 
-Endpoint API dan metadata terstruktur — bagian yang hampir tidak ada di repo sejenis.
+Then the field-specific ones, which is usually where the real data lives: PANGAEA for earth and environmental science, CERN Open Data and HEPData for high-energy physics, GigaDB for bioinformatics, Materials Cloud and NOMAD for materials. OpenML is worth knowing for tabular ML benchmarks with published task definitions, and Hugging Face Datasets has become the default for NLP and multimodal data.
 
-| Sumber | Kegunaan |
-|---|---|
-| **OpenAlex** | API metadata paper lintas disiplin |
-| **SemRepo** | Knowledge graph 190k+ repository riset (RDF/SPARQL) |
-| **Linked Papers With Code** | Graf relasi paper ↔ metode ↔ dataset ↔ kode |
-| **DataCite Commons** | Relasi DOI antara paper, dataset, dan software |
-| **re3data** | Direktori repositori ilmiah (untuk menemukan sumber baru) |
-| **FAIRsharing** | Registry standar & database riset |
-| zbMATH/swMATH | Software matematika ↔ literatur |
-| DataLad Registry | Dataset berversi + provenance |
-| DGL Examples | Koleksi implementasi paper GNN |
+A caution that applies to this whole section: a dataset with a DOI is citable research output, which is not the same as a dataset you are permitted to use the way you plan to. Read the license before you build on it.
 
----
+## 04 · Reproduce the experiment (43 sources)
 
-## Pilih dari mana — 10 pintu masuk terbaik
+This is the section that separates a working reproduction from a promising repository, and the one most link lists skip entirely.
 
-Kalau bingung mulai dari mana:
+**Conference artifact evaluation** is the strongest signal available: Security Research Artifacts, SIGMOD Reproducibility, and the 2026 artifact tracks at ICSE, ISSTA, POPL, PLDI, ICFP, EuroSys, CCS, and ISCA. A paper that passed artifact evaluation had an independent reviewer run the code.
 
-| # | Sumber | Kenapa |
+**DARTS** goes a step further. Dagstuhl publishes artifacts as reviewed publications in their own right, with DOIs, so a release there has been examined the way a paper is.
+
+**Replication platforms**: ReScience C, Renku, Whole Tale, WorkflowHub, Dockstore, nf-core. These package code, data, and environment together, which is the part that normally breaks.
+
+**Benchmarks and leaderboards**: MLCommons/MLPerf, Codabench, AIcrowd, EvalAI, Grand Challenge, DrivenData, Kaggle, Open Graph Benchmark, DataPerf, NAB, TimeEval, and the Monash forecasting archive. These give you a baseline to compare against, which is what you need before claiming an improvement.
+
+**Model zoos**: MONAI, BioImage Model Zoo, MMDetection. And for language models, the EleutherAI evaluation harness, which is what a great many published numbers were actually produced with.
+
+## 05 · For agents and automation (9 sources)
+
+The smallest group, and the one almost every list like this omits. If you want to search a thousand papers instead of five, you need metadata endpoints, not web pages.
+
+OpenAlex gives you a full bibliographic API across disciplines. SemRepo is a knowledge graph of research repositories, roughly 190,000 of them, queryable over SPARQL. Linked Papers With Code carries the historical paper-to-repository relations. DataCite Commons resolves the links between a paper's DOI and the DOIs of its software and data. re3data and FAIRsharing help you find repositories you did not know existed.
+
+What that looks like in practice:
+
+```bash
+# Paper metadata by title
+curl -s "https://api.openalex.org/works?search=graph%20neural%20networks&per-page=5"
+
+# Software registered with a DOI
+curl -s "https://api.datacite.org/dois?query=replication%20package&resource-type-id=software"
+```
+
+## Where to start
+
+If you read nothing else, these ten carry most of the weight.
+
+| # | Source | Why it earns the slot |
 |---|---|---|
-| 1 | [**CatalyzeX**](https://www.catalyzex.com/) | Tempel judul paper → langsung dapat link kode. Paling cepat. |
-| 2 | [**Papers With Code Data Archive**](https://github.com/paperswithcode/paperswithcode-data) | Situs aslinya mati Juli 2025, tapi dump datanya masih hidup dan bisa di-query massal. |
-| 3 | [**JOSS**](https://joss.theoj.org/papers) | Paper tentang software — kode adalah subjek publikasinya. |
-| 4 | [**Journal of Statistical Software**](https://www.jstatsoft.org/) | Paper + paket + skrip replikasi, satu halaman. |
-| 5 | [**Zenodo**](https://zenodo.org/) | Repositori DOI; filter `Software` untuk paket yang bisa dikutip. |
-| 6 | [**Code Ocean**](https://codeocean.com/explore/capsules/) | Bukan cuma kode — lingkungan eksekusinya sekalian. |
-| 7 | [**Cari Paper**](https://arxiv.org/) + [**Security Research Artifacts**](https://secartifacts.github.io/) | Untuk cybersecurity: banyak paper keamanan wajib rilis artefak. |
-| 8 | [**DARTS**](https://drops.dagstuhl.de/entities/journal/DARTS) | Artefak yang sudah **dievaluasi**, bukan sekadar diunggah. |
-| 9 | [**OpenAlex**](https://openalex.org/) | Kalau kamu mau otomasi, bukan klik manual. |
-| 10 | [**SemRepo**](https://semrepo.org/) | Query SPARQL ke graf repository riset. |
+| 1 | [**CatalyzeX**](https://www.catalyzex.com/) | Paste a paper title, get a code link. Fastest single move. |
+| 2 | [**Papers With Code Data Archive**](https://github.com/paperswithcode/paperswithcode-data) | The site died in July 2025, the data dump did not, and it is queryable in bulk. |
+| 3 | [**JOSS**](https://joss.theoj.org/papers) | Papers about software, so the code is the subject of publication. |
+| 4 | [**Journal of Statistical Software**](https://www.jstatsoft.org/) | Paper, package, and replication scripts on one page. |
+| 5 | [**Zenodo**](https://zenodo.org/) | DOI repository; filter to `Software` for citable releases. |
+| 6 | [**Code Ocean**](https://codeocean.com/explore/capsules/) | Not just the code, the execution environment with it. |
+| 7 | [**Security Research Artifacts**](https://secartifacts.github.io/) | In security, artifacts are effectively mandatory, so coverage is unusually good. |
+| 8 | [**DARTS**](https://drops.dagstuhl.de/entities/journal/DARTS) | Artifacts that were **evaluated**, not merely uploaded. |
+| 9 | [**OpenAlex**](https://openalex.org/) | For when you want to automate rather than click. |
+| 10 | [**SemRepo**](https://semrepo.org/) | SPARQL queries against a graph of research repositories. |
 
----
+## The six-step workflow
 
-## Alur 6 langkah: menulis paper dengan kode
+[CHECKLIST.md](CHECKLIST.md) and [QUERIES.md](QUERIES.md) expand each step.
 
-1. **Mulai dari satu paper** yang punya DOI/arXiv ID. Catat: judul persis,
-   penulis, tahun, DOI, jenis eksperimen, dataset.
-2. **Cari implementasi** yang bisa diaudit. Urutan prioritas: bagian *Code
-   Availability* di paper → situs lab/penulis → CatalyzeX/Hugging Face →
-   GitHub/GitLab/Zenodo/Code Ocean → indeks artefak. Cocokkan README, nama
-   paper, DOI, identitas penulis.
-3. **Cari paket reproduksi lengkap.** Prioritas: artifact badge resmi, DARTS,
-   ReScience C, Code Ocean, SoftwareX/JOSS/JMLR MLOSS, supplementary jurnal,
-   Zenodo. → lihat [CHECKLIST.md](CHECKLIST.md)
-4. **Verifikasi artefak terhadap paper.** Cek kelengkapan dataset,
-   preprocessing, split train/val/test, seed, versi dependensi, hiperparameter,
-   hardware, metrik, dan perintah untuk menghasilkan tabel/gambar paper.
-5. **Jalankan baseline sebelum modifikasi.** Pakai commit/rilis yang sesuai.
-   Simpan log, hash, lockfile environment, hasil aktual, dan selisihnya
-   terhadap paper asli.
-6. **Baru kembangkan.** Dokumentasikan modifikasi, ablation, uji statistik, dan
-   perbandingan yang adil. Sitasi paper, kode, dan dataset sebagai tiga objek
-   terpisah.
+1. **Start from one paper** with a DOI or arXiv ID. Write down the exact title, the authors, the year, the DOI, what kind of experiment it reports, and which datasets it used.
+2. **Find an implementation you can audit.** In order: the paper's own code availability statement, then the authors' or lab's site, then a lookup service, then code hosting, then artifact indexes. Confirm that the README, the paper title, the DOI, and the author identity actually match.
+3. **Look for a full reproduction package**, not just a repository. An artifact badge, a DARTS entry, a Code Ocean capsule, or a software journal article is worth more than a promising README. See [CHECKLIST.md](CHECKLIST.md).
+4. **Compare the artifact against the paper.** Dataset completeness, preprocessing, the train/validation/test split, random seeds, dependency versions, hyperparameters, hardware, metrics, and whether the scripts can regenerate the paper's tables and figures.
+5. **Run the baseline before changing anything.** Use the release or commit that matches the paper. Keep the logs, the environment lockfile, the actual numbers, and the gap between them and the published ones.
+6. **Only then modify.** Document what you changed, run ablations, test significance, and cite the paper, the code, and the dataset as three separate objects if all three have identifiers.
 
-Query pencarian siap copy: **[QUERIES.md](QUERIES.md)** (20 query).
+## Supporting files
 
----
-
-## Berkas pendukung
-
-| Berkas | Isi |
+| File | What is in it |
 |---|---|
-| [`DIRECTORY.md`](DIRECTORY.md) | 200 entri lengkap, dikelompokkan per tahap alur kerja |
-| [`data/sources.json`](data/sources.json) | Data terstruktur + status audit |
-| [`data/sources.csv`](data/sources.csv) | Versi spreadsheet |
-| [`audit/liveness.md`](audit/liveness.md) | Hasil audit per tautan terbaru |
-| [`CHECKLIST.md`](CHECKLIST.md) | Checklist 16 poin untuk menilai repo penelitian |
-| [`QUERIES.md`](QUERIES.md) | 20 query pencarian siap pakai |
-| [`scripts/audit_links.py`](scripts/audit_links.py) | Script audit liveness |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Cara menambah/memperbaiki sumber |
+| [`DIRECTORY.md`](DIRECTORY.md) | All 200 entries, sorted by workflow stage |
+| [`data/sources.json`](data/sources.json) | Structured data with audit results |
+| [`data/sources.csv`](data/sources.csv) | The same, for spreadsheets |
+| [`audit/liveness.md`](audit/liveness.md) | Per-link audit output, newest run |
+| [`CHECKLIST.md`](CHECKLIST.md) | 16-point checklist for judging a research repository |
+| [`QUERIES.md`](QUERIES.md) | 20 ready-to-paste search queries |
+| [`scripts/audit_links.py`](scripts/audit_links.py) | The auditor, standard library only |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to add or fix an entry |
 
-Pakai dari kode:
+Loading it from code:
 
 ```python
 import json, urllib.request
@@ -230,63 +173,42 @@ src = json.load(urllib.request.urlopen(
     "https://raw.githubusercontent.com/rayss868/paper-code-datasets/main/data/sources.json"))
 cyber = [e for e in src["entries"]
          if "security" in e["bidang"].lower() and e["status"] == "alive"]
-print(len(cyber), "sumber cybersecurity yang aktif")
+print(len(cyber), "live security sources")
 ```
 
----
+## Contributing
 
-## Cara berkontribusi
+New sources, corrected URLs, and fixed classifications are all welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first, because the format is strict on purpose: the data files are meant to be processed by machines, not only read.
 
-Sumber baru, koreksi tautan, atau perbaikan status sangat diterima.
-Baca [CONTRIBUTING.md](CONTRIBUTING.md) — formatnya ketat supaya data tetap
-bisa diproses mesin.
+## What is verified, and what is not
 
----
+Being precise about this is the difference between a useful directory and a plausible-looking one.
 
-## Disclaimer & keterbatasan
+**Verified:**
 
-Repo ini adalah **kompilasi dari percakapan riset**, bukan audit manual
-satu-per-satu oleh penyusun asalnya. Yang **sudah** diverifikasi:
+- The structure of the list: 200 numbered entries in sequence, 199 unique URLs, and exactly one duplicate, where entries 48 and 133 point at the same GitHub topic. The duplicate is kept and labelled rather than quietly removed, since it is evidence of how the list was assembled.
+- Host concentration: 200 entries spread over 149 distinct hosts, with `github.com` holding 46 of them, or 23%. Many of those are topic and tag pages rather than independent sources, so the honest count of distinct providers sits well below 200.
+- Link liveness, as of the date in the audit table above.
 
-- Integritas struktur daftar: 200 entri bernomor berurutan, 199 URL unik,
-  satu duplikat persis di entri 48 & 133 (dicatat, sengaja dipertahankan
-  sebagai jejak daftar awal).
-- Konsentrasi host: 149 host berbeda untuk 200 entri; `github.com` menampung
-  46 entri (23%). **Banyak entri GitHub adalah topik/tag, bukan sumber
-  independen** — perhitungkan itu saat menilai "jumlah sumber".
-- Liveness: lihat tabel status audit di atas (dijalankan otomatis).
+**Not verified:**
 
-Yang **belum** diverifikasi dan perlu kehati-hatian:
+- Quantitative claims that appear in some entry descriptions, such as a project's repository count. Those come from whoever compiled the original list, and should be treated as claims until you check the source.
+- The quality, license, and completeness of any repository you find through this directory.
+- Whether a project is actively maintained rather than abandoned.
 
-- Klaim kuantitatif pada deskripsi entri tertentu (mis. statistik jumlah
-  repository sebuah proyek) — perlakukan sebagai klaim penyusun asal, bukan
-  fakta terverifikasi, sampai kamu cek sendiri ke sumbernya.
-- Kualitas, lisensi, dan kelengkapan setiap repository yang ditemukan.
-- Keaktifan pemeliharaan proyek (repo aktif vs terbengkalai).
+**Warnings worth keeping in mind:**
 
-**Peringatan penting:**
+1. A link existing does not mean code exists there. Plenty of these are bibliographic indexes, data archives, or conference program pages.
+2. "Official implementation" has to be checked against the author, the lab, and the paper. Plenty of repositories are third-party reimplementations.
+3. "Artifact available" and "results reproduced" are different claims, and both differ from "the numbers came out the same on my machine."
+4. Software with a DOI is citable, not necessarily correct or bug-free.
+5. Older releases often need specific toolchains. Work in a container or VM, and do not run scripts you have not looked at.
+6. Most of these catalogs change. Recheck a link when you actually use it.
 
-1. Tautan yang ada **tidak otomatis berarti kode paper tersedia**. Sebagian
-   hanya indeks bibliografi, dataset, atau halaman program konferensi.
-2. *"Official implementation"* harus dicocokkan dengan penulis/lab/paper.
-3. *"Artifact available"* ≠ *"results reproduced"*.
-4. Software ber-DOI bukan jaminan bebas bug atau berkualitas tinggi.
-5. Rilis lama bisa butuh environment khusus — pakai container/VM terisolasi,
-   dan **jangan jalankan skrip yang tidak kamu percaya**.
-6. Untuk publikasi akademik, sitasi paper, kode, dan dataset sebagai tiga
-   objek terpisah bila masing-masing punya DOI.
-7. Sebagian besar katalog berubah; verifikasi tautan saat dipakai.
+**A note on history:** Papers With Code (entry 140) was shut down by Meta in July 2025, and the domain now points at Hugging Face Trending Papers. The historical data is still reachable through the archive (entry 138).
 
-**Catatan sejarah:** Papers With Code (entri 140) dinonaktifkan Meta pada Juli
-2025; domainnya kini mengarah ke Hugging Face Trending Papers. Data historisnya
-masih tersedia lewat arsip (entri 138).
+## License
 
----
+The compilation is released under [CC0 1.0 Universal](LICENSE), which places it in the public domain. Use it, change it, redistribute it, no conditions.
 
-## Lisensi
-
-Kompilasi ini dirilis dengan [CC0 1.0 Universal](LICENSE) — domain publik.
-Data boleh dipakai, dimodifikasi, dan didistribusikan tanpa syarat.
-
-Sumber pihak ketiga yang ditautkan tetap tunduk pada lisensi masing-masing;
-repo ini tidak mengklaim hak atas konten tersebut.
+Third-party sites and repositories linked from here keep their own licenses.

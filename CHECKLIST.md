@@ -1,66 +1,58 @@
-# Checklist — menilai repository penelitian sebelum dipakai
+# Checklist for a research repository
 
-Isi checklist ini untuk **setiap** repository yang akan kamu jadikan basis.
-Tujuannya memisahkan "ada kodenya" dari "bisa benar-benar dipakai dan
-dipertanggungjawabkan".
+Fill this in for every repository you are considering building on. The point is to separate "it has code" from "I can use this and defend the result."
 
-## Identitas
+## Identity
 
-- [ ] Judul paper, tahun, penulis, dan DOI/arXiv ID cocok.
-- [ ] Ada tautan dari paper/penulis ke repository (wajib jika mengklaim
-      *official implementation*).
+- [ ] Title, year, authors, and DOI or arXiv ID match the paper you read.
+- [ ] The paper or the authors' pages link to this repository, if you are treating it as the official implementation.
 
-## Lisensi & legal
+## License and legal
 
-- [ ] Lisensi kode jelas dan mengizinkan tujuan pemakaianmu.
-- [ ] Lisensi dataset dan pembatasan privasi/etik sudah dibaca.
-- [ ] Jika memakai pretrained weights, asal-usul dan lisensinya jelas.
-- [ ] Kode tidak meminta API key rahasia secara tidak perlu.
+- [ ] The code license is clear and permits what you intend to do.
+- [ ] You have read the dataset license, including any privacy or ethics restrictions.
+- [ ] If pretrained weights are involved, their provenance and license are clear.
+- [ ] The code does not ask for API keys it has no reason to need.
 
-## Instalasi & eksekusi
+## Install and run
 
-- [ ] Ada README dengan perintah instalasi dan eksekusi yang valid.
-- [ ] Ada `requirements.txt`, `environment.yml`, lockfile, atau Dockerfile.
-- [ ] Versi rilis/commit sesuai dengan eksperimen dalam publikasi.
+- [ ] The README has install and run commands that actually work.
+- [ ] There is a `requirements.txt`, `environment.yml`, lockfile, or Dockerfile.
+- [ ] The release or commit you are on matches the experiments in the paper.
 
-## Data & eksperimen
+## Data and experiments
 
-- [ ] Dataset, split data, preprocessing, dan label diketahui.
-- [ ] Hyperparameter, random seed, dan metrik evaluasi dijelaskan.
-- [ ] Script training/inference/evaluation terpisah atau terdokumentasi.
+- [ ] You know which dataset, which split, which preprocessing, and which labels.
+- [ ] Hyperparameters, random seeds, and evaluation metrics are stated.
+- [ ] Training, inference, and evaluation scripts are separate or clearly documented.
 
-## Verifikasi hasil
+## Checking the result
 
-- [ ] Hasil bisa dibandingkan dengan tabel/gambar pada paper.
-- [ ] Dependensi, model, dan data diperiksa sebelum dieksekusi.
-- [ ] Keterbatasan reproduksi dan deviasi hasil dilaporkan.
+- [ ] You can compare your output against a specific table or figure in the paper.
+- [ ] Dependencies, model files, and data were inspected before anything was executed.
+- [ ] Reproduction limits and any deviation from the published numbers are written down.
 
-## Sitasi
+## Citation
 
-- [ ] Paper, kode, dataset, dan versi software disitasi dengan benar.
+- [ ] The paper, the code, the dataset, and the software version are each cited correctly.
 
----
+## Quick score
 
-## Skor cepat (opsional)
+A rubric for comparing candidates against each other. It is an internal sorting aid, not a journal standard, and it should not be quoted as one.
 
-Rubrik internal untuk membandingkan kandidat. **Ini bukan standar resmi
-jurnal** — hanya alat bantu keputusan.
-
-| Komponen | 0 (tidak ada) | 1 (parsial) | 2 (lengkap/terverifikasi) |
+| Component | 0 (absent) | 1 (partial) | 2 (complete or verified) |
 |---|---|---|---|
-| Identitas paper | | | |
+| Paper identity | | | |
 | Source code | | | |
-| Instalasi | | | |
+| Install | | | |
 | Dataset | | | |
-| Parameter | | | |
-| Evaluasi | | | |
-| Lisensi | | | |
+| Parameters | | | |
+| Evaluation | | | |
+| License | | | |
 | Reproducibility | | | |
 
-**Maksimum 16 poin.**
+Maximum is 16.
 
-Cara membaca skor:
-
-- **13–16** — siap dijadikan baseline.
-- **8–12** — bisa dipakai, tapi siapkan waktu untuk memperbaiki.
-- **0–7** — anggap sebagai referensi ide saja, bukan basis kode.
+- **13 to 16:** safe to use as a baseline.
+- **8 to 12:** usable, but budget time for repairs.
+- **0 to 7:** treat it as a source of ideas, not as a code base.

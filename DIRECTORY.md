@@ -3,1767 +3,1767 @@ audience: humans-and-agents
 last_reviewed: 2026-10-12
 ---
 
-# Direktori Lengkap — 200 Sumber
+# Full directory: 200 sources
 
-Disusun ulang menurut **tahap alur kerja penulisan paper**, bukan abjad.
+Reorganized by **workflow stage** rather than by the alphabetical order of the original compilation.
 
-Data mentah: [`data/sources.json`](../data/sources.json) · [`data/sources.csv`](../data/sources.csv)
-Status tautan: [`audit/liveness.md`](../audit/liveness.md)
+Raw data: [`data/sources.json`](../data/sources.json) | [`data/sources.csv`](../data/sources.csv)
+Link status: [`audit/liveness.md`](../audit/liveness.md)
 
-> Setiap entri menyertakan `Jenis`, `Bidang`, `Yang dicari`, `Cara pakai`, dan `Catatan` (batasan).
+> Every entry carries its type, field, what to look for, how to use it, and where it falls short.
 
-## Daftar isi
+## Contents
 
-- [Cari Paper](#01-discover) — 31 sumber
-- [Cari Source Code](#02-find-code) — 100 sumber
-- [Cari Dataset](#03-datasets) — 17 sumber
-- [Reproduksi Eksperimen](#04-reproduce) — 43 sumber
-- [Untuk AI Agent & Otomasi](#06-agents) — 9 sumber
+- [Find the paper](#01-discover), 31 sources
+- [Find the code](#02-find-code), 100 sources
+- [Find the data](#03-datasets), 17 sources
+- [Reproduce the experiment](#04-reproduce), 43 sources
+- [For agents and automation](#05-agents), 9 sources
 
 
 <a id="01-discover"></a>
-## Cari Paper — 31 sumber
+## Find the paper (31 sources)
 
-Menemukan publikasi: preprint, prosiding, mesin pencari paper, peta literatur.
+Publications: preprints, proceedings, search engines, and literature maps.
 
-### A. Platform Khusus Research Code Dan Reproduksibilitas
+### A. Research code and reproducibility platforms
 
 #### [005] OpenAIRE Explore
 - **URL:** https://explore.openaire.eu/
-- **Jenis:** Discovery ilmiah
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Metadata publikasi, data, software, dan koneksi di antaranya.
-- **Cara pakai:** Temukan publikasi; gunakan relasi research output untuk menemukan software atau dataset.
-- **Catatan:** Tidak semua tautan metadata menunjuk kode yang bisa diunduh.
+- **Type:** Scholarly discovery
+- **Field:** Cross-disciplinary
+- **What to look for:** Publication, data, and software metadata, plus the links between them.
+- **How to use it:** Find a publication, then use the research output relations to reach the software or dataset.
+- **Limitation:** Not every metadata link points at code you can actually download.
 
 #### [011] MICCAI Open Access
 - **URL:** https://papers.miccai.org/
-- **Jenis:** Prosiding
-- **Bidang:** Medical imaging AI
-- **Yang dicari:** Paper konferensi serta link kode atau data jika penulis membagikannya.
-- **Cara pakai:** Cari judul atau tahun MICCAI; periksa bagian resource, supplementary, GitHub.
-- **Catatan:** Setiap artikel berbeda dalam ketersediaan kode.
-- **Koreksi:** 2026-10-12: papers.miccai.org mengalihkan ke miccai.org/publications/miccai-open-access-reviews/. Halaman tujuan valid.
+- **Type:** Proceedings
+- **Field:** Medical imaging AI
+- **What to look for:** Conference papers plus code or data links when the authors share them.
+- **How to use it:** Search by MICCAI title or year; check the resources section, the supplementary material, and GitHub.
+- **Limitation:** Code availability differs from article to article.
+- **Correction:** 2026-10-12: papers.miccai.org redirects to miccai.org/publications/miccai-open-access-reviews/. The destination page is valid.
 
-### C. Mesin Pencari Paper Yang Dapat Ditelusuri Ke Kode
+### C. Paper search engines you can trace back to code
 
 #### [027] arXiv
 - **URL:** https://arxiv.org/
-- **Jenis:** Preprint
-- **Bidang:** CS, ML, matematika, fisika
-- **Yang dicari:** Manuskrip dan link GitHub/project yang dicantumkan penulis.
-- **Cara pakai:** Cari judul paper; periksa abstrak, laman HTML, PDF, dan appendix.
-- **Catatan:** Preprint belum tentu menjalani peer review; kode opsional.
+- **Type:** Preprint
+- **Field:** CS, ML, mathematics, physics
+- **What to look for:** Manuscripts and the GitHub or project links the authors list.
+- **How to use it:** Search by paper title; check the abstract, the HTML page, the PDF, and the appendix.
+- **Limitation:** Preprints have not necessarily been peer reviewed; code is optional.
 
 #### [028] alphaXiv
 - **URL:** https://www.alphaxiv.org/
-- **Jenis:** Penjelajah paper
-- **Bidang:** AI dan arXiv
-- **Yang dicari:** Paper arXiv, diskusi dan fitur eksplorasi penelitian.
-- **Cara pakai:** Cari ID arXiv; cek project links dan diskusi replikasi.
-- **Catatan:** Ketersediaan fungsi dan tautan dapat berubah.
+- **Type:** Paper explorer
+- **Field:** AI and arXiv
+- **What to look for:** arXiv papers, discussion, and research exploration features.
+- **How to use it:** Search by arXiv ID; check the project links and the replication discussion.
+- **Limitation:** Feature and link availability can change.
 
 #### [029] Cool Papers
 - **URL:** https://papers.cool/
-- **Jenis:** Kurasi paper
-- **Bidang:** AI dan ML
-- **Yang dicari:** Jelajah paper populer dan topik AI.
-- **Cara pakai:** Gunakan topik/konferensi untuk shortlist paper, lalu telusuri repo di situs penulis.
-- **Catatan:** Platform discovery; bukan jaminan repository lengkap.
+- **Type:** Paper curation
+- **Field:** AI and ML
+- **What to look for:** A browsable feed of popular papers and AI topics.
+- **How to use it:** Use the topic or conference filter to shortlist papers, then find the repo on the authors' site.
+- **Limitation:** A discovery platform, not a guarantee that a repository is complete.
 
 #### [030] OpenReview
 - **URL:** https://openreview.net/
-- **Jenis:** Review konferensi
-- **Bidang:** ML dan AI
-- **Yang dicari:** Submission, komentar review, lampiran, dan link kode bila ada.
-- **Cara pakai:** Cari judul/venue; buka PDF, supplementary dan author response.
-- **Catatan:** Kode bisa baru dibuka setelah acceptance atau tidak tersedia.
+- **Type:** Conference review
+- **Field:** ML and AI
+- **What to look for:** Submissions, review comments, attachments, and code links when present.
+- **How to use it:** Search by title or venue; open the PDF, the supplementary material, and the author response.
+- **Limitation:** Code may be released only after acceptance, or may not exist at all.
 
 #### [031] CVF Open Access
 - **URL:** https://openaccess.thecvf.com/
-- **Jenis:** Prosiding
-- **Bidang:** Computer vision
-- **Yang dicari:** Paper CVPR/ICCV/WACV dan supplementary materials.
-- **Cara pakai:** Cari tahun dan judul; telusuri project page, PDF, GitHub.
-- **Catatan:** Tidak setiap paper menyertakan implementation release.
+- **Type:** Proceedings
+- **Field:** Computer vision
+- **What to look for:** CVPR/ICCV/WACV papers and supplementary materials.
+- **How to use it:** Search by year and title; follow the project page, PDF, and GitHub.
+- **Limitation:** Not every paper ships an implementation release.
 
 #### [032] ACL Anthology
 - **URL:** https://aclanthology.org/
-- **Jenis:** Prosiding
-- **Bidang:** NLP
-- **Yang dicari:** Artikel ACL, EMNLP dan konferensi bahasa lain.
-- **Cara pakai:** Cari paper; periksa bagian Code/Data Availability dan situs proyek.
-- **Catatan:** Lampiran publikasi bukan selalu source code.
+- **Type:** Proceedings
+- **Field:** NLP
+- **What to look for:** ACL, EMNLP, and other language conference articles.
+- **How to use it:** Find the paper; check its Code/Data Availability section and project site.
+- **Limitation:** Publication attachments are not always source code.
 
 #### [033] PMLR
 - **URL:** https://proceedings.mlr.press/
-- **Jenis:** Prosiding
-- **Bidang:** Machine learning
-- **Yang dicari:** Proceedings paper dan supplemental material jika disediakan.
-- **Cara pakai:** Cari metode atau konferensi; ikuti author links dan appendix.
-- **Catatan:** Kode sangat tergantung kebijakan paper/venue.
+- **Type:** Proceedings
+- **Field:** Machine learning
+- **What to look for:** Proceedings papers and supplemental material where it is provided.
+- **How to use it:** Search the method or conference, then follow author links and the appendix.
+- **Limitation:** Code depends entirely on the paper and the venue policy.
 
 #### [034] NeurIPS Proceedings
 - **URL:** https://proceedings.neurips.cc/
-- **Jenis:** Prosiding
-- **Bidang:** AI, deep learning
-- **Yang dicari:** Paper NeurIPS dan materi supplementary.
-- **Cara pakai:** Cari paper; buka supplementary dan tautan proyek/code.
-- **Catatan:** Tidak semua submission merilis kode publik.
+- **Type:** Proceedings
+- **Field:** AI, deep learning
+- **What to look for:** NeurIPS papers and supplementary material.
+- **How to use it:** Search for a paper; open the supplementary files and any project or code links.
+- **Limitation:** Not every submission releases public code.
 
 #### [035] USENIX Security
 - **URL:** https://www.usenix.org/conferences/byname/108
-- **Jenis:** Prosiding keamanan
-- **Bidang:** Cybersecurity
-- **Yang dicari:** Paper, appendix, dan artefak pada penelitian tertentu.
-- **Cara pakai:** Cari topik/venue per tahun, lalu lihat artifact badge atau GitHub.
-- **Catatan:** Sebagian artefak dibatasi karena keamanan, privasi, atau lisensi.
+- **Type:** Security proceedings
+- **Field:** Cybersecurity
+- **What to look for:** Papers, appendices, and artifacts for selected studies.
+- **How to use it:** Search by topic or venue per year, then look for an artifact badge or GitHub.
+- **Limitation:** Some artifacts are restricted for security, privacy, or licensing reasons.
 
 #### [036] NDSS Symposium
 - **URL:** https://www.ndss-symposium.org/
-- **Jenis:** Prosiding keamanan
-- **Bidang:** Network dan system security
-- **Yang dicari:** Paper dan referensi project/code dari penulis.
-- **Cara pakai:** Telusuri tahun konferensi; buka paper dan artefak yang disebutkan.
-- **Catatan:** Kode tidak dijamin tersedia untuk setiap paper.
+- **Type:** Security proceedings
+- **Field:** Network and system security
+- **What to look for:** Papers and references to the authors' project or code.
+- **How to use it:** Browse by conference year; open the paper and the artifacts it mentions.
+- **Limitation:** Code is not guaranteed to be available for every paper.
 
 #### [037] Semantic Scholar
 - **URL:** https://www.semanticscholar.org/
-- **Jenis:** Mesin paper
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Metadata, sitasi, versi paper dan tautan eksternal.
-- **Cara pakai:** Cari judul tepat atau DOI; lanjut ke halaman penulis dan code availability.
-- **Catatan:** Bukan hosting source code utama.
+- **Type:** Paper search engine
+- **Field:** Cross-disciplinary
+- **What to look for:** Metadata, citations, paper versions, and external links.
+- **How to use it:** Search the exact title or DOI, then move on to the author page and the code availability statement.
+- **Limitation:** Not a primary host for source code.
 
 #### [038] Google Scholar
 - **URL:** https://scholar.google.com/
-- **Jenis:** Mesin paper
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Sitasi, versi PDF, dan halaman publikasi.
-- **Cara pakai:** Cari judul + "github" atau + "supplementary code".
-- **Catatan:** Hasil perlu diverifikasi; tidak semua tautan gratis/valid.
+- **Type:** Paper search engine
+- **Field:** Cross-disciplinary
+- **What to look for:** Citations, PDF versions, and publication pages.
+- **How to use it:** Search by title plus "github", or plus "supplementary code".
+- **Limitation:** Results need verification; not every link is free or still valid.
 
 #### [039] Connected Papers
 - **URL:** https://www.connectedpapers.com/
-- **Jenis:** Peta literatur
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Graf jaringan paper yang berhubungan.
-- **Cara pakai:** Masukkan DOI paper acuan; temukan metode pendahulu/penerus lalu cek masing-masing kode.
-- **Catatan:** Tujuannya memetakan literatur, bukan mengunduh kode.
+- **Type:** Literature map
+- **Field:** Cross-disciplinary
+- **What to look for:** A network graph of related papers.
+- **How to use it:** Enter the DOI of a reference paper; find the predecessor and successor methods, then check the code for each.
+- **Limitation:** The goal is mapping the literature, not downloading code.
 
 #### [040] ResearchRabbit
 - **URL:** https://www.researchrabbit.ai/
-- **Jenis:** Peta literatur
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Koleksi paper dan hubungan sitasi untuk eksplorasi topik.
-- **Cara pakai:** Buat koleksi paper relevan lalu telusuri project sites/GitHub.
-- **Catatan:** Biasanya kode perlu ditemukan di luar platform.
+- **Type:** Literature map
+- **Field:** Cross-disciplinary
+- **What to look for:** Paper collections and citation relationships for exploring a topic.
+- **How to use it:** Build a collection of relevant papers, then trace their project sites and GitHub repos.
+- **Limitation:** Usually the code has to be found outside the platform.
 
 #### [041] PubMed Central
 - **URL:** https://pmc.ncbi.nlm.nih.gov/
-- **Jenis:** Arsip full text
-- **Bidang:** Biomedis
-- **Yang dicari:** Artikel ilmiah full text dan supplementary files.
-- **Cara pakai:** Cari metode lalu find "Code availability" atau "Data and code".
-- **Catatan:** Ketersediaan source code per artikel.
+- **Type:** Full text archive
+- **Field:** Biomedicine
+- **What to look for:** Full text articles and supplementary files.
+- **How to use it:** Search the method, then look for "Code availability" or "Data and code".
+- **Limitation:** Source code availability varies by article.
 
 #### [042] Europe PMC
 - **URL:** https://europepmc.org/
-- **Jenis:** Arsip paper
-- **Bidang:** Biomedis
-- **Yang dicari:** Publikasi, metadata dan supplementary material.
-- **Cara pakai:** Cari judul dan DOI; telusuri software/data links dan availability statements.
-- **Catatan:** Tidak semuanya memiliki repository source.
+- **Type:** Paper archive
+- **Field:** Biomedical
+- **What to look for:** Publications, metadata, and supplementary material.
+- **How to use it:** Search by title and DOI; follow the software and data links and the availability statements.
+- **Limitation:** Not all of them have a source repository.
 
 #### [044] CORE
 - **URL:** https://core.ac.uk/
-- **Jenis:** Agregator open access
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Naskah akses terbuka dari repositori institusional.
-- **Cara pakai:** Cari paper; telaah bagian Availability dan materi tambahan.
-- **Catatan:** Open access paper tidak berarti open-source code.
+- **Type:** Open access aggregator
+- **Field:** Cross-disciplinary
+- **What to look for:** Open access manuscripts from institutional repositories.
+- **How to use it:** Find the paper; review its Availability section and supplementary material.
+- **Limitation:** An open access paper does not imply open-source code.
 
 #### [045] IEEE Xplore
 - **URL:** https://ieeexplore.ieee.org/
-- **Jenis:** Penerbit/prosiding
-- **Bidang:** Teknik, cybersecurity, AI
-- **Yang dicari:** Artikel teknis, DOI dan supplementary jika tersedia.
-- **Cara pakai:** Cari paper; lihat supplemental material serta project website penulis.
-- **Catatan:** Banyak konten memerlukan langganan institusi.
+- **Type:** Publisher and proceedings
+- **Field:** Engineering, cybersecurity, AI
+- **What to look for:** Technical articles, DOIs, and supplementary material where it exists.
+- **How to use it:** Find the paper, then check the supplemental material and the authors' project site.
+- **Limitation:** Much of the content requires an institutional subscription.
 
 #### [046] ACM Digital Library
 - **URL:** https://dl.acm.org/
-- **Jenis:** Penerbit/prosiding
-- **Bidang:** Computer science
-- **Yang dicari:** Paper, artifact badge, supplementary files, dan DOI.
-- **Cara pakai:** Cari paper dan tanda Artifacts Available/Evaluated/Results Reproduced.
-- **Catatan:** Akses paper atau materi bisa dibatasi.
+- **Type:** Publisher/proceedings
+- **Field:** Computer science
+- **What to look for:** Papers, artifact badges, supplementary files, and DOIs.
+- **How to use it:** Search for a paper and the Artifacts Available, Artifacts Evaluated, or Results Reproduced badges.
+- **Limitation:** Access to the paper or its material may be restricted.
 
-### H. Portal Paper, Data, Notebook Dan Software
+### H. Paper, data, notebook, and software portals
 
 #### [092] F1000Research
 - **URL:** https://f1000research.com/
-- **Jenis:** Jurnal open research
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Artikel Software Tool disertai informasi ketersediaan kode.
-- **Cara pakai:** Cari tipe artikel Software Tool; ikuti source code availability.
-- **Catatan:** Perhatikan tahapan peer review tiap artikel.
+- **Type:** Open research journal
+- **Field:** Cross-disciplinary
+- **What to look for:** Software Tool articles that include code availability information.
+- **How to use it:** Filter by the Software Tool article type; follow the source code availability statement.
+- **Limitation:** Note the peer review stage of each article.
 
-### J. Darts, Jurnal Software Dan Kurasi Kode Tambahan
+### J. DARTS, software journals, and further code curation
 
 #### [108] SciPy Proceedings
 - **URL:** https://proceedings.scipy.org/
-- **Jenis:** Prosiding
-- **Bidang:** Scientific Python
-- **Yang dicari:** Paper ekosistem SciPy, paket dan notebook.
-- **Cara pakai:** Cari topik Python; ikuti repo software serta notebook artikel.
-- **Catatan:** Paper dan implementasi bisa tersebar di beberapa repo.
+- **Type:** Proceedings
+- **Field:** Scientific Python
+- **What to look for:** Papers on the SciPy ecosystem, packages, and notebooks.
+- **How to use it:** Search a Python topic; follow the software repo and the article notebook.
+- **Limitation:** Papers and implementations are often spread across several repos.
 
 #### [109] SciPy Proceedings Source
 - **URL:** https://github.com/scipy-conference/scipy_proceedings
-- **Jenis:** Repository prosiding
-- **Bidang:** Scientific Python
-- **Yang dicari:** Sumber penerbitan prosiding, paper assets dan proses review.
-- **Cara pakai:** Gunakan pencarian nama artikel; cocokkan source dan eksternal repo penulis.
-- **Catatan:** Utamanya sumber prosiding, bukan katalog kode aplikasi.
+- **Type:** Proceedings repository
+- **Field:** Scientific Python
+- **What to look for:** The proceedings source, paper assets, and review process.
+- **How to use it:** Search for an article by name and match the source against the author's external repo.
+- **Limitation:** Mainly proceedings source, not a catalog of application code.
 
 #### [110] Papers We Love
 - **URL:** https://github.com/papers-we-love/papers-we-love
-- **Jenis:** Kurasi paper
-- **Bidang:** Computer science
-- **Yang dicari:** Paper klasik/modern untuk belajar ide algoritma.
-- **Cara pakai:** Pilih topik, baca paper lalu cari implementasinya terpisah.
-- **Catatan:** Bukan repositori kode paper secara langsung.
+- **Type:** Paper curation
+- **Field:** Computer science
+- **What to look for:** Classic and modern papers for studying algorithm ideas.
+- **How to use it:** Pick a topic, read the paper, then look for the implementation separately.
+- **Limitation:** Not a repository of paper code itself.
 
-### M. Repository Resmi Lab Ai
+### M. Official AI lab repositories
 
 #### [128] Ai2 Research Papers
 - **URL:** https://allenai.org/papers
-- **Jenis:** Katalog lab
-- **Bidang:** NLP, AI dan agents
-- **Yang dicari:** Publikasi Ai2 dan tautan proyek/code jika tersedia.
-- **Cara pakai:** Cari paper/model; periksa links pada halaman publikasi.
-- **Catatan:** Halaman publikasi dapat mengarah ke repo eksternal.
+- **Type:** Lab catalog
+- **Field:** NLP, AI, and agents
+- **What to look for:** Ai2 publications and project or code links where available.
+- **How to use it:** Search a paper or model; check the links on its publication page.
+- **Limitation:** Publication pages may point to external repos.
 
 #### [129] Google Research Publications
 - **URL:** https://research.google/pubs/
-- **Jenis:** Katalog publikasi
-- **Bidang:** AI dan sains komputasi
-- **Yang dicari:** Artikel riset Google untuk dicocokkan dengan repository.
-- **Cara pakai:** Cari judul, lalu cocokkan dengan repo google-research/DeepMind.
-- **Catatan:** Bukan hosting source code secara langsung.
+- **Type:** Publication catalog
+- **Field:** AI and computational science
+- **What to look for:** Google research articles to match against a repository.
+- **How to use it:** Search the title, then match it against the google-research or DeepMind repository.
+- **Limitation:** Does not host source code directly.
 
-### N. Sumber Dari Awal Percakapan Yang Belum Tercantum Dan Penanda Duplikat
+### N. Earlier sources plus duplicate markers
 
 #### [132] Hugging Face Papers
 - **URL:** https://huggingface.co/papers
-- **Jenis:** Paper discovery
-- **Bidang:** AI dan ML
-- **Yang dicari:** Paper, arXiv links, model dan resource kode/dataset terkait.
-- **Cara pakai:** Cari judul atau task; periksa Code/Models/Datasets terkait.
-- **Catatan:** Tidak semua paper memiliki training code open-source.
+- **Type:** Paper discovery
+- **Field:** AI and ML
+- **What to look for:** Papers, arXiv links, models, and related code or dataset resources.
+- **How to use it:** Search by title or task; check the related Code/Models/Datasets.
+- **Limitation:** Not every paper has open-source training code.
 
-### Q. Jurnal, Benchmark Ml, Dan Kode Paper
+### Q. Journals, ML benchmarks, and paper code
 
 #### [166] PLOS Computational Biology - Code Availability
 - **URL:** https://journals.plos.org/ploscompbiol/s/code-availability
-- **Jenis:** Jurnal kebijakan source code
-- **Bidang:** Computational biology, ML biomedis
-- **Yang dicari:** Paper yang wajib menyatakan lokasi kode buatan penulis terkait hasil riset, dengan pengecualian tertentu.
-- **Cara pakai:** Cari paper pada jurnal; periksa Data/Code Availability, DOI serta repository.
-- **Catatan:** Tidak semua paper memiliki paket training lengkap dan pengecualian kode berlaku.
+- **Type:** Journal with a source code policy
+- **Field:** Computational biology, biomedical ML
+- **What to look for:** Papers required to state where the authors' own code supporting the results can be found, with certain exceptions.
+- **How to use it:** Search for a paper in the journal; check the Data and Code Availability statements, the DOI, and the repository.
+- **Limitation:** Not every paper ships a complete training package, and code exceptions do apply.
 
-### T. Benchmark, Dataset, Dan Implementasi Risetpaper
+### T. Benchmarks, datasets, and paper implementation research
 
 #### [193] Nature Scientific Data
 - **URL:** https://www.nature.com/sdata/
-- **Jenis:** Jurnal dataset + kode
-- **Bidang:** Lintas bidang komputasional
-- **Yang dicari:** Data descriptor dan code availability statement untuk kode pemrosesan data khusus.
-- **Cara pakai:** Cari topik pada jurnal; buka Code availability dan akses software/data.
-- **Catatan:** Tidak semua paper menggunakan custom code; sebagian mempunyai batasan akses.
+- **Type:** Dataset and code journal
+- **Field:** Cross-disciplinary computational work
+- **What to look for:** Data descriptors and code availability statements for custom processing code.
+- **How to use it:** Search a topic in the journal, then open Code availability and access the software or data.
+- **Limitation:** Not all papers use custom code, and some access is restricted.
 
 #### [194] INSPIRE-HEP
 - **URL:** https://inspirehep.net/
-- **Jenis:** Discovery paper + resources
-- **Bidang:** High-energy physics
-- **Yang dicari:** Metadata paper fisika energi tinggi, identifier, eksperimen, tautan data/software terkait.
-- **Cara pakai:** Cari DOI/arXiv HEP; ikuti related resources ke dataset/kode jika ada.
-- **Catatan:** Indeks literatur, bukan portal kode langsung.
+- **Type:** Paper discovery plus resources
+- **Field:** High-energy physics
+- **What to look for:** High-energy physics paper metadata, identifiers, experiments, and related data or software links.
+- **How to use it:** Search by HEP DOI or arXiv ID; follow the related resources to datasets or code when available.
+- **Limitation:** A literature index, not a direct code portal.
 
 
 <a id="02-find-code"></a>
-## Cari Source Code — 100 sumber
+## Find the code (100 sources)
 
-Menemukan implementasi kode dari paper: jurnal software, indeks kode, hub kode.
+Implementations: software journals, code indexes, hubs, and curated lists.
 
-### A. Platform Khusus Research Code Dan Reproduksibilitas
+### A. Research code and reproducibility platforms
 
 #### [001] Journal of Open Source Software (JOSS)
 - **URL:** https://joss.theoj.org/papers
-- **Jenis:** Jurnal software
-- **Bidang:** Software ilmiah lintas bidang
-- **Yang dicari:** Artikel software, DOI, dan repositori implementasi yang ditautkan.
-- **Cara pakai:** Cari kata kunci bidang; buka paper; ikuti tautan repository dan dokumentasi instalasi.
-- **Catatan:** Fokusnya publikasi software, bukan semua jenis paper eksperimen.
+- **Type:** Software journal
+- **Field:** Scientific software across fields
+- **What to look for:** Software articles, DOIs, and the linked implementation repositories.
+- **How to use it:** Search by field keyword, open the paper, then follow the repository link and the install documentation.
+- **Limitation:** It publishes software papers, not every kind of experimental paper.
 
 #### [002] JMLR Machine Learning Open Source Software (MLOSS)
 - **URL:** https://www.jmlr.org/mloss/
-- **Jenis:** Jurnal software
-- **Bidang:** Machine learning
-- **Yang dicari:** Paper perangkat lunak ML dan tautan paket/source code.
-- **Cara pakai:** Telusuri judul algoritma di arsip MLOSS, lalu cek tautan code serta versi library.
-- **Catatan:** Artikel dapat menggunakan versi dependensi lama.
+- **Type:** Software journal
+- **Field:** Machine learning
+- **What to look for:** ML software papers and links to packages or source code.
+- **How to use it:** Search an algorithm name in the MLOSS archive, then check the code link and the library version.
+- **Limitation:** Articles may rely on older dependency versions.
 
 #### [004] Research Software Directory
 - **URL:** https://research-software-directory.org/
-- **Jenis:** Indeks software
-- **Bidang:** Software akademik
-- **Yang dicari:** Direktori proyek perangkat lunak riset, kontributor dan publikasi terkait.
-- **Cara pakai:** Cari nama institusi, bidang, atau software; lanjutkan ke repo serta referensi paper.
-- **Catatan:** Cakupan mengikuti institusi/komunitas yang berpartisipasi.
+- **Type:** Software index
+- **Field:** Academic software
+- **What to look for:** Directory of research software projects, contributors, and related publications.
+- **How to use it:** Search by institution name, field, or software; then continue to the repo and paper references.
+- **Limitation:** Coverage follows the institutions and communities that participate.
 
 #### [006] Software Heritage
 - **URL:** https://archive.softwareheritage.org/
-- **Jenis:** Arsip kode
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Snapshot source code dan riwayat arsip software.
-- **Cara pakai:** Cari URL/identitas repo dari paper; periksa apakah revisi kodenya diarsipkan.
-- **Catatan:** Arsip kode tidak otomatis mencakup dataset maupun petunjuk eksekusi.
+- **Type:** Code archive
+- **Field:** Cross-disciplinary
+- **What to look for:** Source code snapshots and archived software history.
+- **How to use it:** Look up the repo URL or identifier from the paper; check whether the code revision was archived.
+- **Limitation:** A code archive does not automatically include datasets or execution instructions.
 
 #### [007] Open Scientific Code Registry
 - **URL:** https://openscicode.org/
-- **Jenis:** Indeks kode
-- **Bidang:** Neuroscience
-- **Yang dicari:** Kode yang dirujuk dalam artikel atau penelitian neuroscience.
-- **Cara pakai:** Cari judul paper atau nama metode, lalu ikuti kode yang terindeks.
-- **Catatan:** Cakupannya terutama neuroscience; perlu cek pembaruan indeks.
+- **Type:** Code index
+- **Field:** Neuroscience
+- **What to look for:** Code referenced in neuroscience articles or research.
+- **How to use it:** Search by paper title or method name, then follow the indexed code.
+- **Limitation:** Coverage is mainly neuroscience; check how current the index is.
 
 #### [008] bio.tools
 - **URL:** https://bio.tools/
-- **Jenis:** Registry software
-- **Bidang:** Bioinformatika
-- **Yang dicari:** Daftar software, fungsi, publikasi dan tautan kodenya.
-- **Cara pakai:** Saring berdasarkan fungsi bioinformatika; buka publikasi dan URL repositori.
-- **Catatan:** Sebagian merupakan tools web, bukan full source code.
+- **Type:** Software registry
+- **Field:** Bioinformatics
+- **What to look for:** List of software, its function, publications, and code links.
+- **How to use it:** Filter by bioinformatics function; open the publication and the repository URL.
+- **Limitation:** Some entries are web tools rather than full source code.
 
 #### [009] SciCrunch Resources
 - **URL:** https://scicrunch.org/resources
-- **Jenis:** Registry alat
-- **Bidang:** Biomedis dan ilmu hayati
-- **Yang dicari:** Research resources, software, identifiers, dan informasi alat.
-- **Cara pakai:** Cari nama tool atau RRID; temukan halaman vendor/proyek dan artikel terkait.
-- **Catatan:** Tidak menjamin kode sumber tersedia secara terbuka.
+- **Type:** Tool registry
+- **Field:** Biomedicine and life sciences
+- **What to look for:** Research resources, software, identifiers, and tool information.
+- **How to use it:** Search the tool name or its RRID, then find the vendor or project page and the related article.
+- **Limitation:** It does not guarantee that source code is openly available.
 
 #### [012] SciCodes
 - **URL:** https://scicodes.net/
-- **Jenis:** Jaringan registry
-- **Bidang:** Software ilmiah
-- **Yang dicari:** Daftar registry dan inisiatif pengindeksan kode ilmiah.
-- **Cara pakai:** Mulai dari daftar mitra; pilih registry sesuai bidang riset.
-- **Catatan:** Portal konsorsium, bukan mesin download kode tunggal.
+- **Type:** Registry network
+- **Field:** Scientific software
+- **What to look for:** List of registries and initiatives that index scientific code.
+- **How to use it:** Start from the partner list; pick the registry that matches your research field.
+- **Limitation:** A consortium portal, not a single code download engine.
 
-### B. Repositori Kode Penelitian Dan Executable Papers
+### B. Research code repositories and executable papers
 
 #### [013] Journal of Statistical Software
 - **URL:** https://www.jstatsoft.org/
-- **Jenis:** Jurnal software
-- **Bidang:** Statistik, R dan Python
-- **Yang dicari:** Paper implementasi metode, paket software dan materi replikasi.
-- **Cara pakai:** Cari metode statistik; buka artikel dan supplementary code/CRAN/GitHub.
-- **Catatan:** Perhatikan versi paket serta perbedaan API terbaru.
+- **Type:** Software journal
+- **Field:** Statistics, R and Python
+- **What to look for:** Method implementation papers, software packages, and replication material.
+- **How to use it:** Search the statistical method, then open the article and the supplementary code, CRAN, or GitHub link.
+- **Limitation:** Watch the package version and any API changes since publication.
 
 #### [014] The R Journal
 - **URL:** https://journal.r-project.org/
-- **Jenis:** Jurnal software
-- **Bidang:** Statistik dengan R
-- **Yang dicari:** Artikel penggunaan/pengembangan paket R serta kode contoh.
-- **Cara pakai:** Cari nama algoritma; buka paper, contoh R, dan repo paket terkait.
-- **Catatan:** Mayoritas ekosistem R, bukan Python.
+- **Type:** Software journal
+- **Field:** Statistics with R
+- **What to look for:** Articles on using and developing R packages, plus example code.
+- **How to use it:** Search the algorithm name; open the paper, the R examples, and the related package repo.
+- **Limitation:** Mostly the R ecosystem, not Python.
 
 #### [015] AEA Data and Code Repository
 - **URL:** https://www.icpsr.umich.edu/sites/aea/home
-- **Jenis:** Replikasi
-- **Bidang:** Ekonomi empiris
-- **Yang dicari:** Paket data, scripts, dokumentasi dan bahan replikasi artikel AEA.
-- **Cara pakai:** Cari judul artikel; unduh replication package dan jalankan README.
-- **Catatan:** Sebagian data berlisensi/terbatas dan tidak didistribusikan langsung.
+- **Type:** Replication
+- **Field:** Empirical economics
+- **What to look for:** Data packages, scripts, documentation, and replication materials for AEA articles.
+- **How to use it:** Search by article title; download the replication package and follow the README.
+- **Limitation:** Some data is licensed or restricted and is not distributed directly.
 
 #### [016] openICPSR
 - **URL:** https://www.openicpsr.org/
-- **Jenis:** Repositori
-- **Bidang:** Ilmu sosial dan ekonomi
-- **Yang dicari:** Dataset, kode, syntax files dan paket proyek penelitian.
-- **Cara pakai:** Cari penulis/judul/DOI; saring tipe file lalu periksa lampiran kode.
-- **Catatan:** Kelengkapan bahan bervariasi antar depositor.
+- **Type:** Repository
+- **Field:** Social sciences and economics
+- **What to look for:** Datasets, code, syntax files, and research project packages.
+- **How to use it:** Search by author, title, or DOI; filter by file type, then check the code attachments.
+- **Limitation:** How complete the materials are varies from depositor to depositor.
 
 #### [018] NASA Open Source Software
 - **URL:** https://code.nasa.gov/
-- **Jenis:** Katalog software
-- **Bidang:** Antariksa, simulasi, sains
-- **Yang dicari:** Proyek open-source NASA dan tautan repository.
-- **Cara pakai:** Cari topik atau nama software; lanjut ke repository resmi.
-- **Catatan:** Tidak semua software berkaitan langsung dengan satu paper.
+- **Type:** Software catalog
+- **Field:** Space, simulation, science
+- **What to look for:** NASA open-source projects and repository links.
+- **How to use it:** Search by topic or software name, then continue to the official repository.
+- **Limitation:** Not every piece of software maps directly to a single paper.
 
 #### [019] DOE CODE
 - **URL:** https://www.osti.gov/doecode
-- **Jenis:** Katalog software
-- **Bidang:** Energi, fisika, komputasi
-- **Yang dicari:** Software penelitian Departemen Energi AS beserta metadata.
-- **Cara pakai:** Cari nama proyek atau DOI software; ikuti tautan source/download.
-- **Catatan:** Lisensi dan kelengkapan source tergantung masing-masing item.
+- **Type:** Software catalog
+- **Field:** Energy, physics, computing
+- **What to look for:** Research software from the US Department of Energy along with its metadata.
+- **How to use it:** Search by project name or software DOI; follow the source or download links.
+- **Limitation:** Licensing and source completeness depend on the individual item.
 
 #### [020] CodaLab Worksheets
 - **URL:** https://codalab.org/codalab-worksheets/
-- **Jenis:** Eksperimen
-- **Bidang:** ML dan komputasi
-- **Yang dicari:** Worksheets yang mencatat command, data, hasil dan eksperimen.
-- **Cara pakai:** Cari worksheet publik terkait benchmark; lihat run, inputs, outputs.
-- **Catatan:** Akses dan ketersediaan lingkungan eksekusi tergantung proyek.
+- **Type:** Experiments
+- **Field:** ML and computing
+- **What to look for:** Worksheets that record commands, data, results, and experiments.
+- **How to use it:** Find public worksheets tied to a benchmark; inspect the runs, inputs, and outputs.
+- **Limitation:** Access to and availability of the execution environment depend on the project.
 
 #### [021] Wolfram Notebook Archive
 - **URL:** https://www.notebookarchive.org/
-- **Jenis:** Notebook
-- **Bidang:** Matematika dan komputasi
-- **Yang dicari:** Notebook interaktif yang dapat dibaca/dijalankan dengan Wolfram.
-- **Cara pakai:** Cari konsep matematis atau algoritma lalu unduh notebook.
-- **Catatan:** Menjalankan lokal mungkin memerlukan Wolfram Language/produk terkait.
+- **Type:** Notebook
+- **Field:** Mathematics and computing
+- **What to look for:** Interactive notebooks you can read or run in Wolfram.
+- **How to use it:** Search the mathematical concept or algorithm, then download the notebook.
+- **Limitation:** Running it locally may need Wolfram Language or related products.
 
 #### [022] Bioconductor
 - **URL:** https://bioconductor.org/packages/release/bioc/
-- **Jenis:** Paket software
-- **Bidang:** Bioinformatika R
-- **Yang dicari:** Paket open-source, source tarball, vignette, dan sitasi.
-- **Cara pakai:** Cari paket atau tugas analitik; baca vignette dan artikel sitasinya.
-- **Catatan:** Berfokus pada R/Bioconductor, bukan paper pada seluruh bidang.
-- **Koreksi:** 2026-10-12: /packages/ mengembalikan 404. Diganti ke /packages/release/bioc/ (terverifikasi 200).
+- **Type:** Software package
+- **Field:** R bioinformatics
+- **What to look for:** Open-source packages, source tarballs, vignettes, and citations.
+- **How to use it:** Search for a package or an analysis task; read the vignette and its citation article.
+- **Limitation:** Focused on R/Bioconductor, not papers across every field.
+- **Correction:** 2026-10-12: /packages/ returned 404. Changed to /packages/release/bioc/ (verified 200).
 
 #### [023] CRAN Packages
 - **URL:** https://cran.r-project.org/web/packages/
-- **Jenis:** Paket software
-- **Bidang:** R, statistik dan data mining
-- **Yang dicari:** Source code paket R, dokumentasi, referensi metode.
-- **Cara pakai:** Cari nama metode; buka Reference manual, source dan DESCRIPTION.
-- **Catatan:** Paket bukan pengganti pembacaan paper sumber metode.
+- **Type:** Software package
+- **Field:** R, statistics and data mining
+- **What to look for:** Source code of R packages, documentation, and method references.
+- **How to use it:** Search by method name; open the Reference manual, the source, and DESCRIPTION.
+- **Limitation:** A package is not a substitute for reading the paper behind the method.
 
 #### [024] PyPI
 - **URL:** https://pypi.org/
-- **Jenis:** Paket software
-- **Bidang:** Python
-- **Yang dicari:** Library dan tautan halaman source/publikasi jika dicantumkan.
-- **Cara pakai:** Cari paket terkait algoritma; ikuti project links ke source dan paper.
-- **Catatan:** Unggahan PyPI tidak otomatis melewati peer review ilmiah.
+- **Type:** Software package
+- **Field:** Python
+- **What to look for:** Libraries plus links to source or publication pages when listed.
+- **How to use it:** Search for packages related to an algorithm; follow the project links to the source and paper.
+- **Limitation:** A PyPI upload has not automatically gone through scientific peer review.
 
 #### [026] Binder
 - **URL:** https://mybinder.org/
-- **Jenis:** Eksekusi notebook
-- **Bidang:** Jupyter dan data science
-- **Yang dicari:** Menjalankan repository notebook sebagai environment sementara.
-- **Cara pakai:** Gunakan repo GitHub/GitLab dari paper lalu coba launch melalui Binder.
-- **Catatan:** Binder sendiri bukan indeks paper; environment bisa gagal karena dependensi.
+- **Type:** Notebook execution
+- **Field:** Jupyter and data science
+- **What to look for:** Running notebook repositories as temporary environments.
+- **How to use it:** Take the GitHub or GitLab repo from the paper and try launching it through Binder.
+- **Limitation:** Binder itself is not a paper index; environments can fail on dependency issues.
 
-### D. Implementasi Source Code Secara Langsung
+### D. Direct source code implementations
 
 #### [047] GitHub Code Search
 - **URL:** https://github.com/search?type=code
-- **Jenis:** Pencarian kode
-- **Bidang:** Lintas bidang
-- **Yang dicari:** File source dan repository berdasarkan istilah spesifik.
-- **Cara pakai:** Cari judul paper persis, nama metode, DOI, nama fungsi, atau dataset.
-- **Catatan:** Cek lisensi, commit, dan keaslian penulis; hasil tidak peer-reviewed.
+- **Type:** Code search
+- **Field:** Cross-domain
+- **What to look for:** Source files and repositories matching specific terms.
+- **How to use it:** Search for an exact paper title, method name, DOI, function name, or dataset.
+- **Limitation:** Check the license, the commits, and the authenticity of the authors; results are not peer reviewed.
 
 #### [048] GitHub Topic: paper-implementations
 - **URL:** https://github.com/topics/paper-implementations
-- **Jenis:** Kurasi repo
-- **Bidang:** AI dan bidang lain
-- **Yang dicari:** Repository berlabel implementasi paper.
-- **Cara pakai:** Sort by recently updated; periksa citation, README dan training scripts.
-- **Catatan:** Tag dikelola pemilik repo, bukan bukti kelengkapan.
+- **Type:** Curated repos
+- **Field:** AI and other fields
+- **What to look for:** Repositories tagged as paper implementations.
+- **How to use it:** Sort by recently updated; check the citation, README, and training scripts.
+- **Limitation:** Tags are managed by the repo owner and are not proof of completeness.
 
 #### [049] GitHub Topic: paper-implementation
 - **URL:** https://github.com/topics/paper-implementation
-- **Jenis:** Kurasi repo
-- **Bidang:** AI dan bidang lain
-- **Yang dicari:** Repository implementasi dari paper.
-- **Cara pakai:** Gunakan pencarian topik; cocokkan DOI/judul dengan repository.
-- **Catatan:** Label tidak membuktikan hasil eksperimen setara paper.
+- **Type:** Curated repositories
+- **Field:** AI and adjacent fields
+- **What to look for:** Repositories implementing methods from papers.
+- **How to use it:** Use topic search, then match the DOI or title against the repository.
+- **Limitation:** The label does not prove the experiments match the paper.
 
 #### [050] GitHub Topic: research-paper-implementation
 - **URL:** https://github.com/topics/research-paper-implementation
-- **Jenis:** Kurasi repo
-- **Bidang:** Computer science
-- **Yang dicari:** Implementasi metode dari paper yang ditandai komunitas.
-- **Cara pakai:** Saring bahasa Python, tingkat aktivitas, dan kesesuaian paper.
-- **Catatan:** Repository bisa merupakan implementasi pihak ketiga.
+- **Type:** Repo curation
+- **Field:** Computer science
+- **What to look for:** Implementations of methods from papers, flagged by the community.
+- **How to use it:** Filter by Python, activity level, and how well the repo matches the paper.
+- **Limitation:** The repository may be a third-party implementation.
 
 #### [051] GitLab Explore
 - **URL:** https://gitlab.com/explore
-- **Jenis:** Hosting kode
-- **Bidang:** Lintas bidang
-- **Yang dicari:** Repositori dan proyek software yang dibuat publik.
-- **Cara pakai:** Cari nama algoritma atau judul paper di GitLab.
-- **Catatan:** Tidak semuanya terkait publikasi dan ada yang private.
+- **Type:** Code hosting
+- **Field:** Cross-domain
+- **What to look for:** Repositories and software projects that have been made public.
+- **How to use it:** Search GitLab for an algorithm name or a paper title.
+- **Limitation:** Not everything is tied to a publication, and some projects are private.
 
 #### [052] Hugging Face Models
 - **URL:** https://huggingface.co/models
-- **Jenis:** Hub model
-- **Bidang:** Machine learning
-- **Yang dicari:** Bobot model, konfigurasi, model cards dan tautan paper.
-- **Cara pakai:** Filter task; lihat model card, arXiv paper, dan linked code.
-- **Catatan:** Weights bukan otomatis training code atau dataset lengkap.
+- **Type:** Model hub
+- **Field:** Machine learning
+- **What to look for:** Model weights, configs, model cards, and paper links.
+- **How to use it:** Filter by task; read the model card, arXiv paper, and linked code.
+- **Limitation:** Weights are not automatically the training code or a complete dataset.
 
 #### [053] Hugging Face Spaces
 - **URL:** https://huggingface.co/spaces
-- **Jenis:** Demo + kode
-- **Bidang:** AI
-- **Yang dicari:** Demo interaktif dan Git repo aplikasi untuk Space publik.
-- **Cara pakai:** Temukan demo sesuai metode lalu buka Files and versions.
-- **Catatan:** Kode demo bisa hanya inference, bukan implementasi training.
+- **Type:** Demo and code
+- **Field:** AI
+- **What to look for:** Interactive demos and the Git repository behind a public Space.
+- **How to use it:** Find a demo for your method, then open Files and versions.
+- **Limitation:** Demo code is often inference only, not the training implementation.
 
 #### [054] Kaggle Code
 - **URL:** https://www.kaggle.com/code
-- **Jenis:** Notebook
-- **Bidang:** Data science
-- **Yang dicari:** Notebook Python/R untuk data dan algoritma.
-- **Cara pakai:** Cari paper/metode/dataset, filter notebook dengan output jelas.
-- **Catatan:** Notebook komunitas tidak selalu sesuai paper yang diklaim.
+- **Type:** Notebook
+- **Field:** Data science
+- **What to look for:** Python and R notebooks for data and algorithms.
+- **How to use it:** Search by paper, method, or dataset, and filter for notebooks with clear outputs.
+- **Limitation:** Community notebooks do not always match the paper they claim.
 
 #### [055] R-universe
 - **URL:** https://r-universe.dev/
-- **Jenis:** Paket ilmiah
-- **Bidang:** R
-- **Yang dicari:** Paket, binary dan tautan sumber R dari berbagai komunitas.
-- **Cara pakai:** Cari paket fungsi analisis, lanjut ke repository serta artikel sitasi.
-- **Catatan:** Bukan indeks komprehensif kode paper.
+- **Type:** Scientific packages
+- **Field:** R
+- **What to look for:** R packages, binaries, and source links from various communities.
+- **How to use it:** Search for a package of analysis functions, then continue to its repository and the article to cite.
+- **Limitation:** Not a comprehensive index of paper code.
 
 #### [056] Codeberg Explore
 - **URL:** https://codeberg.org/explore/repos
-- **Jenis:** Hosting kode
-- **Bidang:** Open-source
-- **Yang dicari:** Repository open-source alternatif.
-- **Cara pakai:** Gunakan kata kunci metode, paper, dan nama penulis.
-- **Catatan:** Ketersediaan metadata akademik tidak konsisten.
+- **Type:** Code hosting
+- **Field:** Open-source
+- **What to look for:** Alternative open-source repositories.
+- **How to use it:** Use the method name, the paper, and author names as keywords.
+- **Limitation:** Academic metadata coverage is inconsistent.
 
 #### [057] SourceForge Directory
 - **URL:** https://sourceforge.net/directory/
-- **Jenis:** Direktori software
-- **Bidang:** Lintas bidang
-- **Yang dicari:** Software, rilis dan download proyek teknis.
-- **Cara pakai:** Cari tools scientific computing; periksa source, dokumentasi dan publikasi.
-- **Catatan:** Banyak tool bukan reproduksi paper spesifik.
+- **Type:** Software directory
+- **Field:** Cross-disciplinary
+- **What to look for:** Software, releases, and downloads for technical projects.
+- **How to use it:** Search for scientific computing tools, then check the source, documentation, and publications.
+- **Limitation:** Many tools are not reproductions of a specific paper.
 
-### E. Benchmark, Kompetisi, Baseline Dan Model Zoo
+### E. Benchmarks, competitions, baselines, and model zoos
 
 #### [064] OpenMMLab GitHub
 - **URL:** https://github.com/open-mmlab
-- **Jenis:** Framework penelitian
-- **Bidang:** Computer vision
-- **Yang dicari:** Implementasi model, config training dan model zoo.
-- **Cara pakai:** Cari nama arsitektur; cek config, model checkpoint dan referensi paper.
-- **Catatan:** Framework besar membutuhkan versi CUDA/PyTorch yang sesuai.
+- **Type:** Research framework
+- **Field:** Computer vision
+- **What to look for:** Model implementations, training configs, and model zoos.
+- **How to use it:** Search by architecture name; check the config, model checkpoint, and paper reference.
+- **Limitation:** Large frameworks need matching CUDA and PyTorch versions.
 
-### F. Github Curated Lists Untuk Paper + Kode
+### F. Curated GitHub lists for papers and code
 
 #### [067] amusi CVPR2026 Papers with Code
 - **URL:** https://github.com/amusi/CVPR2026-Papers-with-Code
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Computer vision
-- **Yang dicari:** Daftar paper CVPR 2026 dengan resource code saat tersedia.
-- **Cara pakai:** Cari nama task/model di README; ikuti GitHub/project links.
-- **Catatan:** Repositori kurasi komunitas, tautan mungkin tidak selalu diperbarui.
+- **Type:** Curated GitHub list
+- **Field:** Computer vision
+- **What to look for:** A list of CVPR 2026 papers with code resources where available.
+- **How to use it:** Search the README for a task or model name; follow the GitHub or project links.
+- **Limitation:** A community-curated repository, so the links may not always be kept up to date.
 
 #### [068] firetix Awesome CVPR 2026 Papers
 - **URL:** https://github.com/firetix/awesome-cvpr-2026-papers
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Computer vision
-- **Yang dicari:** Koleksi paper CVPR 2026 berdasarkan topik dan resources.
-- **Cara pakai:** Filter kategori; cek apakah label code berarti source atau hanya project page.
-- **Catatan:** Jangan samakan demo/model dengan full training code.
+- **Type:** Curated GitHub
+- **Field:** Computer vision
+- **What to look for:** Collection of CVPR 2026 papers by topic, plus resources.
+- **How to use it:** Filter by category; check whether a code label means source or just a project page.
+- **Limitation:** Do not equate a demo or model with full training code.
 
 #### [069] MICCAI OpenSourcePapers
 - **URL:** https://github.com/JunMa11/MICCAI-OpenSourcePapers
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Medical AI
-- **Yang dicari:** Daftar paper MICCAI dengan tautan source dan resources.
-- **Cara pakai:** Cari nama metode, paper dan tahun; ikuti repo penulis.
-- **Catatan:** Sebagian tautan bisa pindah atau berganti versi.
+- **Type:** Curated GitHub list
+- **Field:** Medical AI
+- **What to look for:** MICCAI papers with source and resource links.
+- **How to use it:** Search the method name, paper, or year, then follow the authors' repository.
+- **Limitation:** Some links move or change version.
 
 #### [070] Awesome MICCAI 2026
 - **URL:** https://github.com/ambicuity/Awesome-MICCAI-2026
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Medical AI
-- **Yang dicari:** Daftar paper dan repository publik MICCAI 2026.
-- **Cara pakai:** Cari medical image task dan cek URL kode per paper.
-- **Catatan:** Perlu verifikasi kelengkapan data/replikasi.
+- **Type:** GitHub curation
+- **Field:** Medical AI
+- **What to look for:** Lists of MICCAI 2026 papers and their public repositories.
+- **How to use it:** Search by medical image task and check the code URL for each paper.
+- **Limitation:** Data and replication completeness still needs verification.
 
 #### [071] Awesome AI for Cybersecurity Papers
 - **URL:** https://github.com/BaichengDanny/awesome-ai-for-cybersecurity-papers
-- **Jenis:** Kurasi GitHub
-- **Bidang:** AI untuk cybersecurity
-- **Yang dicari:** Paper, benchmark dan beberapa tautan implementasi.
-- **Cara pakai:** Pilih subbidang intrusion/malware/vulnerability; buka kode dan data asli.
-- **Catatan:** Sebagian entri mungkin hanya referensi literatur.
+- **Type:** Curated GitHub list
+- **Field:** AI for cybersecurity
+- **What to look for:** Papers, benchmarks, and some implementation links.
+- **How to use it:** Pick a subarea such as intrusion, malware, or vulnerability; open the original code and data.
+- **Limitation:** Some entries may be literature references only.
 
 #### [072] Awesome ML for Cybersecurity
 - **URL:** https://github.com/jivoi/awesome-ml-for-cybersecurity
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Cybersecurity
-- **Yang dicari:** Daftar paper, tools, dataset dan resource ML keamanan.
-- **Cara pakai:** Temukan sumber dataset atau baseline sesuai serangan/skenario.
-- **Catatan:** Materi berbeda-beda kualitas dan kebaruannya.
+- **Type:** Curated GitHub
+- **Field:** Cybersecurity
+- **What to look for:** Lists of papers, tools, datasets, and security ML resources.
+- **How to use it:** Find dataset sources or baselines that match a given attack or scenario.
+- **Limitation:** Entries vary in quality and freshness.
 
 #### [073] Machine Learning for Cyber Security
 - **URL:** https://github.com/wtsxDev/Machine-Learning-for-Cyber-Security
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Cybersecurity
-- **Yang dicari:** Materi metode, dataset, dan sumber bacaan keamanan ML.
-- **Cara pakai:** Cari kategori metode; lanjutkan ke sumber asli dan GitHub.
-- **Catatan:** Jangan asumsikan semua resource memiliki kode lengkap.
+- **Type:** Curated GitHub list
+- **Field:** Cybersecurity
+- **What to look for:** Method material, datasets, and reading for ML security.
+- **How to use it:** Pick a method category, then continue to the original source and GitHub.
+- **Limitation:** Do not assume every resource has complete code.
 
 #### [074] OpenSci Awesome ML Cybersecurity
 - **URL:** https://github.com/opensci-hub/Awesome-ML-Cybersecurity
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Cybersecurity
-- **Yang dicari:** Koleksi literatur dan tools ML keamanan.
-- **Cara pakai:** Cari teknik deteksi/klasifikasi dan bandingkan repository aktif.
-- **Catatan:** Indeks komunitas bukan penilaian kinerja metode.
+- **Type:** GitHub curation
+- **Field:** Cybersecurity
+- **What to look for:** Collections of literature and security ML tools.
+- **How to use it:** Search by detection or classification technique and compare the active repositories.
+- **Limitation:** A community index is not an assessment of method performance.
 
 #### [075] Awesome AI Papers
 - **URL:** https://github.com/songqiang321/Awesome-AI-Papers
-- **Jenis:** Kurasi GitHub
-- **Bidang:** AI
-- **Yang dicari:** Daftar publikasi AI dan tautan pendukung.
-- **Cara pakai:** Cari istilah riset; catat arXiv/DOI lalu cari implementasi.
-- **Catatan:** Proporsi entri berkode dapat berbeda menurut topik.
+- **Type:** Curated GitHub list
+- **Field:** AI
+- **What to look for:** A list of AI publications and supporting links.
+- **How to use it:** Search for a research term; note the arXiv ID or DOI, then look for the implementation.
+- **Limitation:** The share of entries that come with code can differ by topic.
 
 #### [076] Awesome CV MasterHub
 - **URL:** https://github.com/cuixing158/Awesome-CV-MasterHub
-- **Jenis:** Kurasi GitHub
-- **Bidang:** Computer vision
-- **Yang dicari:** Koleksi model, paper dan informasi kode terkait.
-- **Cara pakai:** Cari deteksi, segmentasi, klasifikasi lalu cek source link.
-- **Catatan:** Periksa apakah link paper/kode masih aktif.
+- **Type:** Curated GitHub
+- **Field:** Computer vision
+- **What to look for:** Collections of models, papers, and related code information.
+- **How to use it:** Search detection, segmentation, or classification, then check the source link.
+- **Limitation:** Check whether the paper and code links still work.
 
-### G. Jurnal Kode Dan Notebook Ilmiah Khusus
+### G. Code journals and specialized scientific notebooks
 
 #### [077] SciPost Physics Codebases
 - **URL:** https://scipost.org/journals/SciPostPhysCodeb
-- **Jenis:** Jurnal kode
-- **Bidang:** Fisika komputasi
-- **Yang dicari:** Artikel codebase dengan identitas publikasi dan arsip source.
-- **Cara pakai:** Cari tipe simulasi; buka artikel dan rilis code yang disitir.
-- **Catatan:** Dominan fisika, bukan semua disiplin.
+- **Type:** Code journal
+- **Field:** Computational physics
+- **What to look for:** Codebase articles with a publication identity and archived source.
+- **How to use it:** Search the simulation type, then open the article and the cited code release.
+- **Limitation:** Mostly physics, not every discipline.
 
 #### [079] Astrophysics Source Code Library (ASCL)
 - **URL:** https://ascl.net/
-- **Jenis:** Registry kode
-- **Bidang:** Astronomi dan astrofisika
-- **Yang dicari:** Kode yang digunakan/dirujuk dalam publikasi astronomi.
-- **Cara pakai:** Cari kode via nama software atau paper; ikuti source URL dan sitasi.
-- **Catatan:** Tidak semua entri menawarkan installer modern.
+- **Type:** Code registry
+- **Field:** Astronomy and astrophysics
+- **What to look for:** Code used or cited in astronomy publications.
+- **How to use it:** Find the code by software name or paper; follow the source URL and the citation.
+- **Limitation:** Not every entry offers a modern installer.
 
 #### [080] PhysioNet Software
 - **URL:** https://physionet.org/software/
-- **Jenis:** Katalog kode
-- **Bidang:** Medis dan sinyal fisiologis
-- **Yang dicari:** Software untuk ECG, ICU, biosignal, dan analisis klinis.
-- **Cara pakai:** Cari toolkit sesuai dataset/riset; baca dokumentasi dan lisensi.
-- **Catatan:** Data klinis dan izin pemakaian dapat berbeda dengan kode.
+- **Type:** Code catalog
+- **Field:** Medical and physiological signals
+- **What to look for:** Software for ECG, ICU, biosignals, and clinical analysis.
+- **How to use it:** Find a toolkit that matches your dataset or research; read its documentation and license.
+- **Limitation:** Clinical data and its usage permissions may differ from the code license.
 
 #### [082] Pangeo Gallery
 - **URL:** https://gallery.pangeo.io/
-- **Jenis:** Notebook contoh
-- **Bidang:** Iklim, geospasial
-- **Yang dicari:** Notebook Python/Jupyter untuk analisis data bumi.
-- **Cara pakai:** Pilih notebook terkait dataset iklim/satelit, temukan repo sumber.
-- **Catatan:** Contoh pengolahan data tidak selalu terkait paper tunggal.
+- **Type:** Example notebook
+- **Field:** Climate, geospatial
+- **What to look for:** Python and Jupyter notebooks for earth data analysis.
+- **How to use it:** Pick a notebook tied to a climate or satellite dataset, then find its source repo.
+- **Limitation:** A data processing example is not always tied to a single paper.
 
-### H. Portal Paper, Data, Notebook Dan Software
+### H. Paper, data, notebook, and software portals
 
 #### [083] Image Processing On Line (IPOL)
 - **URL:** https://www.ipol.im/
-- **Jenis:** Jurnal algoritma
-- **Bidang:** Image processing
-- **Yang dicari:** Artikel algoritma dengan source code dan online demo.
-- **Cara pakai:** Cari teknik citra, baca penjelasan, akses kode dan jalankan contoh.
-- **Catatan:** Cocok image processing klasik; cakupan ML tertentu terbatas.
+- **Type:** Algorithms journal
+- **Field:** Image processing
+- **What to look for:** Algorithm articles with source code and an online demo.
+- **How to use it:** Search for an image technique, read the explanation, access the code, and run the example.
+- **Limitation:** A good fit for classic image processing; coverage of certain ML areas is limited.
 
 #### [084] Journal of Open Research Software
 - **URL:** https://openresearchsoftware.metajnl.com/
-- **Jenis:** Jurnal software
-- **Bidang:** Software riset lintas disiplin
-- **Yang dicari:** Software metapapers dengan metadata ketersediaan kode.
-- **Cara pakai:** Cari paper/software; ikuti availability statement ke repository.
-- **Catatan:** Artikel software, bukan semua paper terapan.
-- **Koreksi:** 2026-10-12: tidak dapat dijangkau (timeout) dari host audit, tetapi situs AKTIF (artikel terbit Sep 2026). Kemungkinan pembatasan IP/geo — bukan tautan mati.
+- **Type:** Software journal
+- **Field:** Research software across disciplines
+- **What to look for:** Software metapapers with code availability metadata.
+- **How to use it:** Find the paper or software; follow the availability statement to the repository.
+- **Limitation:** Software articles only, not every applied paper.
+- **Correction:** 2026-10-12: not reachable (timeout) from the audit host, but the site is ACTIVE (articles published Sep 2026). Likely IP or geo filtering rather than a dead link.
 
 #### [085] Journal of Open Source Education (JOSE)
 - **URL:** https://jose.theoj.org/papers
-- **Jenis:** Jurnal edukasi
-- **Bidang:** Komputasi dan pendidikan
-- **Yang dicari:** Software/materi pendidikan terbuka berikut repository.
-- **Cara pakai:** Cari bahan pengajaran teknis; lihat repo dan materi notebook.
-- **Catatan:** Tidak dirancang khusus untuk reproduksi hasil riset mutakhir.
+- **Type:** Education journal
+- **Field:** Computing and education
+- **What to look for:** Open educational software and materials with repositories.
+- **How to use it:** Search for technical teaching material, then look at the repo and the notebooks.
+- **Limitation:** Not designed for reproducing cutting-edge research results.
 
 #### [086] pyOpenSci Packages
 - **URL:** https://www.pyopensci.org/python-packages/
-- **Jenis:** Review software
-- **Bidang:** Python ilmiah
-- **Yang dicari:** Paket Python terkurasi dengan penilaian terbuka.
-- **Cara pakai:** Cari task pengolahan data; buka source, review dan dokumentasi.
-- **Catatan:** Review kualitas software bukan validasi seluruh klaim paper.
+- **Type:** Software review
+- **Field:** Scientific Python
+- **What to look for:** Curated Python packages with open reviews.
+- **How to use it:** Search by data processing task; open the source, the review, and the documentation.
+- **Limitation:** A software quality review is not validation of every claim in a paper.
 
 #### [087] rOpenSci Packages
 - **URL:** https://ropensci.org/packages/
-- **Jenis:** Review software
-- **Bidang:** R dan open science
-- **Yang dicari:** Paket R riset, dokumentasi, source dan beberapa review.
-- **Cara pakai:** Filter kategori paket dan pelajari reference serta source repo.
-- **Catatan:** Lebih cocok ekosistem R.
+- **Type:** Software review
+- **Field:** R and open science
+- **What to look for:** Research R packages, documentation, source, and some reviews.
+- **How to use it:** Filter by package category and study the reference material and the source repository.
+- **Limitation:** Better suited to the R ecosystem.
 
 #### [089] ESA EarthCODE Workflows
 - **URL:** https://earthcode.esa.int/workflows
-- **Jenis:** Workflow riset
-- **Bidang:** Earth observation
-- **Yang dicari:** Workflow komputasi, metadata dan output riset geospasial.
-- **Cara pakai:** Cari workflow berdasarkan sensor/metode lalu telusuri code artefact.
-- **Catatan:** Sebagian pekerjaan terkait layanan/cloud tertentu.
+- **Type:** Research workflow
+- **Field:** Earth observation
+- **What to look for:** Compute workflows, metadata, and geospatial research output.
+- **How to use it:** Search workflows by sensor or method, then trace the code artifact.
+- **Limitation:** Some work is tied to specific cloud or vendor services.
 
 #### [090] DANDI Notebooks
 - **URL:** https://notebooks.dandiarchive.org/index.html
-- **Jenis:** Notebook
-- **Bidang:** Neuroscience
-- **Yang dicari:** Notebook analisis untuk dataset neuroscience dan paper.
-- **Cara pakai:** Pilih dataset DANDI, buka notebook lalu coba Colab bila tersedia.
-- **Catatan:** Penyimpanan data dan notebook dapat berbeda lokasi.
+- **Type:** Notebook
+- **Field:** Neuroscience
+- **What to look for:** Analysis notebooks for neuroscience datasets and papers.
+- **How to use it:** Pick a DANDI dataset, open the notebook, and try Colab if it is offered.
+- **Limitation:** The data and the notebook may be hosted in different places.
 
-### J. Darts, Jurnal Software Dan Kurasi Kode Tambahan
+### J. DARTS, software journals, and further code curation
 
 #### [106] SoftwareX
 - **URL:** https://www.sciencedirect.com/journal/softwarex
-- **Jenis:** Jurnal software
-- **Bidang:** Komputasi ilmiah
-- **Yang dicari:** Artikel software, availability statements dan tautan repo.
-- **Cara pakai:** Cari nama tool atau topik; ikuti source code availability.
-- **Catatan:** Akses full text dan lisensi artikel/software berbeda.
+- **Type:** Software journal
+- **Field:** Scientific computing
+- **What to look for:** Software articles, availability statements, and repo links.
+- **How to use it:** Search by tool name or topic; follow the source code availability statement.
+- **Limitation:** Full text access and the article or software license are separate things.
 
 #### [107] ElsevierSoftwareX GitHub
 - **URL:** https://github.com/ElsevierSoftwareX
-- **Jenis:** Repository organisasi
-- **Bidang:** Software riset
-- **Yang dicari:** Repository yang dikaitkan dengan sebagian publikasi SoftwareX.
-- **Cara pakai:** Cari nama paper di repo organisasi; cek versi dan paper DOI.
-- **Catatan:** Tidak harus mencakup seluruh artikel jurnal.
+- **Type:** Organization repository
+- **Field:** Research software
+- **What to look for:** Repositories associated with some SoftwareX publications.
+- **How to use it:** Search the organization's repos for the paper name; check the version and the paper DOI.
+- **Limitation:** It does not necessarily cover every article in the journal.
 
 #### [111] GitHub Topic: reproducible-paper
 - **URL:** https://github.com/topics/reproducible-paper
-- **Jenis:** Kurasi repo
-- **Bidang:** Komputasi ilmiah
-- **Yang dicari:** Repository yang menandai paket replikasi paper.
-- **Cara pakai:** Cari repositori dengan scripts dan env, cocokkan publikasi.
-- **Catatan:** Topik diisi sendiri oleh pemilik repo.
+- **Type:** Curated repos
+- **Field:** Scientific computing
+- **What to look for:** Repositories tagged as paper replication packages.
+- **How to use it:** Find repositories with scripts and an environment, and match them to the publication.
+- **Limitation:** The topics are assigned by the repo owners themselves.
 
-### K. Arsip Algoritma Dan Model Komputasi
+### K. Algorithm and computational model archives
 
 #### [112] ACM Collected Algorithms (CALGO/Netlib)
 - **URL:** https://www.netlib.org/toms/
-- **Jenis:** Arsip algoritma
-- **Bidang:** Numerical computing
-- **Yang dicari:** Kode algoritma matematis/numerik yang terkait publikasi ACM TOMS.
-- **Cara pakai:** Cari nomor algoritma atau nama metode, unduh source dan baca referensi.
-- **Catatan:** Banyak kode historis memakai Fortran/C lawas.
+- **Type:** Algorithm archive
+- **Field:** Numerical computing
+- **What to look for:** Mathematical and numerical algorithm code tied to ACM TOMS publications.
+- **How to use it:** Search by algorithm number or method name, download the source, and read the reference.
+- **Limitation:** Much of the historical code uses old Fortran or C.
 
 #### [113] ModelDB
 - **URL:** https://modeldb.science/
-- **Jenis:** Repositori model
-- **Bidang:** Computational neuroscience
-- **Yang dicari:** Model simulasi neuron dan jaringan terkait paper.
-- **Cara pakai:** Cari paper atau jenis neuron; unduh model files dan parameter.
-- **Catatan:** Menjalankan simulasi dapat membutuhkan NEURON/GENESIS/tool khusus.
+- **Type:** Model repository
+- **Field:** Computational neuroscience
+- **What to look for:** Neuron and network simulation models tied to papers.
+- **How to use it:** Search the paper or neuron type, then download the model files and parameters.
+- **Limitation:** Running the simulation may need NEURON, GENESIS, or a similar tool.
 
 #### [114] Physiome Model Repository
 - **URL:** https://models.physiomeproject.org/
-- **Jenis:** Repositori model
-- **Bidang:** Biologi/fisiologi
-- **Yang dicari:** Model biologis dan matematis, format CellML dan kode pendukung.
-- **Cara pakai:** Cari model berdasarkan artikel, lihat versi dan format eksekusi.
-- **Catatan:** Model yang dapat dijalankan tidak selalu Python langsung.
+- **Type:** Model repository
+- **Field:** Biology/physiology
+- **What to look for:** Biological and mathematical models, CellML format, and supporting code.
+- **How to use it:** Search for a model by its article, then check the version and the runnable format.
+- **Limitation:** Runnable models are not always plain Python.
 
 #### [115] CoMSES Computational Model Library
 - **URL:** https://www.comses.net/codebases/
-- **Jenis:** Repositori model
-- **Bidang:** Agent-based simulation
-- **Yang dicari:** Model, source code, metadata paper dan review model.
-- **Cara pakai:** Cari domain sosial/lingkungan; lihat Codebase dan publikasi terkait.
-- **Catatan:** Perlu periksa versi software simulator yang digunakan.
+- **Type:** Model repository
+- **Field:** Agent-based simulation
+- **What to look for:** Models, source code, paper metadata, and model reviews.
+- **How to use it:** Search the social or environmental domain; look at the Codebase and the related publications.
+- **Limitation:** Worth checking which version of the simulator software was used.
 
 #### [116] NetLogo Models Library
 - **URL:** https://ccl.northwestern.edu/netlogo/models/
-- **Jenis:** Model/contoh
-- **Bidang:** Agent-based modeling
-- **Yang dicari:** Kode model NetLogo dan contoh simulasi interaktif.
-- **Cara pakai:** Cari fenomena/metode; jalankan model dan inspeksi source.
-- **Catatan:** Model edukasi tidak otomatis representasi paper asli.
+- **Type:** Models/examples
+- **Field:** Agent-based modeling
+- **What to look for:** NetLogo model code and interactive simulation examples.
+- **How to use it:** Search a phenomenon or method; run the model and inspect its source.
+- **Limitation:** An educational model is not automatically a faithful representation of the original paper.
 
 #### [117] Open Source Brain
 - **URL:** https://www.opensourcebrain.org/
-- **Jenis:** Repositori model
-- **Bidang:** Neuroscience
-- **Yang dicari:** Model otak, skrip simulasi dan data penelitian.
-- **Cara pakai:** Cari publikasi/neural model; telusuri Git repository dan workflow.
-- **Catatan:** Sebagian model bergantung simulator khusus.
+- **Type:** Model repository
+- **Field:** Neuroscience
+- **What to look for:** Brain models, simulation scripts, and research data.
+- **How to use it:** Search the publication or neural model, then follow the Git repository and workflow.
+- **Limitation:** Some models depend on specialized simulators.
 
 #### [118] BioModels
 - **URL:** https://www.ebi.ac.uk/biomodels/
-- **Jenis:** Repositori model
-- **Bidang:** Systems biology
-- **Yang dicari:** Model matematika yang ditautkan ke publikasi, sering format SBML.
-- **Cara pakai:** Cari judul/DOI paper; unduh model, jalankan dengan kompatibel tool.
-- **Catatan:** Model persamaan berbeda dengan paket source code lengkap.
+- **Type:** Model repository
+- **Field:** Systems biology
+- **What to look for:** Mathematical models linked to publications, often in SBML format.
+- **How to use it:** Search by paper title or DOI; download the model and run it with a compatible tool.
+- **Limitation:** An equation model is different from a complete source code package.
 
 #### [120] REANA Demo BSM Search
 - **URL:** https://github.com/reanahub/reana-demo-bsm-search
-- **Jenis:** Contoh workflow
-- **Bidang:** Fisika energi tinggi
-- **Yang dicari:** Repository demonstrasi analisis dengan scripts dan workflow.
-- **Cara pakai:** Baca workflow YAML serta tahap input-proses-output.
-- **Catatan:** Satu contoh proyek, bukan direktori pencarian umum.
+- **Type:** Example workflow
+- **Field:** High-energy physics
+- **What to look for:** Analysis demo repositories with scripts and workflows.
+- **How to use it:** Read the workflow YAML and the input, processing, and output stages.
+- **Limitation:** A single example project, not a general-purpose search directory.
 
-### L. Knowledge Graph Paper-Ke-Repository
+### L. Paper-to-repository knowledge graphs
 
 #### [123] SemRepo Source
 - **URL:** https://github.com/faerber-lab/semrepo
-- **Jenis:** Source platform
-- **Bidang:** Metadata ilmiah
-- **Yang dicari:** Kode/pipeline pembangunan knowledge graph SemRepo.
-- **Cara pakai:** Baca docs dan skema untuk integrasi sistem pencarian sendiri.
-- **Catatan:** Source pengindeks, bukan kumpulan implementasi tiap paper.
+- **Type:** Source platform
+- **Field:** Scientific metadata
+- **What to look for:** The code and pipeline that build the SemRepo knowledge graph.
+- **How to use it:** Read the docs and the schema to integrate it into your own search system.
+- **Limitation:** It is the source of the indexer, not a collection of the implementation behind each paper.
 
-### M. Repository Resmi Lab Ai
+### M. Official AI lab repositories
 
 #### [125] Google Research Code
 - **URL:** https://github.com/google-research/google-research
-- **Jenis:** Repository lab
-- **Bidang:** AI dan ML
-- **Yang dicari:** Implementasi resmi/pendamping paper Google Research.
-- **Cara pakai:** Cari nama paper dalam subfolder; baca README dan command eksperimen.
-- **Catatan:** Banyak proyek historis; konfigurasi lingkungan bervariasi.
+- **Type:** Lab repository
+- **Field:** AI and ML
+- **What to look for:** Official implementations and companions to Google Research papers.
+- **How to use it:** Search the paper name in the subfolders, then read the README and the experiment commands.
+- **Limitation:** Many projects are old, and environment setup varies.
 
 #### [126] Google DeepMind Research
 - **URL:** https://github.com/google-deepmind/deepmind-research
-- **Jenis:** Repository lab
-- **Bidang:** AI dan ML
-- **Yang dicari:** Kode yang dirilis untuk mendampingi paper DeepMind.
-- **Cara pakai:** Cari nama paper; lihat training/evaluation dan lisensi.
-- **Catatan:** Tidak semua model/weights/data penelitian dirilis.
+- **Type:** Lab repository
+- **Field:** AI and ML
+- **What to look for:** Code released alongside DeepMind papers.
+- **How to use it:** Search by paper name; look at the training and evaluation code and the license.
+- **Limitation:** Not every research model, weight set, or dataset is released.
 
 #### [127] Meta Research GitHub
 - **URL:** https://github.com/facebookresearch
-- **Jenis:** Repository organisasi
-- **Bidang:** AI dan ML
-- **Yang dicari:** Source code penelitian Meta dan library terkait.
-- **Cara pakai:** Cari nama riset atau arsitektur; pilih repository resmi.
-- **Catatan:** Repository organisasi besar; tak semua kode merujuk paper.
+- **Type:** Organization repository
+- **Field:** AI and ML
+- **What to look for:** Meta research source code and related libraries.
+- **How to use it:** Search for a research name or architecture; pick the official repository.
+- **Limitation:** A large organization account; not all of its code maps to a paper.
 
-### N. Sumber Dari Awal Percakapan Yang Belum Tercantum Dan Penanda Duplikat
+### N. Earlier sources plus duplicate markers
 
 #### [130] CatalyzeX
 - **URL:** https://www.catalyzex.com/
-- **Jenis:** Paper-to-code search
-- **Bidang:** AI dan ML
-- **Yang dicari:** Pencarian implementasi GitHub yang dihubungkan dengan paper.
-- **Cara pakai:** Masukkan judul paper/arXiv ID, buka "Code" atau repositori terkait.
-- **Catatan:** Link bisa implementasi pihak ketiga; perlu cek validitas.
+- **Type:** Paper-to-code search
+- **Field:** AI and ML
+- **What to look for:** Search for GitHub implementations linked to a paper.
+- **How to use it:** Enter the paper title or arXiv ID, then open the "Code" tab or the linked repository.
+- **Limitation:** Links may point to third-party implementations, so check that they are valid.
 
 #### [131] Code Ocean Capsules
 - **URL:** https://codeocean.com/explore/capsules/
-- **Jenis:** Executable research
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Paket kode, data, environment dan run untuk hasil paper.
-- **Cara pakai:** Cari judul/artikel; buka Compute Capsule dan prosedur run.
-- **Catatan:** Sebagian capsule/resource mensyaratkan akses atau lingkungan tertentu.
+- **Type:** Executable research
+- **Field:** Cross-disciplinary
+- **What to look for:** Code, data, environment, and run packages for a paper's results.
+- **How to use it:** Search by title or article; open the Compute Capsule and the run procedure.
+- **Limitation:** Some capsules or resources require particular access or a specific environment.
 
 #### [133] GitHub Topic: paper-implementations (duplikat no. 48)
 - **URL:** https://github.com/topics/paper-implementations
-- **Jenis:** Kurasi repo
-- **Bidang:** AI dan bidang lain
-- **Yang dicari:** Tautan dari daftar pertama yang sama persis dengan nomor 48.
-- **Cara pakai:** Gunakan petunjuk pencarian di nomor 48.
-- **Catatan:** DUPLIKAT URL; dihitung sebagai jejak daftar awal, bukan website unik.
+- **Type:** Curated repositories
+- **Field:** AI and adjacent fields
+- **What to look for:** The exact same link as entry 48.
+- **How to use it:** Use the search guidance in entry 48.
+- **Limitation:** DUPLICATE URL, kept as a trace of the first list rather than counted as a unique site.
 
 #### [134] Zenodo
 - **URL:** https://zenodo.org/
-- **Jenis:** Repositori DOI
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Rilis kode, replication packages, data, laporan dan DOI.
-- **Cara pakai:** Cari judul, DOI, penulis, atau "replication package"; filter Software.
-- **Catatan:** Lisensi dan jenis file bervariasi; tidak semua record berisi source.
+- **Type:** DOI repository
+- **Field:** Cross-disciplinary
+- **What to look for:** Code releases, replication packages, data, reports, and DOIs.
+- **How to use it:** Search by title, DOI, author, or "replication package"; filter for Software.
+- **Limitation:** Licenses and file types vary, and not every record contains source.
 
 #### [138] Papers With Code Data Archive
 - **URL:** https://github.com/paperswithcode/paperswithcode-data
-- **Jenis:** Arsip metadata
-- **Bidang:** Machine learning
-- **Yang dicari:** Data historis paper, repo, task, dan hubungan benchmark.
-- **Cara pakai:** Gunakan dump metadata untuk pencarian massal/offline lalu validasi URL repo.
-- **Catatan:** Sumber historis; tidak boleh diperlakukan sebagai indeks terkini.
+- **Type:** Metadata archive
+- **Field:** Machine learning
+- **What to look for:** Historical data on papers, repos, tasks, and benchmark relationships.
+- **How to use it:** Use the metadata dump for bulk or offline search, then validate the repo URLs.
+- **Limitation:** A historical source; do not treat it as a current index.
 
 #### [140] Papers With Code (situs historis)
 - **URL:** https://paperswithcode.com/
-- **Jenis:** Portal historis
-- **Bidang:** Machine learning
-- **Yang dicari:** Dahulu menghubungkan paper, code dan leaderboard.
-- **Cara pakai:** Gunakan arsip nomor 138 atau alternatif terbaru; jangan andalkan situs lama.
-- **Catatan:** Status layanan berubah/dihentikan; ini entri historis, bukan rekomendasi aktif.
-- **Koreksi:** 2026-10-12: terkonfirmasi redirect ke huggingface.co/papers/trending (sesuai catatan historis). Gunakan arsip entri 138 untuk data.
+- **Type:** Historical portal
+- **Field:** Machine learning
+- **What to look for:** Once linked papers, code, and leaderboards.
+- **How to use it:** Use archive entry 138 or a newer alternative; do not rely on the old site.
+- **Limitation:** Service status has changed or shut down; this is a historical entry, not an active recommendation.
+- **Correction:** 2026-10-12: redirect to huggingface.co/papers/trending confirmed, consistent with the historical note. Use the archive in entry 138 for data.
 
-### N. Workflow, Kode Penelitian, Dan Direktori Model
+### N. Workflows, research code, and model directories
 
 #### [143] nf-core Pipelines
 - **URL:** https://nf-co.re/pipelines/
-- **Jenis:** Pipeline open source
-- **Bidang:** Bioinformatika, genomik
-- **Yang dicari:** Pipeline Nextflow lengkap dengan source code, dokumentasi, parameter dan literatur.
-- **Cara pakai:** Pilih pipeline berdasarkan jenis analisis; buka GitHub dan panduan penggunaan.
-- **Catatan:** Fokus bioinformatika dan versi pipeline harus disesuaikan dengan paper.
+- **Type:** Open-source pipeline
+- **Field:** Bioinformatics, genomics
+- **What to look for:** Nextflow pipelines complete with source code, documentation, parameters, and literature.
+- **How to use it:** Pick a pipeline by type of analysis; open its GitHub repo and usage guide.
+- **Limitation:** The focus is bioinformatics, and the pipeline version has to be matched to the paper.
 
 #### [144] Archive of Formal Proofs (AFP)
 - **URL:** https://www.isa-afp.org/
-- **Jenis:** Arsip bukti formal
-- **Bidang:** Formal methods, algoritma, matematika
-- **Yang dicari:** Teori dan kode pembuktian Isabelle dengan publikasi pendukung.
-- **Cara pakai:** Cari konsep atau paper; unduh entry formal proof dan periksa sesi build.
-- **Catatan:** Kode berupa artefak pembuktian formal, bukan aplikasi Python konvensional.
+- **Type:** Formal proof archive
+- **Field:** Formal methods, algorithms, mathematics
+- **What to look for:** Isabelle theories and proof code with supporting publications.
+- **How to use it:** Search a concept or paper; download the formal proof entry and check its build session.
+- **Limitation:** The code is formal proof artifact, not a conventional Python application.
 
 #### [145] CSDMS Model Download Portal
 - **URL:** https://csdms.colorado.edu/wiki/Model_portal
-- **Jenis:** Katalog model
-- **Bidang:** Geoscience, hidrologi, lingkungan
-- **Yang dicari:** Model simulasi, perangkat lunak ilmiah, referensi artikel dan tautan unduhan.
-- **Cara pakai:** Cari nama model; cek model metadata, halaman kode, dan paper yang menggunakannya.
-- **Catatan:** Lisensi, bahasa kode, dan akses bervariasi menurut pemilik model.
-- **Koreksi:** 2026-10-12: /wiki/Model_download_portal mengembalikan 404. Diganti ke /wiki/Model_portal (halaman resmi unduhan model).
+- **Type:** Model catalog
+- **Field:** Geoscience, hydrology, environment
+- **What to look for:** Simulation models, scientific software, article references, and download links.
+- **How to use it:** Search the model name, then check its metadata, code page, and the papers that used it.
+- **Limitation:** License, language, and access vary by model owner.
+- **Correction:** 2026-10-12: /wiki/Model_download_portal returned 404. Changed to /wiki/Model_portal (the official model download page).
 
 #### [146] USGS Model Catalog
 - **URL:** https://data.usgs.gov/modelcatalog/
-- **Jenis:** Katalog model
-- **Bidang:** Geoscience, lingkungan, hidrologi
-- **Yang dicari:** Metadata model pemerintah, dokumentasi dan kemungkinan tautan software.
-- **Cara pakai:** Cari kata kunci fenomena/algoritma; lanjutkan ke source code atau technical report.
-- **Catatan:** Metadata model tidak selalu berarti implementasi publik tersedia.
+- **Type:** Model catalog
+- **Field:** Geoscience, environment, hydrology
+- **What to look for:** Government model metadata, documentation, and possible software links.
+- **How to use it:** Search by phenomenon or algorithm keyword; continue to the source code or technical report.
+- **Limitation:** Model metadata does not always mean a public implementation exists.
 
 #### [147] NITRC
 - **URL:** https://www.nitrc.org/
-- **Jenis:** Direktori software riset
-- **Bidang:** Neuroimaging, neuroscience
-- **Yang dicari:** Software, dataset, dokumentasi dan proyek pengolahan citra otak.
-- **Cara pakai:** Cari aplikasi sesuai metode; lihat project files, code host, publikasi dan lisensi.
-- **Catatan:** Ada tool binary saja atau proyek yang membutuhkan registrasi.
+- **Type:** Research software directory
+- **Field:** Neuroimaging, neuroscience
+- **What to look for:** Software, datasets, documentation, and projects for processing brain images.
+- **How to use it:** Find the application for your method; look at the project files, code host, publications, and license.
+- **Limitation:** Some tools are binary only, or the project requires registration.
 
 #### [149] Brainlife.io
 - **URL:** https://brainlife.io/
-- **Jenis:** Platform analisis
-- **Bidang:** Neuroscience, neuroinformatics
-- **Yang dicari:** Data, aplikasi analisis, workflow dan tools yang digunakan dalam publikasi.
-- **Cara pakai:** Telusuri aplikasi/pipeline dan lihat dokumentasi serta repository terhubung.
-- **Catatan:** Sebagian fungsi melalui layanan hosted dan memerlukan akun.
+- **Type:** Analysis platform
+- **Field:** Neuroscience, neuroinformatics
+- **What to look for:** Data, analysis apps, workflows, and tools used in publications.
+- **How to use it:** Browse apps and pipelines, then read the docs and the linked repository.
+- **Limitation:** Some functions run as hosted services and need an account.
 
-### O. Algoritma, Jurnal Software, Dan Reproducibility
+### O. Algorithms, software journals, and reproducibility
 
 #### [150] Geoscientific Model Development (GMD)
 - **URL:** https://gmd.copernicus.org/
-- **Jenis:** Jurnal dengan kebijakan kode
-- **Bidang:** Iklim, atmosfer, pemodelan
-- **Yang dicari:** Paper model komputasi dengan bagian code/data availability dan versi artefak.
-- **Cara pakai:** Cari judul model; buka Code and data availability untuk arsip dan repository.
-- **Catatan:** Ketersediaan bisa dibatasi atau kode bergantung stack ilmiah khusus.
+- **Type:** Journal with a code policy
+- **Field:** Climate, atmosphere, modeling
+- **What to look for:** Computational model papers with a code and data availability section and artifact versioning.
+- **How to use it:** Search by model name; open the Code and data availability section for the archive and repository.
+- **Limitation:** Availability may be restricted, or the code may depend on a specific scientific stack.
 
 #### [153] Graphics Replicability Database
 - **URL:** https://graphicsreplicability.github.io/replicability.graphics/
-- **Jenis:** Database replikasi
-- **Bidang:** Computer graphics
-- **Yang dicari:** Pemetaan paper computer graphics terhadap artefak dan status replikasi.
-- **Cara pakai:** Telusuri paper dan cari tautan source/data yang dirujuk; verifikasi satu per satu.
-- **Catatan:** Cakupan dan kebaruan rekaman dapat terbatas.
+- **Type:** Replication database
+- **Field:** Computer graphics
+- **What to look for:** A mapping from graphics papers to artifacts and replication status.
+- **How to use it:** Look up the paper and follow the source or data links it cites, verifying each one.
+- **Limitation:** Coverage and freshness of the records can be limited.
 
 #### [154] MATLAB File Exchange
 - **URL:** https://www.mathworks.com/matlabcentral/fileexchange/
-- **Jenis:** Berbagi source code
-- **Bidang:** Numerical computing, signal processing
-- **Yang dicari:** Script dan paket MATLAB untuk berbagai metode numerik, pemodelan, simulasi.
-- **Cara pakai:** Cari algoritma atau judul paper; lihat lisensi, dependensi dan contoh pemakaian.
-- **Catatan:** Tidak semua proyek berasal dari paper peer-reviewed; bisa memerlukan MATLAB.
+- **Type:** Source code sharing
+- **Field:** Numerical computing, signal processing
+- **What to look for:** MATLAB scripts and packages for numerical methods, modeling, and simulation.
+- **How to use it:** Search by algorithm or paper title; check the license, dependencies, and usage examples.
+- **Limitation:** Not every project comes from a peer-reviewed paper, and MATLAB may be required.
 
 #### [155] Julia Packages
 - **URL:** https://juliapackages.com/packages
-- **Jenis:** Indeks paket
-- **Bidang:** Matematika, optimasi, machine learning
-- **Yang dicari:** Paket Julia dengan repository dan sebagian mempunyai paper akademik.
-- **Cara pakai:** Cari algoritma/bidang dan lanjutkan ke link source serta artikel/citation.
-- **Catatan:** Direktori paket, bukan indeks paper yang selalu mengandung kode eksperimen.
+- **Type:** Package index
+- **Field:** Mathematics, optimization, machine learning
+- **What to look for:** Julia packages with repositories, some of which have an academic paper.
+- **How to use it:** Search by algorithm or field, then continue to the source link and the article to cite.
+- **Limitation:** A package directory, not an index of papers that always contain experiment code.
 
 #### [156] Galaxy Tool Shed
 - **URL:** https://toolshed.g2.bx.psu.edu/
-- **Jenis:** Repositori tools workflow
-- **Bidang:** Bioinformatika
-- **Yang dicari:** Tool analisis, wrappers, dependensi, workflow serta referensi ilmiah.
-- **Cara pakai:** Cari nama paket, periksa install info dan repository pengembang.
-- **Catatan:** Banyak item wrapper untuk tool eksternal, bukan seluruh kode algoritma.
+- **Type:** Workflow tool repository
+- **Field:** Bioinformatics
+- **What to look for:** Analysis tools, wrappers, dependencies, workflows, and scientific references.
+- **How to use it:** Search a package name, then check the install info and the developer repository.
+- **Limitation:** Many items are wrappers around external tools, not the full algorithm code.
 
-### P. Repositori Akademik Dan Jaringan Data
+### P. Academic repositories and data networks
 
 #### [160] EMBL-EBI BioStudies
 - **URL:** https://www.ebi.ac.uk/biostudies/
-- **Jenis:** Arsip studi ilmiah
-- **Bidang:** Biologi, bioinformatika
-- **Yang dicari:** Data studi, supplementary attachments, kode atau link jika disertakan.
-- **Cara pakai:** Cari accession/DOI, lihat study files dan software links.
-- **Catatan:** Format lampiran bervariasi; data dapat dibatasi.
+- **Type:** Scientific study archive
+- **Field:** Biology, bioinformatics
+- **What to look for:** Study data, supplementary attachments, and code or links where included.
+- **How to use it:** Search by accession or DOI, then look at the study files and software links.
+- **Limitation:** Attachment formats vary, and access to the data may be restricted.
 
-### Q. Jurnal, Benchmark Ml, Dan Kode Paper
+### Q. Journals, ML benchmarks, and paper code
 
 #### [167] Bioinformatics (Oxford Academic) - Application Notes
 - **URL:** https://academic.oup.com/bioinformatics
-- **Jenis:** Jurnal software/algoritma
-- **Bidang:** Bioinformatika, genomics ML
-- **Yang dicari:** Artikel penerapan algoritma baru dan software, umumnya dengan availability statement dan URL kode.
-- **Cara pakai:** Cari Application Note / Software paper; cek Availability and Implementation.
-- **Catatan:** Kebijakan akses dapat mencakup syarat penggunaan nonkomersial.
+- **Type:** Software/algorithms journal
+- **Field:** Bioinformatics, genomics ML
+- **What to look for:** Articles on new algorithm and software applications, usually with an availability statement and a code URL.
+- **How to use it:** Search for an Application Note or Software paper; check the Availability and Implementation section.
+- **Limitation:** Access policies may include a non-commercial use requirement.
 
 #### [173] aeon Time Series Toolkit
 - **URL:** https://github.com/aeon-toolkit/aeon
-- **Jenis:** Perpustakaan implementasi riset
-- **Bidang:** Time series ML, anomaly detection
-- **Yang dicari:** Kode Python untuk metode classification, regression, forecasting, clustering dan paper asal.
-- **Cara pakai:** Cari estimator/algoritma dalam dokumentasi; ikuti citation dan contoh penggunaan.
-- **Catatan:** Library terintegrasi dapat berbeda dari script orisinal paper.
+- **Type:** Research implementation library
+- **Field:** Time series ML, anomaly detection
+- **What to look for:** Python code for classification, regression, forecasting, and clustering methods, along with the source papers.
+- **How to use it:** Find the estimator in the docs, then follow the citation and a usage example.
+- **Limitation:** An integrated library can differ from the original paper script.
 
-### R. Implementasi Deep Learning Dan Nlp
+### R. Deep learning and NLP implementations
 
 #### [175] TensorFlow Model Garden
 - **URL:** https://github.com/tensorflow/models
-- **Jenis:** Repository kode model
-- **Bidang:** Vision, NLP, speech, reinforcement learning
-- **Yang dicari:** Kode research models dari paper terbit, script training, models dan dokumentasi.
-- **Cara pakai:** Buka research/ atau official/; pilih paper, cocokkan TensorFlow version.
-- **Catatan:** Sebagian model lama memakai TensorFlow 1 dan perlu penyesuaian.
+- **Type:** Model code repository
+- **Field:** Vision, NLP, speech, reinforcement learning
+- **What to look for:** Research model code from published papers, training scripts, models, and documentation.
+- **How to use it:** Open research/ or official/; pick a paper and match the TensorFlow version.
+- **Limitation:** Some older models use TensorFlow 1 and need adjustment.
 
 #### [176] PyTorch Examples
 - **URL:** https://github.com/pytorch/examples
-- **Jenis:** Kode dan contoh baseline
-- **Bidang:** Deep learning lintas task
-- **Yang dicari:** Contoh CNN, Transformer, VAE, GAN, RL serta script training sederhana.
-- **Cara pakai:** Cari folder model/tugas; jalankan baseline lalu telusuri referensi algoritma.
-- **Catatan:** Contoh edukatif tidak selalu mereproduksi konfigurasi paper secara penuh.
+- **Type:** Code and baseline examples
+- **Field:** Deep learning across tasks
+- **What to look for:** Examples of CNN, Transformer, VAE, GAN, and RL models plus simple training scripts.
+- **How to use it:** Find the model or task folder; run the baseline, then trace the algorithm reference.
+- **Limitation:** Educational examples do not always reproduce a paper's configuration in full.
 
 #### [177] timm / PyTorch Image Models
 - **URL:** https://github.com/huggingface/pytorch-image-models
-- **Jenis:** Implementasi arsitektur
-- **Bidang:** Computer vision
-- **Yang dicari:** Implementasi beragam arsitektur dari paper, pretrained weights, training/eval scripts.
-- **Cara pakai:** Cari nama arsitektur atau paper di model docs; jalankan script dan cek weights.
-- **Catatan:** Bobot/varian model berbeda-beda; rujuk citation dan konfigurasi tepat.
+- **Type:** Architecture implementations
+- **Field:** Computer vision
+- **What to look for:** Implementations of many paper architectures, pretrained weights, and training or evaluation scripts.
+- **How to use it:** Search the architecture or paper in the model docs, run the script, and check the weights.
+- **Limitation:** Weights and variants differ, so check the citation and the exact configuration.
 
 #### [178] Detectron2
 - **URL:** https://github.com/facebookresearch/detectron2
-- **Jenis:** Framework model riset
-- **Bidang:** Object detection, segmentation
-- **Yang dicari:** Model zoo, baseline, config, checkpoint serta implementasi metode vision.
-- **Cara pakai:** Cocokkan paper dengan configs/projects, jalankan training dan evaluasi.
-- **Catatan:** Membutuhkan GPU/dependensi kompatibel untuk sejumlah tugas.
+- **Type:** Research model framework
+- **Field:** Object detection, segmentation
+- **What to look for:** Model zoos, baselines, configs, checkpoints, and vision method implementations.
+- **How to use it:** Match the paper to the configs or projects, then run training and evaluation.
+- **Limitation:** Several tasks require a GPU and compatible dependencies.
 
 #### [180] OpenNMT
 - **URL:** https://opennmt.net/
-- **Jenis:** Toolkit model NLP
-- **Bidang:** Machine translation, sequence modeling
-- **Yang dicari:** Implementasi seq2seq dan Transformer, dokumentasi training serta referensi paper.
-- **Cara pakai:** Pilih toolkit PyTorch atau TensorFlow, ikuti training/validation scripts.
-- **Catatan:** Framework bukan indeks paper universal; cek versi dan tokenisasi.
+- **Type:** NLP model toolkit
+- **Field:** Machine translation, sequence modeling
+- **What to look for:** Seq2seq and Transformer implementations, training documentation, and paper references.
+- **How to use it:** Pick the PyTorch or TensorFlow toolkit and follow the training and validation scripts.
+- **Limitation:** The framework is not a universal paper index; check the version and tokenization.
 
 #### [181] fairseq
 - **URL:** https://github.com/facebookresearch/fairseq
-- **Jenis:** Implementasi paper NLP
-- **Bidang:** Machine translation, speech, language modeling
-- **Yang dicari:** Repository algoritma seq-to-seq dan daftar penelitian yang diimplementasikan.
-- **Cara pakai:** Cari daftar implemented papers; ikuti folder examples dan konfigurasi.
-- **Catatan:** Sebagian paper mengandalkan dependency/model lawas; cek status maintenance.
+- **Type:** NLP paper implementation
+- **Field:** Machine translation, speech, language modeling
+- **What to look for:** A seq-to-seq repository plus a list of the research it implements.
+- **How to use it:** Start from the list of implemented papers, then follow the examples folder and the configuration.
+- **Limitation:** Some papers rely on old dependencies or models, so check maintenance status.
 
-### S. Materials Science, Energy, Dan Research Software
+### S. Materials science, energy, and research software
 
 #### [186] Materials Project Software
 - **URL:** https://github.com/materialsproject
-- **Jenis:** Organisasi kode riset
-- **Bidang:** Computational materials
-- **Yang dicari:** Paket Python, API, tools analisis material dengan dokumentasi dan publikasi.
-- **Cara pakai:** Cari library sesuai metode, cek repositori pymatgen/mp-api dan citation paper.
-- **Catatan:** Kode toolkit tidak otomatis menyertakan seluruh data/training scripts paper.
+- **Type:** Research code organization
+- **Field:** Computational materials
+- **What to look for:** Python packages, APIs, and materials analysis tools with documentation and publications.
+- **How to use it:** Find the library for your method, then check the pymatgen or mp-api repository and the paper citation.
+- **Limitation:** Toolkit code does not automatically include all the data or training scripts from a paper.
 
 #### [187] AiiDA
 - **URL:** https://aiida.net/
-- **Jenis:** Workflow reproducibility
-- **Bidang:** Scientific computing, material simulation
-- **Yang dicari:** Framework Python workflow, provenance graph dan plugin koneksi ke software simulasi.
-- **Cara pakai:** Cari workflow/plugin AiiDA yang dipakai penulis; impor dan jalankan prosesnya.
-- **Catatan:** AiiDA merupakan infrastruktur, bukan katalog lengkap semua paper.
+- **Type:** Workflow reproducibility
+- **Field:** Scientific computing, materials simulation
+- **What to look for:** A Python workflow framework, provenance graph, and plugins that connect to simulation software.
+- **How to use it:** Find the AiiDA workflow or plugin the authors used; import it and run the process.
+- **Limitation:** AiiDA is infrastructure, not a complete catalog of every paper.
 
 #### [188] PyPSA
 - **URL:** https://github.com/PyPSA/PyPSA
-- **Jenis:** Software penelitian + paper
-- **Bidang:** Energy systems, electrical engineering
-- **Yang dicari:** Kode optimasi sistem tenaga, benchmark, examples dan paper referensi.
-- **Cara pakai:** Cari model studi kasus PyPSA, replikasi skenario dan versi solver.
-- **Catatan:** Software tool utama perlu data kasus studi untuk mereplikasi paper tertentu.
+- **Type:** Research software + paper
+- **Field:** Energy systems, electrical engineering
+- **What to look for:** Power system optimization code, benchmarks, examples, and reference papers.
+- **How to use it:** Find PyPSA case study models, replicate the scenario, and check the solver version.
+- **Limitation:** The core software tool needs case study data to replicate a specific paper.
 
 #### [189] Pangeo Forge Recipes
 - **URL:** https://github.com/pangeo-forge/pangeo-forge-recipes
-- **Jenis:** Pipeline data ilmiah
-- **Bidang:** Climate, geospatial, earth data
-- **Yang dicari:** Kode pipeline konversi dataset ke format analisis cloud.
-- **Cara pakai:** Cari recipe/feeds yang relevan dan referensi asal data serta publish metadata.
-- **Catatan:** Repository ini menyatakan tidak lagi dalam pengembangan aktif; bukan indeks kode paper.
+- **Type:** Scientific data pipeline
+- **Field:** Climate, geospatial, earth data
+- **What to look for:** Pipeline code that converts datasets into cloud-optimized analysis formats.
+- **How to use it:** Find a relevant recipe or feed, then check the source data reference and the published metadata.
+- **Limitation:** The repository states it is no longer under active development, and it is not a paper-code index.
 
-### T. Benchmark, Dataset, Dan Implementasi Risetpaper
+### T. Benchmarks, datasets, and paper implementation research
 
 #### [196] openmod Open Models Directory
 - **URL:** https://wiki.openmod-initiative.org/wiki/Open_Models
-- **Jenis:** Katalog kode pemodelan
-- **Bidang:** Energy system modelling
-- **Yang dicari:** Daftar model energi open-source, bahasa pemrograman, lisensi dan link kode.
-- **Cara pakai:** Filter model energi; lanjut ke repository lalu paper metode yang dirujuk.
-- **Catatan:** Katalog komunitas dapat mencakup entri lama atau framework yang sama.
+- **Type:** Modeling code catalog
+- **Field:** Energy system modelling
+- **What to look for:** List of open-source energy models, programming languages, licenses, and code links.
+- **How to use it:** Filter energy models; continue to the repository, then the method paper it cites.
+- **Limitation:** A community catalog may include outdated entries or duplicates of the same framework.
 
 #### [198] PyTorch Geometric (PyG)
 - **URL:** https://github.com/pyg-team/pytorch_geometric
-- **Jenis:** Kode metode paper
-- **Bidang:** Graph neural networks
-- **Yang dicari:** Layer GNN dari berbagai paper, datasets, contoh train/eval dan model.
-- **Cara pakai:** Cari nama metode dalam docs dan examples; ikuti referensi paper pada layer.
-- **Catatan:** Framework implementation tidak identik dengan semua pipeline paper.
+- **Type:** Paper method code
+- **Field:** Graph neural networks
+- **What to look for:** GNN layers from various papers, datasets, train and eval examples, and models.
+- **How to use it:** Search for the method name in the docs and examples; follow the paper reference on the layer.
+- **Limitation:** A framework implementation is not identical to every paper pipeline.
 
 
 <a id="03-datasets"></a>
-## Cari Dataset — 17 sumber
+## Find the data (17 sources)
 
-Repositori dataset dan materi pendukung publikasi.
+Dataset repositories and material supporting a publication.
 
-### A. Platform Khusus Research Code Dan Reproduksibilitas
+### A. Research code and reproducibility platforms
 
 #### [010] OpenML
 - **URL:** https://www.openml.org/
-- **Jenis:** Benchmark/data
-- **Bidang:** Machine learning
-- **Yang dicari:** Dataset, tasks, runs, evaluasi algoritma, dan metadata eksperimen.
-- **Cara pakai:** Pilih task, telusuri runs/baselines lalu cocokkan metode dengan paket Python/R.
-- **Catatan:** Runs eksperimen tidak selalu menyertakan repository paper lengkap.
+- **Type:** Benchmark/data
+- **Field:** Machine learning
+- **What to look for:** Datasets, tasks, runs, algorithm evaluations, and experiment metadata.
+- **How to use it:** Pick a task, browse the runs and baselines, then match the method to a Python or R package.
+- **Limitation:** Experiment runs do not always ship a complete paper repository.
 
-### B. Repositori Kode Penelitian Dan Executable Papers
+### B. Research code repositories and executable papers
 
 #### [017] Open Science Framework (OSF)
 - **URL:** https://osf.io/
-- **Jenis:** Repositori proyek
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Proyek, preregistrasi, data, kode, protokol, dan bahan riset.
-- **Cara pakai:** Cari proyek publik; cek Components, Files, Wiki, dan koneksi repositori.
-- **Catatan:** Sebagian proyek private, embargo, atau hanya data/protokol.
+- **Type:** Project repository
+- **Field:** Cross-disciplinary
+- **What to look for:** Projects, preregistrations, data, code, protocols, and research materials.
+- **How to use it:** Search public projects, then check Components, Files, Wiki, and any linked repositories.
+- **Limitation:** Some projects are private, embargoed, or hold only data and protocols.
 
-### H. Portal Paper, Data, Notebook Dan Software
+### H. Paper, data, notebook, and software portals
 
 #### [088] GigaDB
 - **URL:** https://gigadb.org/
-- **Jenis:** Data + software
-- **Bidang:** Bioinformatika, data science
-- **Yang dicari:** Dataset besar, software dan workflow pendukung publikasi.
-- **Cara pakai:** Cari dataset/studi; cek bagian Files/Tools/Code dan DOI.
-- **Catatan:** Tidak setiap record berisi kode.
+- **Type:** Data + software
+- **Field:** Bioinformatics, data science
+- **What to look for:** Large datasets, software, and workflows supporting a publication.
+- **How to use it:** Find the dataset or study; check its Files/Tools/Code section and DOI.
+- **Limitation:** Not every record includes code.
 
 #### [091] Dryad
 - **URL:** https://datadryad.org/
-- **Jenis:** Data pendukung
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Dataset ilmiah dan materi riset yang dapat dikutip.
-- **Cara pakai:** Cari DOI/judul; lihat metadata dan tautan Zenodo untuk software.
-- **Catatan:** Fokus utama data; source code tidak selalu disertakan.
+- **Type:** Supporting data
+- **Field:** Cross-disciplinary
+- **What to look for:** Scientific datasets and citable research materials.
+- **How to use it:** Search by DOI or title; check the metadata and the Zenodo link for software.
+- **Limitation:** The focus is data; source code is not always included.
 
 #### [093] CERN Open Data
 - **URL:** https://opendata.cern.ch/
-- **Jenis:** Open data + contoh
-- **Bidang:** Fisika energi tinggi
-- **Yang dicari:** Data eksperimen, software contoh, analisis dan dokumentasi.
-- **Cara pakai:** Pilih dataset dan contoh notebook/run analysis, lihat versi software.
-- **Catatan:** Data/lingkungan fisika dapat memerlukan storage besar.
+- **Type:** Open data and examples
+- **Field:** High-energy physics
+- **What to look for:** Experimental data, example software, analysis, and documentation.
+- **How to use it:** Pick a dataset and its notebook, run the analysis, and note the software version.
+- **Limitation:** Physics data and environments can require serious storage.
 
 #### [094] Mendeley Data
 - **URL:** https://data.mendeley.com/
-- **Jenis:** Repositori data
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Dataset serta supplementary yang kadang memuat source scripts.
-- **Cara pakai:** Cari judul paper; periksa berkas .py/.R/.m dan README.
-- **Catatan:** Berorientasi data; kode tidak selalu tersedia.
+- **Type:** Data repository
+- **Field:** Cross-disciplinary
+- **What to look for:** Datasets and supplementary files that sometimes include source scripts.
+- **How to use it:** Search by paper title; check for .py, .R, or .m files and a README.
+- **Limitation:** Data-oriented, so code is not always available.
 
-### N. Sumber Dari Awal Percakapan Yang Belum Tercantum Dan Penanda Duplikat
+### N. Earlier sources plus duplicate markers
 
 #### [136] Figshare
 - **URL:** https://figshare.com/
-- **Jenis:** Repositori riset
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Dataset, software, supporting files dan materi penelitian.
-- **Cara pakai:** Cari judul paper, DOI atau "source code"; periksa file download.
-- **Catatan:** Banyak record berupa data/figure, bukan source code.
+- **Type:** Research repository
+- **Field:** Cross-disciplinary
+- **What to look for:** Datasets, software, supporting files, and research materials.
+- **How to use it:** Search by paper title, DOI, or "source code"; check the downloadable files.
+- **Limitation:** Many records are data or figures, not source code.
 
 #### [139] Harvard Dataverse
 - **URL:** https://dataverse.harvard.edu/
-- **Jenis:** Repositori data
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Dataset penelitian, file pendukung, kode jika depositor menyertakan.
-- **Cara pakai:** Cari judul/DOI paper; lihat Files dan metadata lalu pilih file script.
-- **Catatan:** Fokus dataset; ketersediaan source code berbeda antar record.
+- **Type:** Data repository
+- **Field:** Cross-disciplinary
+- **What to look for:** Research datasets, supporting files, and code when the depositor includes it.
+- **How to use it:** Search by paper title or DOI; look at Files and metadata, then pick out the script files.
+- **Limitation:** The focus is datasets; source code availability differs from record to record.
 
-### P. Repositori Akademik Dan Jaringan Data
+### P. Academic repositories and data networks
 
 #### [157] 4TU.ResearchData
 - **URL:** https://data.4tu.nl/
-- **Jenis:** Repositori data/software
-- **Bidang:** Engineering, teknik, geoscience
-- **Yang dicari:** Dataset, model, script dan artefak komputasi penelitian dengan DOI.
-- **Cara pakai:** Cari paper/title dan gunakan filter tipe record; unduh files & metadata.
-- **Catatan:** Tidak setiap record memuat kode, sebagian fokus dataset.
+- **Type:** Data and software repository
+- **Field:** Engineering and geoscience
+- **What to look for:** Datasets, models, scripts, and computational artifacts with DOIs.
+- **How to use it:** Search the paper or title, filter by record type, then download the files and metadata.
+- **Limitation:** Not every record holds code, and some are dataset only.
 
 #### [158] DataverseNO
 - **URL:** https://dataverse.no/
-- **Jenis:** Repositori Dataverse
-- **Bidang:** Penelitian lintas disiplin
-- **Yang dicari:** Dataset, script R/Python, replication package, metadata dan DOI.
-- **Cara pakai:** Cari keyword atau judul publikasi; periksa tab Files untuk script/data.
-- **Catatan:** Sama seperti Harvard Dataverse, ketersediaan kode tergantung deposit.
+- **Type:** Dataverse repository
+- **Field:** Cross-disciplinary research
+- **What to look for:** Datasets, R or Python scripts, replication packages, metadata, and DOIs.
+- **How to use it:** Search by keyword or publication title; check the Files tab for scripts and data.
+- **Limitation:** As with Harvard Dataverse, code availability depends on what was deposited.
 
 #### [159] Borealis Canadian Dataverse Repository
 - **URL:** https://borealisdata.ca/
-- **Jenis:** Repositori Dataverse
-- **Bidang:** Penelitian lintas disiplin
-- **Yang dicari:** Dataset riset Kanada serta script atau dokumen pendukung jika tersedia.
-- **Cara pakai:** Telusuri judul paper dan list file di record; simpan DOI serta lisensi.
-- **Catatan:** Lebih berorientasi data daripada source code lengkap.
+- **Type:** Dataverse repository
+- **Field:** Cross-disciplinary research
+- **What to look for:** Canadian research datasets plus supporting scripts or documents where available.
+- **How to use it:** Browse by paper title and the file list in the record; keep the DOI and the license.
+- **Limitation:** Geared more toward data than toward complete source code.
 
 #### [161] PANGAEA
 - **URL:** https://www.pangaea.de/
-- **Jenis:** Repositori data
-- **Bidang:** Earth science, geoscience
-- **Yang dicari:** Dataset dengan metadata kuat, DOI, referensi paper dan bahan pendukung.
-- **Cara pakai:** Cari publikasi atau parameter; telusuri references serta external links.
-- **Catatan:** Sumber data, bukan prioritas bila kebutuhan utama source code.
+- **Type:** Data repository
+- **Field:** Earth science, geoscience
+- **What to look for:** Datasets with strong metadata, DOIs, paper references, and supporting material.
+- **How to use it:** Search the publication or parameter, then follow the references and external links.
+- **Limitation:** A data source, so lower priority if source code is what you need.
 
-### Q. Jurnal, Benchmark Ml, Dan Kode Paper
+### Q. Journals, ML benchmarks, and paper code
 
 #### [168] Materials Cloud Archive
 - **URL:** https://archive.materialscloud.org/
-- **Jenis:** Arsip data/simulasi
-- **Bidang:** Computational materials science
-- **Yang dicari:** Data perhitungan, workflow AiiDA, input/output dan kadang code untuk reproduksi paper.
-- **Cara pakai:** Cari nama material, judul paper atau DOI; buka file pendukung dan provenance.
-- **Catatan:** Bergantung software fisika komputasi dan tidak semua deposit berisi kode.
+- **Type:** Data/simulation archive
+- **Field:** Computational materials science
+- **What to look for:** Calculation data, AiiDA workflows, inputs and outputs, and sometimes code to reproduce the paper.
+- **How to use it:** Search a material name, paper title, or DOI; open the supporting files and provenance.
+- **Limitation:** Depends on computational physics software, and not every deposit contains code.
 
-### R. Implementasi Deep Learning Dan Nlp
+### R. Deep learning and NLP implementations
 
 #### [174] Hugging Face Datasets
 - **URL:** https://huggingface.co/datasets
-- **Jenis:** Katalog dataset & cards
-- **Bidang:** AI, NLP, vision, audio
-- **Yang dicari:** Dataset Hub, dataset cards, lisensi, splits dan referensi paper bila ditulis author.
-- **Cara pakai:** Cari dataset yang disebut paper; cek Dataset Card lalu ikuti repository kode.
-- **Catatan:** Portal dataset; ketersediaan script training tidak dijamin.
+- **Type:** Dataset and card catalog
+- **Field:** AI, NLP, vision, audio
+- **What to look for:** Dataset Hub entries, dataset cards, licenses, splits, and paper references when the authors list them.
+- **How to use it:** Search for the dataset named in the paper; check the Dataset Card, then follow the code repository.
+- **Limitation:** A dataset portal, so training scripts are not guaranteed.
 
-### S. Materials Science, Energy, Dan Research Software
+### S. Materials science, energy, and research software
 
 #### [185] NOMAD Laboratory
 - **URL:** https://nomad-lab.eu/
-- **Jenis:** Arsip data/workflow
-- **Bidang:** Materials informatics
-- **Yang dicari:** Data simulasi dan eksperimen material serta metadata yang dapat dikaitkan ke workflow.
-- **Cara pakai:** Cari record dengan nama material/publikasi; periksa file input-output dan link code.
-- **Catatan:** Utamanya data komputasional; source code tidak selalu tersedia.
+- **Type:** Data and workflow archive
+- **Field:** Materials informatics
+- **What to look for:** Materials simulation and experiment data, plus metadata that links to workflows.
+- **How to use it:** Find a record by material name or publication, then check the input and output files and any code link.
+- **Limitation:** Mostly computational data, and source code is not always there.
 
-### T. Benchmark, Dataset, Dan Implementasi Risetpaper
+### T. Benchmarks, datasets, and paper implementation research
 
 #### [191] UCI Machine Learning Repository
 - **URL:** https://archive.ics.uci.edu/
-- **Jenis:** Repositori dataset
-- **Bidang:** Machine learning umum
-- **Yang dicari:** Dataset klasik dan baru beserta deskripsi tugas dan sitasi.
-- **Cara pakai:** Temukan dataset pada paper lalu telusuri implementasi dari artikel GitHub.
-- **Catatan:** Berisi data, tidak menjanjikan kode implementasi paper.
+- **Type:** Dataset repository
+- **Field:** General machine learning
+- **What to look for:** Classic and new datasets with task descriptions and citations.
+- **How to use it:** Find the dataset in the paper, then track the implementation down through the GitHub article.
+- **Limitation:** It contains data; it does not promise the implementation code for a paper.
 
 #### [195] HEPData
 - **URL:** https://www.hepdata.net/
-- **Jenis:** Data penelitian + auxiliary files
-- **Bidang:** High-energy physics
-- **Yang dicari:** Tabel data paper fisika, metadata, resource files tambahan, API dan DOI.
-- **Cara pakai:** Cari INSPIRE paper atau collaboration; lihat resources dan downloads record.
-- **Catatan:** Kode hanya ada jika disertakan sebagai auxiliary file atau link.
+- **Type:** Research data + auxiliary files
+- **Field:** High-energy physics
+- **What to look for:** Physics paper data tables, metadata, extra resource files, API, and DOI.
+- **How to use it:** Search for the INSPIRE paper or collaboration; look at the record's resources and downloads.
+- **Limitation:** Code is present only if it is included as an auxiliary file or a link.
 
 
 <a id="04-reproduce"></a>
-## Reproduksi Eksperimen — 43 sumber
+## Reproduce the experiment (43 sources)
 
-Artifact evaluation, benchmark, paket replikasi, model zoo.
+Artifact evaluation, benchmarks, replication packages, and model zoos.
 
-### A. Platform Khusus Research Code Dan Reproduksibilitas
+### A. Research code and reproducibility platforms
 
 #### [003] ReScience C
 - **URL:** https://rescience.github.io/read/
-- **Jenis:** Reproduksibilitas
-- **Bidang:** Komputasi ilmiah
-- **Yang dicari:** Artikel replikasi beserta kode pendukung eksperimen.
-- **Cara pakai:** Mulai dari hasil reproduksi paper; buka link Code; bandingkan metode asli dan reproduksinya.
-- **Catatan:** Replikasi dapat memiliki perbedaan hasil yang dibahas dalam artikelnya.
+- **Type:** Reproducibility
+- **Field:** Scientific computing
+- **What to look for:** Replication articles together with the code that supports the experiments.
+- **How to use it:** Start from the paper's reproduction results; open the Code link; compare the original method with its reproduction.
+- **Limitation:** A replication may report differing results, which the article itself discusses.
 
-### B. Repositori Kode Penelitian Dan Executable Papers
+### B. Research code repositories and executable papers
 
 #### [025] Renku
 - **URL:** https://renkulab.io/
-- **Jenis:** Platform reproduksibilitas
-- **Bidang:** Data science
-- **Yang dicari:** Proyek komputasi kolaboratif, workflow dan lingkungan penelitian.
-- **Cara pakai:** Cari proyek publik; pelajari metadata, repository dan workflow.
-- **Catatan:** Sangat bergantung pada setelan publikasi dan akses proyek.
+- **Type:** Reproducibility platform
+- **Field:** Data science
+- **What to look for:** Collaborative compute projects, workflows, and research environments.
+- **How to use it:** Search public projects and study their metadata, repository, and workflow.
+- **Limitation:** Depends heavily on the project's publication settings and access.
 
-### E. Benchmark, Kompetisi, Baseline Dan Model Zoo
+### E. Benchmarks, competitions, baselines, and model zoos
 
 #### [058] MLCommons / MLPerf
 - **URL:** https://mlcommons.org/benchmarks/
-- **Jenis:** Benchmark
-- **Bidang:** AI/ML
-- **Yang dicari:** Suite benchmark, hasil, aturan evaluasi, implementasi acuan.
-- **Cara pakai:** Pilih benchmark; ikuti reference implementation dan konfigurasi run.
-- **Catatan:** Benchmark bukan pengganti kode metode paper tertentu.
+- **Type:** Benchmark
+- **Field:** AI/ML
+- **What to look for:** Benchmark suites, results, evaluation rules, and reference implementations.
+- **How to use it:** Pick a benchmark; follow its reference implementation and run configuration.
+- **Limitation:** A benchmark is not a substitute for the code of any specific paper method.
 
 #### [059] Codabench
 - **URL:** https://www.codabench.org/
-- **Jenis:** Benchmark
-- **Bidang:** AI, data science
-- **Yang dicari:** Benchmark, paket evaluation, dan submission algoritma.
-- **Cara pakai:** Cari competition akademik; unduh starter kit jika tersedia.
-- **Catatan:** Akses kode submission peserta bervariasi.
+- **Type:** Benchmark
+- **Field:** AI, data science
+- **What to look for:** Benchmarks, evaluation packages, and algorithm submissions.
+- **How to use it:** Search for academic competitions; download the starter kit where one exists.
+- **Limitation:** Access to the code participants submit varies.
 
 #### [060] AIcrowd Challenges
 - **URL:** https://www.aicrowd.com/challenges
-- **Jenis:** Kompetisi
-- **Bidang:** AI dan ML
-- **Yang dicari:** Datasets, baseline, starter scripts pada challenge tertentu.
-- **Cara pakai:** Buka challenge; lihat resources, baseline repository dan forum.
-- **Catatan:** Banyak challenge memiliki fase/akses terbatas.
+- **Type:** Competitions
+- **Field:** AI and ML
+- **What to look for:** Datasets, baselines, and starter scripts for a given challenge.
+- **How to use it:** Open the challenge; check its resources, baseline repository, and forum.
+- **Limitation:** Many challenges run in phases or restrict access.
 
 #### [061] EvalAI
 - **URL:** https://eval.ai/
-- **Jenis:** Evaluasi AI
-- **Bidang:** AI
-- **Yang dicari:** Challenge, evaluasi model dan leaderboard.
-- **Cara pakai:** Cari challenge yang terhubung dengan paper; periksa baseline dan submission docs.
-- **Catatan:** Tidak semua solusi peserta open source.
+- **Type:** AI evaluation
+- **Field:** AI
+- **What to look for:** Challenges, model evaluation, and leaderboards.
+- **How to use it:** Find a challenge tied to a paper, then check the baseline and the submission docs.
+- **Limitation:** Not every participant's solution is open source.
 
 #### [062] Grand Challenge
 - **URL:** https://grand-challenge.org/challenges/
-- **Jenis:** Benchmark medis
-- **Bidang:** Medical image analysis
-- **Yang dicari:** Dataset dan benchmark medis dengan protokol evaluasi.
-- **Cara pakai:** Pilih challenge; baca dataset policy dan starter code.
-- **Catatan:** Data medis dapat memerlukan registrasi atau perjanjian.
+- **Type:** Medical benchmark
+- **Field:** Medical image analysis
+- **What to look for:** Medical datasets and benchmarks with evaluation protocols.
+- **How to use it:** Pick a challenge; read the dataset policy and the starter code.
+- **Limitation:** Medical data may require registration or a data use agreement.
 
 #### [063] DrivenData Competitions
 - **URL:** https://www.drivendata.org/competitions/
-- **Jenis:** Kompetisi
-- **Bidang:** Data science untuk dampak sosial
-- **Yang dicari:** Data kompetisi, problem statement dan baseline di beberapa event.
-- **Cara pakai:** Cari topik; buka Benchmarks, Resources atau community solutions.
-- **Catatan:** Kode top solutions tidak selalu dipublikasikan.
+- **Type:** Competition
+- **Field:** Data science for social impact
+- **What to look for:** Competition data, problem statements, and baselines from several events.
+- **How to use it:** Search by topic; open Benchmarks, Resources, or community solutions.
+- **Limitation:** Code for the top solutions is not always published.
 
 #### [065] MONAI Model Zoo
 - **URL:** https://github.com/Project-MONAI/model-zoo
-- **Jenis:** Model zoo
-- **Bidang:** Medical imaging AI
-- **Yang dicari:** Paket model dan konfigurasi eksperimen.
-- **Cara pakai:** Cari model bundle; baca metadata, dataset dan workflow training/inference.
-- **Catatan:** Model bundle belum tentu memuat data medis asli.
+- **Type:** Model zoo
+- **Field:** Medical imaging AI
+- **What to look for:** Model bundles and experiment configuration.
+- **How to use it:** Find a model bundle, then read its metadata, dataset, and training or inference workflow.
+- **Limitation:** A bundle does not necessarily include the original medical data.
 
 #### [066] Kaggle Competitions
 - **URL:** https://www.kaggle.com/competitions
-- **Jenis:** Kompetisi/benchmark
-- **Bidang:** AI dan data science
-- **Yang dicari:** Datasets, evaluation metric, diskusi dan notebook.
-- **Cara pakai:** Buka competition; lihat Code dan referensi teknik pemenang.
-- **Catatan:** Solusi kompetisi bukan otomatis implementasi publikasi ilmiah.
+- **Type:** Competition/benchmark
+- **Field:** AI and data science
+- **What to look for:** Datasets, evaluation metrics, discussions, and notebooks.
+- **How to use it:** Open the competition; look at the Code tab and the write-ups from winning teams.
+- **Limitation:** A competition solution is not automatically an implementation of a published paper.
 
-### G. Jurnal Kode Dan Notebook Ilmiah Khusus
+### G. Code journals and specialized scientific notebooks
 
 #### [078] NeuroLibre
 - **URL:** https://neurolibre.org/
-- **Jenis:** Executable article
-- **Bidang:** Neuroscience
-- **Yang dicari:** Artikel interaktif berbasis notebook, kode, data dan lingkungan.
-- **Cara pakai:** Pilih paper dan buka notebook interaktif/repo pendukung.
-- **Catatan:** Environment mungkin memakai resource komputasi khusus.
+- **Type:** Executable article
+- **Field:** Neuroscience
+- **What to look for:** Interactive articles built on notebooks, code, data, and environments.
+- **How to use it:** Pick a paper and open the interactive notebook or the supporting repo.
+- **Limitation:** The environment may need specialized compute resources.
 
 #### [081] Whole Tale
 - **URL:** https://wholetale.readthedocs.io/en/stable/
-- **Jenis:** Platform reproducibility
-- **Bidang:** Komputasi ilmiah
-- **Yang dicari:** Konsep paket reproduksibilitas dan dokumentasi workflow.
-- **Cara pakai:** Pelajari cara mengekspor tale untuk gabungkan code-data-env.
-- **Catatan:** Tautan ini terutama dokumentasi; bukan katalog publikasi utama.
+- **Type:** Reproducibility platform
+- **Field:** Scientific computing
+- **What to look for:** Background on reproducible packaging and workflow documentation.
+- **How to use it:** Learn how to export a tale, which bundles code, data, and environment together.
+- **Limitation:** This link is documentation, not a publication catalog.
 
-### I. Konferensi Dan Artifact Evaluation
+### I. Conferences and artifact evaluation
 
 #### [095] Security Research Artifacts
 - **URL:** https://secartifacts.github.io/
-- **Jenis:** Indeks artefak
-- **Bidang:** Cybersecurity
-- **Yang dicari:** Tautan research artifacts konferensi keamanan.
-- **Cara pakai:** Cari konferensi/tahun atau paper; ikuti repo/arsip artefak.
-- **Catatan:** Indeks tidak menjamin seluruh artefak tetap online.
+- **Type:** Artifact index
+- **Field:** Cybersecurity
+- **What to look for:** Links to research artifacts from security conferences.
+- **How to use it:** Search by conference and year, or by paper; follow the artifact repository or archive.
+- **Limitation:** The index does not guarantee that every artifact stays online.
 
 #### [096] SIGMOD Reproducibility
 - **URL:** https://reproducibility.sigmod.org/
-- **Jenis:** Reproduksibilitas konferensi
-- **Bidang:** Database systems
-- **Yang dicari:** Artifacts, experiment scripts dan laporan reproduksibilitas.
-- **Cara pakai:** Cari paper SIGMOD; lihat artifact evaluation dan hasil reproduksi.
-- **Catatan:** Beberapa artefak memerlukan resource server besar.
+- **Type:** Conference reproducibility
+- **Field:** Database systems
+- **What to look for:** Artifacts, experiment scripts, and reproducibility reports.
+- **How to use it:** Find SIGMOD papers; look at the artifact evaluation and the reproduction results.
+- **Limitation:** Some artifacts require substantial server resources.
 
 #### [097] ICSE 2026 Artifact Evaluation
 - **URL:** https://conf.researchr.org/track/icse-2026/icse-2026-artifact-evaluation
-- **Jenis:** Program konferensi
-- **Bidang:** Software engineering
-- **Yang dicari:** Pedoman dan paper yang ikut evaluasi artefak ICSE.
-- **Cara pakai:** Temukan accepted artifacts lalu akses arsip paper terkait.
-- **Catatan:** Halaman program, tidak selalu direktori unduhan kode.
+- **Type:** Conference program
+- **Field:** Software engineering
+- **What to look for:** Guidelines and the papers taking part in ICSE artifact evaluation.
+- **How to use it:** Find accepted artifacts, then open the related paper archive.
+- **Limitation:** A program page, not always a downloadable code directory.
 
 #### [098] ISSTA 2026 Artifact Evaluation
 - **URL:** https://conf.researchr.org/track/issta-2026/issta-2026-artifact-evaluation
-- **Jenis:** Program konferensi
-- **Bidang:** Software testing
-- **Yang dicari:** Paket eksperimen static/dynamic analysis dan testing.
-- **Cara pakai:** Cari paper yang memiliki badge artefak lalu cek repo.
-- **Catatan:** Sebagian artefak punya batasan lisensi/perangkat.
+- **Type:** Conference program
+- **Field:** Software testing
+- **What to look for:** Experiment packages for static and dynamic analysis and testing.
+- **How to use it:** Search for papers that carry an artifact badge, then check the repo.
+- **Limitation:** Some artifacts come with license or hardware restrictions.
 
 #### [099] POPL 2026 Artifact Evaluation
 - **URL:** https://popl26.sigplan.org/track/POPL-2026-artifact-evaluation
-- **Jenis:** Program konferensi
-- **Bidang:** Programming languages
-- **Yang dicari:** Compiler, interpreter, proof artifacts dan implementasi riset.
-- **Cara pakai:** Telusuri paper POPL dan artifact appendix.
-- **Catatan:** Program evaluasi tidak sama dengan repositori kode terbuka.
+- **Type:** Conference program
+- **Field:** Programming languages
+- **What to look for:** Compilers, interpreters, proof artifacts, and research implementations.
+- **How to use it:** Browse POPL papers and their artifact appendices.
+- **Limitation:** An evaluation program is not the same thing as an open code repository.
 
 #### [100] PLDI 2026 Research Artifacts
 - **URL:** https://pldi26.sigplan.org/track/pldi-2026-pldi-research-artifacts
-- **Jenis:** Program konferensi
-- **Bidang:** Compiler/programming languages
-- **Yang dicari:** Kode eksperimen compiler, bahasa dan optimasi.
-- **Cara pakai:** Cari artifact badge; lihat container/VM/code yang dibagikan.
-- **Catatan:** Mungkin perlu toolchain lama/khusus.
+- **Type:** Conference program
+- **Field:** Compilers/programming languages
+- **What to look for:** Experiment code for compilers, languages, and optimization.
+- **How to use it:** Look for the artifact badge; inspect the shared container, VM, or code.
+- **Limitation:** May require an older or specialized toolchain.
 
 #### [101] ICFP 2026 Artifact Evaluation
 - **URL:** https://icfp26.sigplan.org/track/icfp-2026-artifact-evaluation
-- **Jenis:** Program konferensi
-- **Bidang:** Functional programming
-- **Yang dicari:** Implementasi bahasa fungsional dan bukti/eksperimen.
-- **Cara pakai:** Mulai dari accepted papers, cari link artifact.
-- **Catatan:** Kelengkapan tergantung penulis dan evaluasi.
+- **Type:** Conference program
+- **Field:** Functional programming
+- **What to look for:** Implementations of functional languages plus proofs or experiments.
+- **How to use it:** Start from accepted papers and look for the artifact link.
+- **Limitation:** Completeness depends on the authors and the evaluation.
 
 #### [102] EuroSys 2026 Artifacts
 - **URL:** https://sysartifacts.github.io/eurosys2026/index
-- **Jenis:** Program konferensi
-- **Bidang:** Distributed systems
-- **Yang dicari:** Artefak eksperimen sistem operasi/cloud/distribusi.
-- **Cara pakai:** Cari artikel dengan artifact badge; cek instruksi deployment.
-- **Catatan:** Resource cluster dan kernel khusus mungkin dibutuhkan.
+- **Type:** Conference program
+- **Field:** Distributed systems
+- **What to look for:** Experiment artifacts for operating systems, cloud, and distributed systems.
+- **How to use it:** Search for articles with an artifact badge; check the deployment instructions.
+- **Limitation:** Cluster resources and custom kernels may be required.
 
 #### [103] ACM CCS 2026 Artifacts
 - **URL:** https://www.sigsac.org/ccs/CCS2026/call-for/call-for-artifacts.html
-- **Jenis:** Program konferensi
-- **Bidang:** Cybersecurity
-- **Yang dicari:** Pedoman rilis dan penilaian artefak paper keamanan.
-- **Cara pakai:** Telusuri accepted papers yang menyerahkan artefak; cek GitHub/Zenodo.
-- **Catatan:** Tautan adalah call for artifacts, bukan daftar seluruh kode.
+- **Type:** Conference program
+- **Field:** Cybersecurity
+- **What to look for:** Guidelines for releasing and evaluating artifacts from security papers.
+- **How to use it:** Browse the accepted papers that submitted artifacts; check GitHub or Zenodo.
+- **Limitation:** The link is a call for artifacts, not a list of all the code.
 
 #### [104] ISCA 2026 Artifact Evaluation
 - **URL:** https://iscaconf.org/isca2026/submit/artifactevaluation.php
-- **Jenis:** Program konferensi
-- **Bidang:** Arsitektur komputer
-- **Yang dicari:** Artefak eksperimen hardware/compiler/performance.
-- **Cara pakai:** Cari accepted artifacts; baca petunjuk toolchain dan environment.
-- **Catatan:** Hardware khusus dapat membatasi reproduksibilitas.
+- **Type:** Conference program
+- **Field:** Computer architecture
+- **What to look for:** Artifacts from hardware, compiler, and performance experiments.
+- **How to use it:** Find accepted artifacts; read the toolchain and environment instructions.
+- **Limitation:** Specialized hardware can limit reproducibility.
 
-### J. Darts, Jurnal Software Dan Kurasi Kode Tambahan
+### J. DARTS, software journals, and further code curation
 
 #### [105] Dagstuhl Artifacts Series (DARTS)
 - **URL:** https://drops.dagstuhl.de/entities/journal/DARTS
-- **Jenis:** Jurnal artefak
-- **Bidang:** Computer science
-- **Yang dicari:** Publikasi artefak berupa kode, VM, dataset dan scripts.
-- **Cara pakai:** Cari paper terkait; unduh artifact package dan baca README evaluasi.
-- **Catatan:** Beberapa paket besar atau bergantung tool khusus.
+- **Type:** Artifact journal
+- **Field:** Computer science
+- **What to look for:** Artifact publications: code, VMs, datasets, and scripts.
+- **How to use it:** Find the related paper, download the artifact package, and read the evaluation README.
+- **Limitation:** Some packages are large or depend on specialized tooling.
 
-### K. Arsip Algoritma Dan Model Komputasi
+### K. Algorithm and computational model archives
 
 #### [119] CERN REANA
 - **URL:** https://github.com/reanahub/reana
-- **Jenis:** Framework
-- **Bidang:** Reproduksibilitas HEP
-- **Yang dicari:** Platform eksekusi computational workflows reproducible.
-- **Cara pakai:** Pelajari orchestrator; cari contoh analisis yang dapat dibangun ulang.
-- **Catatan:** Ini infrastruktur, bukan database seluruh paper.
+- **Type:** Framework
+- **Field:** HEP reproducibility
+- **What to look for:** A platform for running reproducible computational workflows.
+- **How to use it:** Learn the orchestrator; look for analysis examples you can rebuild.
+- **Limitation:** This is infrastructure, not a database of every paper.
 
-### L. Knowledge Graph Paper-Ke-Repository
+### L. Paper-to-repository knowledge graphs
 
 #### [124] Wizwand
 - **URL:** https://www.wizwand.com/
-- **Jenis:** Discovery benchmark
-- **Bidang:** Machine learning
-- **Yang dicari:** Indeks paper, benchmark dan state-of-the-art terkait.
-- **Cara pakai:** Cari task/model lalu ikuti paper maupun code links jika ada.
-- **Catatan:** Periksa apakah halaman dan data aktif/terbarui.
-- **Koreksi:** 2026-10-12: wizwand.com sekarang mengalihkan (redirect) ke sota2.com/research — kemungkinan rebranding. URL masih berfungsi sebagai pintu masuk.
+- **Type:** Benchmark discovery
+- **Field:** Machine learning
+- **What to look for:** An index of papers, benchmarks, and related state-of-the-art results.
+- **How to use it:** Search a task or model, then follow the paper and code links if present.
+- **Limitation:** Check whether the pages and data are still live and up to date.
+- **Correction:** 2026-10-12: wizwand.com now redirects to sota2.com/research, possibly a rebrand. The URL still works as an entry point.
 
-### N. Sumber Dari Awal Percakapan Yang Belum Tercantum Dan Penanda Duplikat
+### N. Earlier sources plus duplicate markers
 
 #### [135] HyperAI Papers
 - **URL:** https://hyper.ai/en/papers
-- **Jenis:** Paper/benchmark discovery
-- **Bidang:** AI dan ML
-- **Yang dicari:** Artikel dan metadata model/benchmark terkait AI.
-- **Cara pakai:** Cari metode atau topik; lanjut ke paper dan resource kode.
-- **Catatan:** Periksa tautan aktif serta tanggal pembaruan.
+- **Type:** Paper/benchmark discovery
+- **Field:** AI and ML
+- **What to look for:** Articles and metadata for AI-related models and benchmarks.
+- **How to use it:** Search by method or topic; continue to the paper and its code resources.
+- **Limitation:** Check that the links are live and note the update dates.
 
 #### [137] CodeSOTA
 - **URL:** https://www.codesota.com/
-- **Jenis:** Paper/benchmark discovery
-- **Bidang:** Machine learning
-- **Yang dicari:** Penelusuran model, hasil benchmark dan implementasi jika tersedia.
-- **Cara pakai:** Cari task/model, telusuri referensi paper dan code links.
-- **Catatan:** Perlu mengecek status situs dan kebaruan leaderboard.
+- **Type:** Paper and benchmark discovery
+- **Field:** Machine learning
+- **What to look for:** Model search, benchmark results, and implementations where available.
+- **How to use it:** Search a task or model, then follow the paper references and code links.
+- **Limitation:** Check whether the site is still maintained and the leaderboard current.
 
-### N. Workflow, Kode Penelitian, Dan Direktori Model
+### N. Workflows, research code, and model directories
 
 #### [141] WorkflowHub
 - **URL:** https://workflowhub.eu/
-- **Jenis:** Workflow registry
-- **Bidang:** Bioinformatika, komputasi lintas disiplin
-- **Yang dicari:** Workflow ilmiah, file alur kerja, metadata penulis dan tautan publikasi.
-- **Cara pakai:** Cari judul metode atau keyword; buka workflow dan periksa file serta referensi paper.
-- **Catatan:** Tidak semua workflow mencakup dataset penuh; format engine bervariasi.
+- **Type:** Workflow registry
+- **Field:** Bioinformatics, cross-disciplinary computing
+- **What to look for:** Scientific workflows, workflow files, author metadata, and publication links.
+- **How to use it:** Search the method title or a keyword, then open the workflow and check its files and paper references.
+- **Limitation:** Not every workflow ships a full dataset, and engine formats vary.
 
 #### [142] Dockstore
 - **URL:** https://dockstore.org/
-- **Jenis:** Workflow registry
-- **Bidang:** Bioinformatika dan komputasi reproducible
-- **Yang dicari:** Workflow containerized dan deskriptor CWL/WDL/Nextflow/Galaxy terkait penelitian.
-- **Cara pakai:** Cari workflow dan lihat source repository, container image, test files dan versinya.
-- **Catatan:** Menjalankan workflow dapat memerlukan compute/cloud, container, atau akses data.
+- **Type:** Workflow registry
+- **Field:** Bioinformatics and reproducible computing
+- **What to look for:** Containerized workflows and CWL, WDL, Nextflow, or Galaxy descriptors tied to research.
+- **How to use it:** Search for a workflow and check its source repository, container image, test files, and version.
+- **Limitation:** Running a workflow may require compute or cloud resources, containers, or data access.
 
 #### [148] BioImage Model Zoo
 - **URL:** https://bioimage.io/
-- **Jenis:** Model zoo
-- **Bidang:** Bioimaging, microscopy AI
-- **Yang dicari:** Model DL biomedis, format model, contoh penggunaan, weights dan referensi paper.
-- **Cara pakai:** Cari task/model, buka resource dan identifikasi implementation atau notebook.
-- **Catatan:** Model weights tidak sama dengan source training code; validasi tiap item.
+- **Type:** Model zoo
+- **Field:** Bioimaging, microscopy AI
+- **What to look for:** Biomedical DL models, model formats, usage examples, weights, and paper references.
+- **How to use it:** Search a task or model, open the resource, and identify the implementation or notebook.
+- **Limitation:** Model weights are not the same as source training code; validate each item.
 
-### O. Algoritma, Jurnal Software, Dan Reproducibility
+### O. Algorithms, software journals, and reproducibility
 
 #### [152] Graphics Replicability Stamp Initiative (GRSI)
 - **URL:** https://www.replicabilitystamp.org/
-- **Jenis:** Inisiatif penilaian artefak
-- **Bidang:** Computer graphics, visualization
-- **Yang dicari:** Paper yang memperoleh penilaian replicability beserta link kode dan data.
-- **Cara pakai:** Pilih tahun/paper bersertifikasi; periksa material dan petunjuk reproduksi.
-- **Catatan:** Penilaian mengikuti protokol GRSI, bukan jaminan eksperimen mudah dijalankan.
+- **Type:** Artifact evaluation initiative
+- **Field:** Computer graphics, visualization
+- **What to look for:** Papers that earned a replicability rating, along with their code and data links.
+- **How to use it:** Pick a year and a certified paper; inspect the materials and the reproduction instructions.
+- **Limitation:** The rating follows the GRSI protocol; it is not a guarantee that the experiments run easily.
 
-### Q. Jurnal, Benchmark Ml, Dan Kode Paper
+### Q. Journals, ML benchmarks, and paper code
 
 #### [169] Open Graph Benchmark (OGB)
 - **URL:** https://ogb.stanford.edu/
-- **Jenis:** Benchmark + evaluator
-- **Bidang:** Graph machine learning
-- **Yang dicari:** Dataset graph, baseline, data loader, evaluators dan leaderboard.
-- **Cara pakai:** Pilih graph/node/link task; lihat baseline scripts dan evaluasi resmi.
-- **Catatan:** Benchmark bukan satu implementasi spesifik semua paper GNN.
+- **Type:** Benchmark and evaluator
+- **Field:** Graph machine learning
+- **What to look for:** Graph datasets, baselines, data loaders, evaluators, and leaderboards.
+- **How to use it:** Pick a graph, node, or link task, then run the baseline scripts and the official evaluation.
+- **Limitation:** A benchmark, not one specific implementation of every GNN paper.
 
 #### [170] NeurIPS 2026 Evaluations & Datasets Track
 - **URL:** https://neurips.cc/Conferences/2026/CallForEvaluationsDatasets
-- **Jenis:** Venue paper benchmark
-- **Bidang:** Machine learning evaluation
-- **Yang dicari:** Paper dataset/evaluation 2026 dan aturan keterbukaan code/dataset untuk camera-ready.
-- **Cara pakai:** Cari paper penerimaan melalui proceedings/OpenReview; cek supplementary dan source.
-- **Catatan:** Link ini halaman track/call, bukan katalog unduhan paper langsung.
+- **Type:** Benchmark paper venue
+- **Field:** Machine learning evaluation
+- **What to look for:** 2026 dataset and evaluation papers, plus the code and dataset disclosure rules for camera-ready versions.
+- **How to use it:** Find accepted papers through the proceedings or OpenReview; check the supplementary material and the source.
+- **Limitation:** This link is the track or call page, not a direct paper download catalog.
 
 #### [171] NLP Progress
 - **URL:** https://nlpprogress.com/
-- **Jenis:** Indeks benchmark
-- **Bidang:** Natural language processing
-- **Yang dicari:** Daftar task NLP, benchmark, metode, publikasi serta link kode jika tersedia.
-- **Cara pakai:** Pilih NLP task; telusuri kolom Code dan paper untuk implementasi resmi.
-- **Catatan:** Maintenance tidak selalu terbaru; sebagian task tidak memiliki code link.
+- **Type:** Benchmark index
+- **Field:** Natural language processing
+- **What to look for:** A list of NLP tasks, benchmarks, methods, and publications, with code links where available.
+- **How to use it:** Pick an NLP task; check the Code column and the paper for the official implementation.
+- **Limitation:** Maintenance is not always current, and some tasks have no code link.
 
 #### [172] Time Series Classification Website
 - **URL:** https://www.timeseriesclassification.com/
-- **Jenis:** Benchmark dan kode
-- **Bidang:** Time series ML
-- **Yang dicari:** Arsip UCR/UEA, hasil benchmark, tautan toolkit aeon/tsml dan baseline.
-- **Cara pakai:** Pilih classification/clustering/regression, bandingkan paper dengan hasil dan kode.
-- **Catatan:** Dataset/baseline berasal dari berbagai tahun; cocokkan split/protokol.
+- **Type:** Benchmark and code
+- **Field:** Time series ML
+- **What to look for:** The UCR/UEA archive, benchmark results, and links to the aeon/tsml toolkits and baselines.
+- **How to use it:** Pick classification, clustering, or regression, then compare the paper against the results and code.
+- **Limitation:** Datasets and baselines come from different years; match the split and protocol.
 
-### R. Implementasi Deep Learning Dan Nlp
+### R. Deep learning and NLP implementations
 
 #### [179] MMDetection
 - **URL:** https://github.com/open-mmlab/mmdetection
-- **Jenis:** Model zoo dan framework
-- **Bidang:** Object detection, segmentation
-- **Yang dicari:** Kode arsitektur paper, config training, weights, benchmark COCO dan evaluasi.
-- **Cara pakai:** Cari nama model di model zoo, cek README paper dan jalankan config baseline.
-- **Catatan:** Bagian dari OpenMMLab [64]; berbeda titik masuk dari daftar organisasi.
+- **Type:** Model zoo and framework
+- **Field:** Object detection, segmentation
+- **What to look for:** Paper architecture code, training configs, weights, COCO benchmarks, and evaluation.
+- **How to use it:** Find the model name in the model zoo, check the paper's README, and run the baseline config.
+- **Limitation:** Part of OpenMMLab [64]; it has a different entry point from the organization list.
 
 #### [182] EleutherAI Language Model Evaluation Harness
 - **URL:** https://github.com/EleutherAI/lm-evaluation-harness
-- **Jenis:** Benchmark evaluation code
-- **Bidang:** LLM, NLP
-- **Yang dicari:** Framework benchmark, task configs, evaluators dan sitasi hasil eksperimen.
-- **Cara pakai:** Cari benchmark yang digunakan dalam paper; cocokkan few-shot setup/metric/model.
-- **Catatan:** Tool evaluasi, bukan implementasi training semua LLM.
+- **Type:** Benchmark evaluation code
+- **Field:** LLM, NLP
+- **What to look for:** Benchmark frameworks, task configs, evaluators, and citations for experiment results.
+- **How to use it:** Find the benchmark used in the paper; match the few-shot setup, metric, and model.
+- **Limitation:** An evaluation tool, not a training implementation for every LLM.
 
-### S. Materials Science, Energy, Dan Research Software
+### S. Materials science, energy, and research software
 
 #### [183] Open Catalyst Project
 - **URL:** https://opencatalystproject.org/
-- **Jenis:** Benchmark+source
-- **Bidang:** AI for materials, catalysis
-- **Yang dicari:** Dataset OC20/OC22, baseline ML, open-source code, leaderboard dan paper.
-- **Cara pakai:** Buka dataset paper, lalu GitHub baseline dan dokumentasi metrik eksperimen.
-- **Catatan:** Dataset besar, memerlukan compute/storage tinggi.
+- **Type:** Benchmark+source
+- **Field:** AI for materials, catalysis
+- **What to look for:** The OC20/OC22 datasets, ML baselines, open-source code, leaderboards, and papers.
+- **How to use it:** Open the dataset paper, then the baseline GitHub repo and the documentation of the experiment metrics.
+- **Limitation:** Large datasets that require substantial compute and storage.
 
 #### [184] Matbench
 - **URL:** https://github.com/materialsproject/matbench
-- **Jenis:** Benchmark source code
-- **Bidang:** ML for materials
-- **Yang dicari:** Tugas prediksi properti bahan, kode dataset loader, benchmark dan paper.
-- **Cara pakai:** Buka source/documentation, jalankan baseline dan bandingkan leaderboard.
-- **Catatan:** Fokus sifat material; split dan metrik harus mengikuti benchmark.
+- **Type:** Source code benchmark
+- **Field:** ML for materials
+- **What to look for:** Material property prediction tasks, dataset loader code, benchmarks, and papers.
+- **How to use it:** Open the source and documentation, run the baseline, and compare against the leaderboard.
+- **Limitation:** Focused on material properties; the splits and metrics must follow the benchmark.
 
-### T. Benchmark, Dataset, Dan Implementasi Risetpaper
+### T. Benchmarks, datasets, and paper implementation research
 
 #### [190] MLCommons DataPerf
 - **URL:** https://github.com/mlcommons/dataperf
-- **Jenis:** Benchmark kode
-- **Bidang:** Data-centric machine learning
-- **Yang dicari:** Task benchmark, kode baseline dan evaluasi pengembangan dataset.
-- **Cara pakai:** Buka challenge atau paper DataPerf; jalankan reference baseline dan evaluator.
-- **Catatan:** Implementasi spesifik challenge, bukan source code paper untuk semua bidang.
+- **Type:** Code benchmark
+- **Field:** Data-centric machine learning
+- **What to look for:** Benchmark tasks, baseline code, and dataset development evaluation.
+- **How to use it:** Open the challenge or the DataPerf paper; run the reference baseline and the evaluator.
+- **Limitation:** Challenge-specific implementations, not paper source code for every field.
 
 #### [192] Monash Time Series Forecasting Archive
 - **URL:** https://forecastingdata.org/
-- **Jenis:** Benchmark forecasting
-- **Bidang:** Forecasting, time series
-- **Yang dicari:** Dataset forecasting, kode pembaca R/Python, baseline, evaluasi dan paper NeurIPS terkait.
-- **Cara pakai:** Buka tab Results atau Software/GitHub pada situs resminya; cocokkan horizon dan metrik.
-- **Catatan:** Kekuatan utamanya dataset dan metadata, bukan semua script model paper.
+- **Type:** Forecasting benchmark
+- **Field:** Forecasting, time series
+- **What to look for:** Forecasting datasets, R/Python reader code, baselines, evaluation, and related NeurIPS papers.
+- **How to use it:** Open the Results or Software/GitHub tab on the official site; match the horizon and metric.
+- **Limitation:** Its main strength is datasets and metadata, not every model script from the papers.
 
 #### [197] Numenta Anomaly Benchmark (NAB)
 - **URL:** https://github.com/numenta/NAB
-- **Jenis:** Benchmark + source
-- **Bidang:** Time-series anomaly detection
-- **Yang dicari:** Dataset deret waktu berlabel, scoring, runner, baseline, publikasi terkait.
-- **Cara pakai:** Klon repository, jalankan evaluasi detector dan bandingkan skor dengan paper.
-- **Catatan:** Versi lama; perlu penyesuaian lingkungan Python dan metrik benchmark.
+- **Type:** Benchmark and source
+- **Field:** Time-series anomaly detection
+- **What to look for:** Labelled time-series datasets, scoring, a runner, baselines, and the related publication.
+- **How to use it:** Clone the repository, run the detector evaluation, and compare the scores against the paper.
+- **Limitation:** An older release, so expect to adjust the Python environment and the benchmark metrics.
 
 #### [200] TimeEval Research Benchmark
 - **URL:** https://github.com/TimeEval/TimeEval
-- **Jenis:** Benchmark reproducibility
-- **Bidang:** Time-series anomaly detection
-- **Yang dicari:** Toolkit evaluasi, ratusan dataset, algoritma containerized dan link paper PVLDB.
-- **Cara pakai:** Gunakan TimeEval algorithms/benchmark manager; replikasi protokol dalam paper.
-- **Catatan:** Docker dan Linux/WSL dapat diperlukan; cek versi runtime.
+- **Type:** Reproducibility benchmark
+- **Field:** Time-series anomaly detection
+- **What to look for:** An evaluation toolkit, hundreds of datasets, containerized algorithms, and PVLDB paper links.
+- **How to use it:** Use the TimeEval algorithms and benchmark manager; replicate the protocol from the paper.
+- **Limitation:** Docker and Linux/WSL may be required; check the runtime version.
 
 
-<a id="06-agents"></a>
-## Untuk AI Agent & Otomasi — 9 sumber
+<a id="05-agents"></a>
+## For agents and automation (9 sources)
 
-Endpoint API dan metadata terstruktur untuk pencarian otomatis.
+API endpoints and structured metadata for automated search.
 
-### C. Mesin Pencari Paper Yang Dapat Ditelusuri Ke Kode
+### C. Paper search engines you can trace back to code
 
 #### [043] OpenAlex
 - **URL:** https://openalex.org/
-- **Jenis:** Metadata/API
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Indeks paper, DOI, topik, institusi dan relasi sitasi.
-- **Cara pakai:** Gunakan web/API untuk temukan karya, lalu enrich dengan GitHub/Zenodo.
-- **Catatan:** Tidak khusus mengindeks repository kode secara lengkap.
+- **Type:** Metadata/API
+- **Field:** Cross-disciplinary
+- **What to look for:** An index of papers, DOIs, topics, institutions, and citation relations.
+- **How to use it:** Use the web interface or API to find works, then enrich them with GitHub or Zenodo.
+- **Limitation:** It does not specifically provide a complete index of code repositories.
 
-### L. Knowledge Graph Paper-Ke-Repository
+### L. Paper-to-repository knowledge graphs
 
 #### [121] Linked Papers With Code
 - **URL:** https://linkedpaperswithcode.com/
-- **Jenis:** Knowledge graph
-- **Bidang:** Machine learning
-- **Yang dicari:** Relasi paper, metode, dataset dan tautan kode dari data PWC.
-- **Cara pakai:** Cari judul/metode, ikuti entri repo dan dataset.
-- **Catatan:** Sebagian sumber bersifat historis; periksa tanggal refresh.
+- **Type:** Knowledge graph
+- **Field:** Machine learning
+- **What to look for:** Relations among papers, methods, datasets, and code links drawn from PWC data.
+- **How to use it:** Search the title or method and follow the repository and dataset entries.
+- **Limitation:** Some sources are historical; check the refresh date.
 
 #### [122] SemRepo
 - **URL:** https://semrepo.org/
-- **Jenis:** Knowledge graph
-- **Bidang:** Research software
-- **Yang dicari:** Metadata repository ilmiah dan relasi publikasinya.
-- **Cara pakai:** Cari repo/paper; eksplorasi graph, dependensi dan link code.
-- **Catatan:** Perlu validasi cakupan serta pembaruan snapshot.
+- **Type:** Knowledge graph
+- **Field:** Research software
+- **What to look for:** Metadata on scholarly repositories and their links to publications.
+- **How to use it:** Search for a repo or paper; explore the graph, dependencies, and code links.
+- **Limitation:** Coverage and snapshot freshness need validation.
 
-### O. Algoritma, Jurnal Software, Dan Reproducibility
+### O. Algorithms, software journals, and reproducibility
 
 #### [151] zbMATH Open (swMATH records)
 - **URL:** https://zbmath.org/
-- **Jenis:** Indeks software matematis
-- **Bidang:** Matematika komputasional
-- **Yang dicari:** Hubungan software matematika dengan sitasi dan literatur ilmiah.
-- **Cara pakai:** Cari nama software atau algoritma; ikuti metadata dan referensi implementasi.
-- **Catatan:** Indeks bibliografi; perlu menelusuri situs publisher atau repository terpisah.
+- **Type:** Mathematical software index
+- **Field:** Computational mathematics
+- **What to look for:** Links between mathematical software and its citations and scholarly literature.
+- **How to use it:** Search by software or algorithm name; follow the metadata and the implementation references.
+- **Limitation:** A bibliographic index; you still have to track down the publisher site or a separate repository.
 
-### P. Repositori Akademik Dan Jaringan Data
+### P. Academic repositories and data networks
 
 #### [162] DataCite Commons
 - **URL:** https://commons.datacite.org/
-- **Jenis:** Pencarian DOI/metadata
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Relasi DOI antara publikasi, dataset, software dan contributor.
-- **Cara pakai:** Cari judul/DOI paper; telusuri related identifiers terutama software/data.
-- **Catatan:** Metadata bukan file kode; perlu mengunjungi repository tujuan.
+- **Type:** DOI/metadata search
+- **Field:** Cross-disciplinary
+- **What to look for:** DOI relationships between publications, datasets, software, and contributors.
+- **How to use it:** Search by paper title or DOI; follow the related identifiers, especially software and data.
+- **Limitation:** Metadata is not the code file; you still need to visit the target repository.
 
 #### [163] re3data
 - **URL:** https://www.re3data.org/
-- **Jenis:** Direktori repositori
-- **Bidang:** Lintas disiplin
-- **Yang dicari:** Katalog repository ilmiah dengan informasi tipe, akses, dan kebijakan.
-- **Cara pakai:** Filter disiplin atau content type, temukan repository baru yang menerima software.
-- **Catatan:** Direktori platform, bukan tempat unduh software langsung.
+- **Type:** Repository directory
+- **Field:** Cross-disciplinary
+- **What to look for:** A catalog of scholarly repositories with information on type, access, and policy.
+- **How to use it:** Filter by discipline or content type to find new repositories that accept software.
+- **Limitation:** A directory of platforms, not a place to download software directly.
 
 #### [164] FAIRsharing
 - **URL:** https://fairsharing.org/
-- **Jenis:** Registry data/standar
-- **Bidang:** Life sciences, lintas disiplin
-- **Yang dicari:** Database riset, metadata standar dan kebijakan repositori.
-- **Cara pakai:** Cari bidang atau metode; pilih database terhubung lalu cek resources.
-- **Catatan:** Biasanya tidak mengindeks source code paper secara langsung.
+- **Type:** Data/standards registry
+- **Field:** Life sciences, cross-disciplinary
+- **What to look for:** Research databases, metadata standards, and repository policies.
+- **How to use it:** Search a field or method; pick a linked database, then check its resources.
+- **Limitation:** Usually does not index paper source code directly.
 
 #### [165] DataLad Public Dataset Registry
 - **URL:** https://github.com/datalad/datasets.datalad.org
-- **Jenis:** Registry dataset berversi
-- **Bidang:** Neuroinformatics dan ilmu komputasi
-- **Yang dicari:** Koleksi dataset versioned dengan provenance dan pointer penyimpanan.
-- **Cara pakai:** Cari dataset dan periksa README/data access; cocokkan dengan implementasi paper.
-- **Catatan:** Fokus manajemen data; tidak semua dataset memiliki script publikasi.
+- **Type:** Versioned dataset registry
+- **Field:** Neuroinformatics and computational science
+- **What to look for:** Versioned dataset collections with provenance and storage pointers.
+- **How to use it:** Find a dataset, read the README and access notes, then match it to the paper implementation.
+- **Limitation:** Focused on data management, and not every dataset ships the publication scripts.
 
-### T. Benchmark, Dataset, Dan Implementasi Risetpaper
+### T. Benchmarks, datasets, and paper implementation research
 
 #### [199] Deep Graph Library (DGL) Examples
 - **URL:** https://github.com/dmlc/dgl/tree/master/examples
-- **Jenis:** Koleksi kode paper GNN
-- **Bidang:** Graph ML, knowledge graphs
-- **Yang dicari:** Contoh implementasi paper GNN termasuk traffic forecasting, link prediction dan node classification.
-- **Cara pakai:** Cari daftar Official DGL Examples; buka paper link dan jalankan contoh terkait.
-- **Catatan:** DGL menandai beberapa example kompatibel hanya dengan versi tertentu.
+- **Type:** GNN paper code collection
+- **Field:** Graph ML, knowledge graphs
+- **What to look for:** Example implementations of GNN papers, including traffic forecasting, link prediction, and node classification.
+- **How to use it:** Find the Official DGL Examples list; open the paper link and run the relevant example.
+- **Limitation:** DGL notes that some examples are compatible only with specific versions.
