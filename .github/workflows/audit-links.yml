@@ -1,0 +1,72 @@
+name: audit-links
+
+# Re-checks every URL in data/sources.json so the directory does not rot.
+# Opens/updates a single issue with the summary instead of committing noise.
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"   # every Monday 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run liveness audit
+        run: python3 scripts/audit_links.py --workers 24 --timeout 15
+
+      - name: Commit refreshed audit
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sources.json audit/liveness.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore(audit): weekly liveness re-check"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summarise counts
+        id: summary
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          d = json.load(open("data/sources.json"))
+          c = d.get("audit", {}).get("counts", {})
+          print("counts=" + ", ".join(f"{k}={v}" for k, v in c.items()))
+          print("when=" + d.get("audit", {}).get("checked_at", "?"))
+          PY
+
+      - name: Open or update tracking issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Weekly link audit"
+          BODY="Automated liveness re-check.
+
+          - Checked at: ${{ steps.summary.outputs.when }}
+          - Counts: ${{ steps.summary.outputs.counts }}
+
+          Full report: [\`audit/liveness.md\`](../blob/main/audit/liveness.md).
+
+          Note: \`bot_walled\` means the site blocks scripts (normal in a browser), not that it is dead."
+          ID=$(gh issue list --label audit --state open --json number --jq '.[0].number // empty')
+          if [ -z "$ID" ]; then
+            gh label create audit --color FBCA04 --description "Automated link audit" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label audit --body "$BODY"
+          else
+            gh issue comment "$ID" --body "$BODY"
+          fi

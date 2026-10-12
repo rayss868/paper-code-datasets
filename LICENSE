@@ -1,0 +1,24 @@
+# CC0 1.0 Universal — Public Domain Dedication
+
+The compilation, structure, descriptions, and data files in this repository
+are dedicated to the public domain under the Creative Commons CC0 1.0
+Universal dedication.
+
+To the extent possible under law, the contributors have waived all copyright
+and related or neighboring rights to this work.
+
+You can copy, modify, distribute and perform the work, even for commercial
+purposes, all without asking permission.
+
+Full text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+---
+
+## Scope note
+
+This dedication covers **this compilation only** — the selection, arrangement,
+and descriptive text, plus `data/sources.json` and `data/sources.csv`.
+
+Third-party sites and repositories linked from here remain under their own
+licenses and terms. Linking to a resource does not transfer any rights over
+it, and this repository claims none.

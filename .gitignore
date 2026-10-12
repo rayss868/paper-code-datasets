@@ -1,0 +1,12 @@
+# scratch
+*~
+.DS_Store
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# audit scratch output
+audit/_tmp*
