@@ -139,7 +139,7 @@ Three things, and they matter more than the count.
 
 **It is sorted by what you are trying to do.** The original compilation grouped sources into alphabetical sections A through T, which served whoever assembled it rather than the reader. Here every entry carries one of sixteen categories and one of five workflow stages, so a concrete question ("where is the code for this paper?") points at one slice instead of the whole list. The original group letter survives on each entry as a provenance trace, because rearranging someone else's list should be visible, not hidden.
 
-**The links were actually checked.** A script probes all 200 and classifies every one, the results carry a date, and a GitHub Action repeats the run every Monday so the directory does not quietly rot. "These links work" is not a promise here, it is a build artifact you can reproduce.
+**The links were actually checked.** A script probes all 200 and classifies every one, and the result is published with the date it was taken. "These links work" is not a promise here, it is a dated measurement you can repeat yourself.
 
 **The content is data, not prose.** Everything on this page exists in `data/sources.json` in a form you can filter, join, or feed to a tool. The markdown is a rendering of the data, not a separate copy of it, so the two cannot drift apart.
 
