@@ -1,26 +1,110 @@
 # Paper, code, data, reproduction
 
-A directory of **200 sources** for the work that sits between "I found an interesting paper" and "I have its implementation running on my machine."
+**200 sources** for the work between "I found an interesting paper" and "I have its implementation running."
 
-Finding the paper is the easy part. Finding the code the authors actually wrote, the dataset they trained it on, the environment that makes the numbers come out the same, and a citation for each of those as a separate object, that is where the hours go. This repo collects the places that shorten the search.
+Most directories like this hand you a wall of links and wish you luck. This one is built so you can see the inside before you click anything: every source has a category, a field, tags, and a checked status, and all of it is queryable.
 
 ```
 find the paper  →  find the code  →  find the data  →  reproduce  →  automate
       01               02                03               04           05
 ```
 
-## What is different here
+## What is inside
 
-Three things, and they matter more than the size of the list.
+| Kind of source | Count | What it gives you |
+|---|---:|---|
+| Software directory | 24 | Broad software catalogs and indexes |
+| Benchmark & leaderboard | 23 | Baselines, evaluation harnesses, leaderboards |
+| Dataset repository | 21 | Datasets with DOIs and citable metadata |
+| Model & algorithm repository | 19 | Model zoos, simulation models, classic algorithms |
+| Software journal | 14 | Papers where the code *is* the publication |
+| Artifact evaluation | 14 | Artifacts an independent reviewer actually ran |
+| Paper discovery | 13 | Preprints, proceedings, citation graphs |
+| Proceedings & publisher | 11 | Venue archives and publisher platforms |
+| Reproducibility platform | 10 | Code, data, and environment packaged together |
+| Paper-to-code lookup | 10 | Paste a paper, get a repository |
+| Lab & organization repository | 10 | Official code from research groups |
+| Curated list | 9 | Community-maintained paper-with-code collections |
+| Metadata & knowledge graph | 8 | APIs and graphs for automated search |
+| Package index | 7 | Package registries across languages |
+| Code search & hosting | 5 | Where the code physically lives |
+| Workflow registry | 2 | Scientific pipelines as reusable artifacts |
 
-1. **It is sorted by what you are trying to do.** The original compilation grouped sources into alphabetical sections A through T. That grouping served whoever assembled it, not the reader. Here everything sits in five workflow stages, so a concrete question ("where is the code for this paper?") points at one section instead of the whole list.
-2. **The links were actually checked.** [`scripts/audit_links.py`](scripts/audit_links.py) probes all 200 URLs and classifies each one. The results carry a date and live in [`audit/liveness.md`](audit/liveness.md). Anyone can rerun it and get the same picture, and a GitHub Action does exactly that every Monday so the list does not quietly rot.
-3. **The content is data, not just prose.** [`data/sources.json`](data/sources.json) and the CSV beside it hold everything the markdown pages hold, plus audit fields, so you can filter it, load it into another tool, or hand it to an agent. A list you cannot query is a list you read once and forget.
+Tagged across fields, with counts: `code` 172, `dataset` 82, `ml` 46, `open science` 41, `benchmark` 39, `api` 34, `materials` 34, `biomedical` 31, `doi` 21, `earth` 21, `licence` 14, `physics` 9, `security` 9, `social` 7.
+
+Filter it yourself:
+
+```bash
+# Everything tagged security, still alive
+jq -r '.entries[] | select(.tags | index("security")) | select(.status=="alive") | "\(.id)\t\(.name)"' data/sources.json
+
+# Benchmark sources in machine learning
+jq -r '.entries[] | select(.kategori=="Benchmark & leaderboard") | select(.tags | index("ml")) | .name' data/sources.json
+
+# Anything where an artifact was independently evaluated
+jq -r '.entries[] | select(.kategori=="Artifact evaluation") | .name' data/sources.json
+```
+
+## Sources worth opening first
+
+**When you want code that was reviewed as code.** Software journals put the implementation at the centre of the publication, so the repository link is on the article page by construction.
+
+| Source | Why |
+|---|---|
+| [Journal of Open Source Software](https://joss.theoj.org/papers) | Software articles with DOIs and linked repositories |
+| [Journal of Statistical Software](https://www.jstatsoft.org/) | Paper, package, and replication scripts on one page |
+| [IPOL](https://www.ipol.im/) | Algorithm articles that must ship runnable code and a demo |
+| [SciPost Physics Codebases](https://scipost.org/journals/SciPostPhysCodeb) | Each codebase gets its own DOI, separate from the article |
+
+**When you need to trust the numbers.** Artifact evaluation means someone independent built and ran the thing, which is a stronger signal than a promising README.
+
+| Source | Why |
+|---|---|
+| [DARTS](https://drops.dagstuhl.de/entities/journal/DARTS) | Reviewed artifacts published as first-class objects, with DOIs |
+| [Security Research Artifacts](https://secartifacts.github.io/) | Cross-conference index of security artifacts |
+| [SIGMOD Reproducibility](https://reproducibility.sigmod.org/) | Database papers with experiment scripts and reproduction reports |
+| [ReScience C](https://rescience.github.io/read/) | Published replications, including the ones that failed |
+
+**When you have a paper title and want the repository in one move.**
+
+| Source | Why |
+|---|---|
+| [CatalyzeX](https://www.catalyzex.com/) | Paste a title, get a code link |
+| [Linked Papers With Code](https://linkedpaperswithcode.com/) | Historical paper to repository relations |
+| [Papers With Code data archive](https://github.com/paperswithcode/paperswithcode-data) | The site died in July 2025, the dump did not, and it queries in bulk |
+| [Code Ocean Capsules](https://codeocean.com/explore/capsules/) | Code plus the environment that runs it |
+
+**When the data is the hard part.**
+
+| Source | Why |
+|---|---|
+| [Harvard Dataverse](https://dataverse.harvard.edu/) | Datasets with DOIs, citable as research output |
+| [Zenodo](https://zenodo.org/) | Filter to Software for citable code releases |
+| [PANGAEA](https://www.pangaea.de/) | Earth and environmental data with strong metadata |
+| [CERN Open Data](https://opendata.cern.ch/) | Physics data with worked analysis examples |
+
+**When you want to search a thousand papers instead of five.**
+
+| Source | Why |
+|---|---|
+| [OpenAlex](https://openalex.org/) | Full bibliographic API, cross-disciplinary |
+| [SemRepo](https://semrepo.org/) | SPARQL over a graph of research repositories |
+| [DataCite Commons](https://commons.datacite.org/) | Resolves the DOI links between papers, software, and data |
+| [re3data](https://www.re3data.org/) | Find repositories you did not know existed |
+
+**When you want to see an algorithm rather than read it.** These archives keep the implementations that predate GitHub.
+
+| Source | Why |
+|---|---|
+| [ACM Collected Algorithms](https://www.netlib.org/toms/) | Numerical algorithms tied to ACM TOMS articles |
+| [ModelDB](https://modeldb.science/) | Neuron and network models behind published papers |
+| [ASCL](https://ascl.net/) | Astronomy code cited directly in the literature |
+| [CoMSES](https://www.comses.net/codebases/) | Agent-based models, peer reviewed |
 
 ## Audit status
 
 <!-- AUDIT-TABLE-START -->
-**Last audit: 2026-10-12.** All 200 URLs probed by `scripts/audit_links.py`, 15s timeout, 24 workers.
+**Last audit: 2026-10-12.** All 200 URLs probed by [`scripts/audit_links.py`](scripts/audit_links.py), 15s timeout, 24 workers.
 
 | Status | Count | Meaning |
 |---|---:|---|
@@ -38,6 +122,8 @@ Read that table with two things in mind, because the raw counts mislead on their
 
 **Four links were corrected** once the probe found them broken. Each fix is recorded in the `correction` field of `data/sources.json` instead of being silently swapped, so you can see what changed and when. Bioconductor and CSDMS had both moved to new paths, Wizwand now redirects to sota2.com, and the MICCAI open access index moved within miccai.org. Separately, `paperswithcode.com` redirects to Hugging Face, which confirms Meta shut the site down in July 2025; use the archived dataset (entry 138) rather than the old portal.
 
+Five categories came back completely green, which is worth noting because they are the ones you can lean on without checking first: Artifact evaluation, Package index, Curated list, Workflow registry, and Lab & organization repository.
+
 **Status legend**, worth reading before you conclude something is broken:
 
 - `alive`: reachable, serves content, same host as listed.
@@ -47,99 +133,35 @@ Read that table with two things in mind, because the raw counts mislead on their
 - `dead`: HTTP 404 or 410, the resource is gone.
 - `error` / `timeout`: transport failure: DNS, TLS, refused connection, or no answer in time.
 
+## Why this is not just another link list
+
+Three things, and they matter more than the count.
+
+**It is sorted by what you are trying to do.** The original compilation grouped sources into alphabetical sections A through T, which served whoever assembled it rather than the reader. Here every entry carries one of sixteen categories and one of five workflow stages, so a concrete question ("where is the code for this paper?") points at one slice instead of the whole list. The original group letter survives on each entry as a provenance trace, because rearranging someone else's list should be visible, not hidden.
+
+**The links were actually checked.** A script probes all 200 and classifies every one, the results carry a date, and a GitHub Action repeats the run every Monday so the directory does not quietly rot. "These links work" is not a promise here, it is a build artifact you can reproduce.
+
+**The content is data, not prose.** Everything on this page exists in `data/sources.json` in a form you can filter, join, or feed to a tool. The markdown is a rendering of the data, not a separate copy of it, so the two cannot drift apart.
+
 ## Contents
 
-- [01 · Find the paper](#01--find-the-paper-31-sources), 31 sources
-- [02 · Find the code](#02--find-the-code-100-sources), 100 sources
-- [03 · Find the data](#03--find-the-data-17-sources), 17 sources
-- [04 · Reproduce the experiment](#04--reproduce-the-experiment-43-sources), 43 sources
-- [05 · For agents and automation](#05--for-agents-and-automation-9-sources), 9 sources
-- [Where to start](#where-to-start)
-- [The six-step workflow](#the-six-step-workflow)
-- [Supporting files](#supporting-files)
-- [Contributing](#contributing)
-- [What is verified, and what is not](#what-is-verified-and-what-is-not)
+- [Full directory: 200 sources](DIRECTORY.md), grouped by kind of source
+- [CHECKLIST.md](CHECKLIST.md), 16-point test for judging a research repository
+- [QUERIES.md](QUERIES.md), 20 ready-to-paste search queries
+- [CONTRIBUTING.md](CONTRIBUTING.md), how to add or fix an entry
+- [audit/liveness.md](audit/liveness.md), per-link audit output
+- [data/sources.json](data/sources.json) and [data/sources.csv](data/sources.csv), the data itself
 
-Full detail on all 200 entries, each with its type, field, what to look for, how to use it, and where it falls short, is in **[DIRECTORY.md](DIRECTORY.md)**.
+Loading it from code:
 
-## 01 · Find the paper (31 sources)
-
-Preprints, proceedings, search engines, and the citation-graph tools that let you work backwards from one good paper.
-
-This is where you start, nearly always. arXiv covers CS, ML, math, and physics. OpenReview shows you the reviews next to the submission, which is often more informative than the paper. PMLR, NeurIPS Proceedings, CVF Open Access, and ACL Anthology are the canonical venues for ML, vision, and NLP in that order. For security, USENIX Security and NDSS matter, and both run artifact policies that make code more likely to exist at all.
-
-Biomedical work routes through PubMed Central and Europe PMC. If you need to know what a venue or funder expects before you commit, PLOS Computational Biology publishes its code availability policy and Nature Scientific Data does the same for data.
-
-For graph exploration rather than keyword search, Connected Papers and ResearchRabbit both let you seed a collection from one paper and see what it cites and what cites it.
-
-## 02 · Find the code (100 sources)
-
-The largest group by far, and where you will spend most of your time. It splits into a few kinds of place, and they are not equally trustworthy.
-
-**Software journals**, where the code is the publication rather than an appendix: JOSS, JMLR MLOSS, Journal of Statistical Software, The R Journal, SoftwareX, Journal of Open Research Software, SciPost Physics Codebases, IPOL, and JOSE. If the paper you care about appeared in one of these, the repository link is on the article page by construction. These are the highest-confidence sources in the directory.
-
-**Paper-to-code lookups**: CatalyzeX (paste a title, get a repository), Code Ocean Capsules (code plus the execution environment), and the Papers With Code data archive. That last one deserves a note. The site is gone, but the data dump is not, and it is the only remaining way to do a bulk offline lookup of paper-to-repository links.
-
-**Code and model hubs**: GitHub code search, GitLab, Codeberg, Hugging Face models and Spaces, PyPI, CRAN, Bioconductor, R-universe, Zenodo. Check `created_at` and `pushed_at` before you commit to anything here. Star counts mean almost nothing on their own.
-
-**Official lab repositories**, when you want the implementation the authors released themselves: Google Research, Google DeepMind, Meta Research, TensorFlow Model Garden, PyTorch Examples, timm, Detectron2, MMDetection, OpenMMLab, fairseq, OpenNMT. Watch the age. Several carry papers from years back and pin old framework versions.
-
-**Curated lists**, ten of them, mostly "Awesome X" collections and conference-specific paper-with-code indexes for CVPR, MICCAI, and AI security. Useful for a first pass, unreliable as a final answer, because a "code available" badge often points at a project page or a demo rather than training code.
-
-## 03 · Find the data (17 sources)
-
-DOI-bearing repositories first: Harvard Dataverse, Zenodo, Figshare, Dryad, Mendeley Data, OSF, and the UCI Machine Learning Repository. The regional Dataverse instances (DataverseNO, Borealis, 4TU.ResearchData) hold a lot that never surfaces in a general search.
-
-Then the field-specific ones, which is usually where the real data lives: PANGAEA for earth and environmental science, CERN Open Data and HEPData for high-energy physics, GigaDB for bioinformatics, Materials Cloud and NOMAD for materials. OpenML is worth knowing for tabular ML benchmarks with published task definitions, and Hugging Face Datasets has become the default for NLP and multimodal data.
-
-A caution that applies to this whole section: a dataset with a DOI is citable research output, which is not the same as a dataset you are permitted to use the way you plan to. Read the license before you build on it.
-
-## 04 · Reproduce the experiment (43 sources)
-
-This is the section that separates a working reproduction from a promising repository, and the one most link lists skip entirely.
-
-**Conference artifact evaluation** is the strongest signal available: Security Research Artifacts, SIGMOD Reproducibility, and the 2026 artifact tracks at ICSE, ISSTA, POPL, PLDI, ICFP, EuroSys, CCS, and ISCA. A paper that passed artifact evaluation had an independent reviewer run the code.
-
-**DARTS** goes a step further. Dagstuhl publishes artifacts as reviewed publications in their own right, with DOIs, so a release there has been examined the way a paper is.
-
-**Replication platforms**: ReScience C, Renku, Whole Tale, WorkflowHub, Dockstore, nf-core. These package code, data, and environment together, which is the part that normally breaks.
-
-**Benchmarks and leaderboards**: MLCommons/MLPerf, Codabench, AIcrowd, EvalAI, Grand Challenge, DrivenData, Kaggle, Open Graph Benchmark, DataPerf, NAB, TimeEval, and the Monash forecasting archive. These give you a baseline to compare against, which is what you need before claiming an improvement.
-
-**Model zoos**: MONAI, BioImage Model Zoo, MMDetection. And for language models, the EleutherAI evaluation harness, which is what a great many published numbers were actually produced with.
-
-## 05 · For agents and automation (9 sources)
-
-The smallest group, and the one almost every list like this omits. If you want to search a thousand papers instead of five, you need metadata endpoints, not web pages.
-
-OpenAlex gives you a full bibliographic API across disciplines. SemRepo is a knowledge graph of research repositories, roughly 190,000 of them, queryable over SPARQL. Linked Papers With Code carries the historical paper-to-repository relations. DataCite Commons resolves the links between a paper's DOI and the DOIs of its software and data. re3data and FAIRsharing help you find repositories you did not know existed.
-
-What that looks like in practice:
-
-```bash
-# Paper metadata by title
-curl -s "https://api.openalex.org/works?search=graph%20neural%20networks&per-page=5"
-
-# Software registered with a DOI
-curl -s "https://api.datacite.org/dois?query=replication%20package&resource-type-id=software"
+```python
+import json, urllib.request
+src = json.load(urllib.request.urlopen(
+    "https://raw.githubusercontent.com/rayss868/paper-code-datasets/main/data/sources.json"))
+for e in src["entries"]:
+    if "artifact" in e["kategori"].lower() and e["status"] == "alive":
+        print(e["id"], e["name"], e["url"])
 ```
-
-## Where to start
-
-If you read nothing else, these ten carry most of the weight.
-
-| # | Source | Why it earns the slot |
-|---|---|---|
-| 1 | [**CatalyzeX**](https://www.catalyzex.com/) | Paste a paper title, get a code link. Fastest single move. |
-| 2 | [**Papers With Code Data Archive**](https://github.com/paperswithcode/paperswithcode-data) | The site died in July 2025, the data dump did not, and it is queryable in bulk. |
-| 3 | [**JOSS**](https://joss.theoj.org/papers) | Papers about software, so the code is the subject of publication. |
-| 4 | [**Journal of Statistical Software**](https://www.jstatsoft.org/) | Paper, package, and replication scripts on one page. |
-| 5 | [**Zenodo**](https://zenodo.org/) | DOI repository; filter to `Software` for citable releases. |
-| 6 | [**Code Ocean**](https://codeocean.com/explore/capsules/) | Not just the code, the execution environment with it. |
-| 7 | [**Security Research Artifacts**](https://secartifacts.github.io/) | In security, artifacts are effectively mandatory, so coverage is unusually good. |
-| 8 | [**DARTS**](https://drops.dagstuhl.de/entities/journal/DARTS) | Artifacts that were **evaluated**, not merely uploaded. |
-| 9 | [**OpenAlex**](https://openalex.org/) | For when you want to automate rather than click. |
-| 10 | [**SemRepo**](https://semrepo.org/) | SPARQL queries against a graph of research repositories. |
 
 ## The six-step workflow
 
@@ -152,33 +174,11 @@ If you read nothing else, these ten carry most of the weight.
 5. **Run the baseline before changing anything.** Use the release or commit that matches the paper. Keep the logs, the environment lockfile, the actual numbers, and the gap between them and the published ones.
 6. **Only then modify.** Document what you changed, run ablations, test significance, and cite the paper, the code, and the dataset as three separate objects if all three have identifiers.
 
-## Supporting files
-
-| File | What is in it |
-|---|---|
-| [`DIRECTORY.md`](DIRECTORY.md) | All 200 entries, sorted by workflow stage |
-| [`data/sources.json`](data/sources.json) | Structured data with audit results |
-| [`data/sources.csv`](data/sources.csv) | The same, for spreadsheets |
-| [`audit/liveness.md`](audit/liveness.md) | Per-link audit output, newest run |
-| [`CHECKLIST.md`](CHECKLIST.md) | 16-point checklist for judging a research repository |
-| [`QUERIES.md`](QUERIES.md) | 20 ready-to-paste search queries |
-| [`scripts/audit_links.py`](scripts/audit_links.py) | The auditor, standard library only |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to add or fix an entry |
-
-Loading it from code:
-
-```python
-import json, urllib.request
-src = json.load(urllib.request.urlopen(
-    "https://raw.githubusercontent.com/rayss868/paper-code-datasets/main/data/sources.json"))
-cyber = [e for e in src["entries"]
-         if "security" in e["bidang"].lower() and e["status"] == "alive"]
-print(len(cyber), "live security sources")
-```
-
 ## Contributing
 
-New sources, corrected URLs, and fixed classifications are all welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first, because the format is strict on purpose: the data files are meant to be processed by machines, not only read.
+New sources, corrected URLs, and fixed classifications are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first, because the format is strict on purpose: the data files are meant to be processed by machines, not only read.
+
+If you add a source, set its `kategori` from the fixed list and give it at least one tag. A source with no category is a source nobody will find again.
 
 ## What is verified, and what is not
 
@@ -189,6 +189,7 @@ Being precise about this is the difference between a useful directory and a plau
 - The structure of the list: 200 numbered entries in sequence, 199 unique URLs, and exactly one duplicate, where entries 48 and 133 point at the same GitHub topic. The duplicate is kept and labelled rather than quietly removed, since it is evidence of how the list was assembled.
 - Host concentration: 200 entries spread over 149 distinct hosts, with `github.com` holding 46 of them, or 23%. Many of those are topic and tag pages rather than independent sources, so the honest count of distinct providers sits well below 200.
 - Link liveness, as of the date in the audit table above.
+- Categories and tags, assigned mechanically from the entry text so the set can be regenerated rather than argued about.
 
 **Not verified:**
 

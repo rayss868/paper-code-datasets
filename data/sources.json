@@ -12,7 +12,9 @@
   "yang_dicari": "Concrete material you can realistically find there.",
   "cara_pakai": "Practical first step for finding an implementation.",
   "catatan": "A limitation that should not be ignored.",
-  "correction": "URL or classification fix applied after the liveness audit, with the date."
+  "correction": "URL or classification fix applied after the liveness audit, with the date.",
+  "kategori": "One of 16 fixed categories (see README). Primary sort key.",
+  "tags": "Field and affordance facets, assigned mechanically from the entry text."
  },
  "entries": [
   {
@@ -30,7 +32,12 @@
    "http_status": 200,
    "final_url": "https://joss.theoj.org/papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software journal",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 2,
@@ -47,7 +54,13 @@
    "http_status": 200,
    "final_url": "https://www.jmlr.org/mloss/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software journal",
+   "tags": [
+    "ml",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 3,
@@ -64,7 +77,12 @@
    "http_status": 200,
    "final_url": "https://rescience.github.io/read/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 4,
@@ -81,7 +99,12 @@
    "http_status": 200,
    "final_url": "https://research-software-directory.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software directory",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 5,
@@ -98,7 +121,14 @@
    "http_status": 403,
    "final_url": "https://explore.openaire.eu/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "open science",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 6,
@@ -115,7 +145,13 @@
    "http_status": 200,
    "final_url": "https://archive.softwareheritage.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Code search & hosting",
+   "tags": [
+    "ml",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 7,
@@ -132,7 +168,12 @@
    "http_status": 200,
    "final_url": "https://openscicode.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 8,
@@ -149,7 +190,12 @@
    "http_status": 200,
    "final_url": "https://bio.tools/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 9,
@@ -166,7 +212,12 @@
    "http_status": 403,
    "final_url": "https://scicrunch.org/resources",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 10,
@@ -183,7 +234,15 @@
    "http_status": 200,
    "final_url": "https://www.openml.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "api",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 11,
@@ -201,7 +260,15 @@
    "final_url": "https://miccai.org/publications/miccai-open-access-reviews/",
    "checked_at": "2026-10-12T14:21:35Z",
    "correction": "2026-10-12: papers.miccai.org redirects to miccai.org/publications/miccai-open-access-reviews/. The destination page is valid.",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "biomedical",
+    "materials",
+    "open science",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 12,
@@ -218,7 +285,11 @@
    "http_status": 200,
    "final_url": "https://scicodes.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code and reproducibility platforms"
+   "section_title": "Research code and reproducibility platforms",
+   "kategori": "Software directory",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 13,
@@ -235,7 +306,14 @@
    "http_status": 200,
    "final_url": "https://www.jstatsoft.org/index",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software journal",
+   "tags": [
+    "materials",
+    "social",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 14,
@@ -252,7 +330,12 @@
    "http_status": 200,
    "final_url": "https://journal.r-project.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software journal",
+   "tags": [
+    "social",
+    "code"
+   ]
   },
   {
    "id": 15,
@@ -269,7 +352,15 @@
    "http_status": 200,
    "final_url": "https://www.icpsr.umich.edu/sites/aea/home",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software directory",
+   "tags": [
+    "materials",
+    "social",
+    "dataset",
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 16,
@@ -286,7 +377,15 @@
    "http_status": 403,
    "final_url": "https://www.openicpsr.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "social",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 17,
@@ -303,7 +402,13 @@
    "http_status": 200,
    "final_url": "https://osf.io/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 18,
@@ -320,7 +425,12 @@
    "http_status": 200,
    "final_url": "https://code.nasa.gov/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software directory",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 19,
@@ -337,7 +447,16 @@
    "http_status": 200,
    "final_url": "https://www.osti.gov/doecode/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software directory",
+   "tags": [
+    "materials",
+    "physics",
+    "open science",
+    "api",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 20,
@@ -354,7 +473,13 @@
    "http_status": 200,
    "final_url": "https://codalab.org/codalab-worksheets/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software directory",
+   "tags": [
+    "earth",
+    "dataset",
+    "benchmark"
+   ]
   },
   {
    "id": 21,
@@ -371,7 +496,11 @@
    "http_status": 200,
    "final_url": "https://www.notebookarchive.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Software directory",
+   "tags": [
+    "general"
+   ]
   },
   {
    "id": 22,
@@ -389,7 +518,12 @@
    "final_url": "https://bioconductor.org/packages/release/bioc/",
    "checked_at": "2026-10-12T14:21:35Z",
    "correction": "2026-10-12: /packages/ returned 404. Changed to /packages/release/bioc/ (verified 200).",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Package index",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 23,
@@ -406,7 +540,13 @@
    "http_status": 200,
    "final_url": "https://cran.r-project.org/web/packages/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Package index",
+   "tags": [
+    "social",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 24,
@@ -423,7 +563,11 @@
    "http_status": 200,
    "final_url": "https://pypi.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Package index",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 25,
@@ -440,7 +584,15 @@
    "http_status": 200,
    "final_url": "https://renkulab.io/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "earth",
+    "open science",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 26,
@@ -457,7 +609,13 @@
    "http_status": 200,
    "final_url": "https://mybinder.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Research code repositories and executable papers"
+   "section_title": "Research code repositories and executable papers",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "earth",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 27,
@@ -474,7 +632,12 @@
    "http_status": 200,
    "final_url": "https://arxiv.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "physics",
+    "code"
+   ]
   },
   {
    "id": 28,
@@ -491,7 +654,11 @@
    "http_status": 200,
    "final_url": "https://www.alphaxiv.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "general"
+   ]
   },
   {
    "id": 29,
@@ -508,7 +675,11 @@
    "http_status": 200,
    "final_url": "https://papers.cool/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 30,
@@ -525,7 +696,12 @@
    "http_status": 200,
    "final_url": "https://openreview.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Software directory",
+   "tags": [
+    "materials",
+    "code"
+   ]
   },
   {
    "id": 31,
@@ -542,7 +718,13 @@
    "http_status": 200,
    "final_url": "https://openaccess.thecvf.com/menu",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "ml",
+    "materials",
+    "open science"
+   ]
   },
   {
    "id": 32,
@@ -559,7 +741,11 @@
    "http_status": 200,
    "final_url": "https://aclanthology.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 33,
@@ -576,7 +762,13 @@
    "http_status": 200,
    "final_url": "https://proceedings.mlr.press/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "ml",
+    "materials",
+    "code"
+   ]
   },
   {
    "id": 34,
@@ -593,7 +785,13 @@
    "http_status": 200,
    "final_url": "https://proceedings.neurips.cc/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "ml",
+    "materials",
+    "code"
+   ]
   },
   {
    "id": 35,
@@ -610,7 +808,12 @@
    "http_status": 200,
    "final_url": "https://www.usenix.org/conferences/byname/108",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "security",
+    "licence"
+   ]
   },
   {
    "id": 36,
@@ -627,7 +830,12 @@
    "http_status": 200,
    "final_url": "https://www.ndss-symposium.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "security",
+    "code"
+   ]
   },
   {
    "id": 37,
@@ -644,7 +852,13 @@
    "http_status": 200,
    "final_url": "https://www.semanticscholar.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "api",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 38,
@@ -661,7 +875,11 @@
    "http_status": 403,
    "final_url": "https://scholar.google.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 39,
@@ -678,7 +896,13 @@
    "http_status": 200,
    "final_url": "https://www.connectedpapers.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "ml",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 40,
@@ -695,7 +919,11 @@
    "http_status": 200,
    "final_url": "https://www.researchrabbit.ai/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 41,
@@ -712,7 +940,12 @@
    "http_status": 200,
    "final_url": "https://pmc.ncbi.nlm.nih.gov/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 42,
@@ -729,7 +962,16 @@
    "http_status": 403,
    "final_url": "https://europepmc.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "biomedical",
+    "materials",
+    "api",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 43,
@@ -746,7 +988,12 @@
    "http_status": 200,
    "final_url": "https://openalex.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "api",
+    "code"
+   ]
   },
   {
    "id": 44,
@@ -763,7 +1010,13 @@
    "http_status": 200,
    "final_url": "https://core.ac.uk/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Paper discovery",
+   "tags": [
+    "materials",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 45,
@@ -780,7 +1033,12 @@
    "http_status": 200,
    "final_url": "https://ieeexplore.ieee.org/Xplore/home.jsp",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "security",
+    "materials"
+   ]
   },
   {
    "id": 46,
@@ -797,7 +1055,12 @@
    "http_status": 403,
    "final_url": "https://dl.acm.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper search engines you can trace back to code"
+   "section_title": "Paper search engines you can trace back to code",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "materials",
+    "open science"
+   ]
   },
   {
    "id": 47,
@@ -814,7 +1077,14 @@
    "http_status": 200,
    "final_url": "https://github.com/search?type=code",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Code search & hosting",
+   "tags": [
+    "dataset",
+    "code",
+    "doi",
+    "licence"
+   ]
   },
   {
    "id": 48,
@@ -831,7 +1101,11 @@
    "http_status": 429,
    "final_url": "https://github.com/topics/paper-implementations",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 49,
@@ -848,7 +1122,12 @@
    "http_status": 429,
    "final_url": "https://github.com/topics/paper-implementation",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 50,
@@ -865,7 +1144,11 @@
    "http_status": 429,
    "final_url": "https://github.com/topics/research-paper-implementation",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 51,
@@ -882,7 +1165,11 @@
    "http_status": 200,
    "final_url": "https://gitlab.com/explore",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Code search & hosting",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 52,
@@ -899,7 +1186,13 @@
    "http_status": 200,
    "final_url": "https://huggingface.co/models",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Software directory",
+   "tags": [
+    "ml",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 53,
@@ -916,7 +1209,11 @@
    "http_status": 200,
    "final_url": "https://huggingface.co/spaces",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Software directory",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 54,
@@ -933,7 +1230,12 @@
    "http_status": 200,
    "final_url": "https://www.kaggle.com/code",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 55,
@@ -950,7 +1252,11 @@
    "http_status": 200,
    "final_url": "https://r-universe.dev/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Package index",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 56,
@@ -967,7 +1273,12 @@
    "http_status": 200,
    "final_url": "https://codeberg.org/explore/repos",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Code search & hosting",
+   "tags": [
+    "api",
+    "code"
+   ]
   },
   {
    "id": 57,
@@ -984,7 +1295,12 @@
    "http_status": 403,
    "final_url": "https://sourceforge.net/directory/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Direct source code implementations"
+   "section_title": "Direct source code implementations",
+   "kategori": "Code search & hosting",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 58,
@@ -1001,7 +1317,12 @@
    "http_status": 200,
    "final_url": "https://mlcommons.org/benchmarks/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 59,
@@ -1018,7 +1339,13 @@
    "http_status": 200,
    "final_url": "https://www.codabench.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 60,
@@ -1035,7 +1362,12 @@
    "http_status": 200,
    "final_url": "https://www.aicrowd.com/challenges",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 61,
@@ -1052,7 +1384,12 @@
    "http_status": 200,
    "final_url": "https://eval.ai/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "open science",
+    "benchmark"
+   ]
   },
   {
    "id": 62,
@@ -1069,7 +1406,15 @@
    "http_status": 200,
    "final_url": "https://grand-challenge.org/challenges/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "biomedical",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 63,
@@ -1086,7 +1431,14 @@
    "http_status": 200,
    "final_url": "https://www.drivendata.org/competitions/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "social",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 64,
@@ -1103,7 +1455,11 @@
    "http_status": 200,
    "final_url": "https://github.com/open-mmlab",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "ml"
+   ]
   },
   {
    "id": 65,
@@ -1120,7 +1476,13 @@
    "http_status": 200,
    "final_url": "https://github.com/Project-MONAI/model-zoo",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "biomedical",
+    "api",
+    "dataset"
+   ]
   },
   {
    "id": 66,
@@ -1137,7 +1499,13 @@
    "http_status": 200,
    "final_url": "https://www.kaggle.com/competitions",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, competitions, baselines, and model zoos"
+   "section_title": "Benchmarks, competitions, baselines, and model zoos",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 67,
@@ -1154,7 +1522,12 @@
    "http_status": 200,
    "final_url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 68,
@@ -1171,7 +1544,12 @@
    "http_status": 200,
    "final_url": "https://github.com/firetix/awesome-cvpr-2026-papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 69,
@@ -1188,7 +1566,12 @@
    "http_status": 200,
    "final_url": "https://github.com/JunMa11/MICCAI-OpenSourcePapers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 70,
@@ -1205,7 +1588,14 @@
    "http_status": 200,
    "final_url": "https://github.com/ambicuity/Awesome-MICCAI-2026",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "ml",
+    "biomedical",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 71,
@@ -1222,7 +1612,14 @@
    "http_status": 200,
    "final_url": "https://github.com/BaichengDanny/awesome-ai-for-cybersecurity-papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "security",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 72,
@@ -1239,7 +1636,12 @@
    "http_status": 200,
    "final_url": "https://github.com/jivoi/awesome-ml-for-cybersecurity",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "security",
+    "dataset"
+   ]
   },
   {
    "id": 73,
@@ -1256,7 +1658,15 @@
    "http_status": 200,
    "final_url": "https://github.com/wtsxDev/Machine-Learning-for-Cyber-Security",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "ml",
+    "security",
+    "materials",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 74,
@@ -1273,7 +1683,11 @@
    "http_status": 200,
    "final_url": "https://github.com/opensci-hub/Awesome-ML-Cybersecurity",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "security"
+   ]
   },
   {
    "id": 75,
@@ -1290,7 +1704,12 @@
    "http_status": 200,
    "final_url": "https://github.com/songqiang321/Awesome-AI-Papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 76,
@@ -1307,7 +1726,12 @@
    "http_status": 200,
    "final_url": "https://github.com/cuixing158/Awesome-CV-MasterHub",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Curated GitHub lists for papers and code"
+   "section_title": "Curated GitHub lists for papers and code",
+   "kategori": "Curated list",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 77,
@@ -1324,7 +1748,12 @@
    "http_status": 200,
    "final_url": "https://scipost.org/journals/SciPostPhysCodeb",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Code journals and specialized scientific notebooks"
+   "section_title": "Code journals and specialized scientific notebooks",
+   "kategori": "Software journal",
+   "tags": [
+    "physics",
+    "code"
+   ]
   },
   {
    "id": 78,
@@ -1341,7 +1770,14 @@
    "http_status": 200,
    "final_url": "https://neurolibre.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Code journals and specialized scientific notebooks"
+   "section_title": "Code journals and specialized scientific notebooks",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "earth",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 79,
@@ -1358,7 +1794,12 @@
    "http_status": 200,
    "final_url": "https://ascl.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Code journals and specialized scientific notebooks"
+   "section_title": "Code journals and specialized scientific notebooks",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "physics",
+    "code"
+   ]
   },
   {
    "id": 80,
@@ -1375,7 +1816,14 @@
    "http_status": 200,
    "final_url": "https://physionet.org/software/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Code journals and specialized scientific notebooks"
+   "section_title": "Code journals and specialized scientific notebooks",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "dataset",
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 81,
@@ -1392,7 +1840,14 @@
    "http_status": 200,
    "final_url": "https://wholetale.readthedocs.io/en/stable/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Code journals and specialized scientific notebooks"
+   "section_title": "Code journals and specialized scientific notebooks",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "earth",
+    "open science",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 82,
@@ -1409,7 +1864,13 @@
    "http_status": 200,
    "final_url": "https://gallery.pangeo.io/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Code journals and specialized scientific notebooks"
+   "section_title": "Code journals and specialized scientific notebooks",
+   "kategori": "Software directory",
+   "tags": [
+    "earth",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 83,
@@ -1426,7 +1887,12 @@
    "http_status": 200,
    "final_url": "https://www.ipol.im/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Software journal",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 84,
@@ -1444,7 +1910,13 @@
    "final_url": "https://openresearchsoftware.metajnl.com/",
    "checked_at": "2026-10-12T14:21:35Z",
    "correction": "2026-10-12: not reachable (timeout) from the audit host, but the site is ACTIVE (articles published Sep 2026). Likely IP or geo filtering rather than a dead link.",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Software journal",
+   "tags": [
+    "open science",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 85,
@@ -1461,7 +1933,13 @@
    "http_status": 200,
    "final_url": "https://jose.theoj.org/papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Software journal",
+   "tags": [
+    "materials",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 86,
@@ -1478,7 +1956,12 @@
    "http_status": 200,
    "final_url": "https://www.pyopensci.org/python-packages/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Package index",
+   "tags": [
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 87,
@@ -1495,7 +1978,12 @@
    "http_status": 200,
    "final_url": "https://ropensci.org/packages/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Package index",
+   "tags": [
+    "materials",
+    "code"
+   ]
   },
   {
    "id": 88,
@@ -1512,7 +2000,14 @@
    "http_status": 200,
    "final_url": "https://gigadb.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Dataset repository",
+   "tags": [
+    "biomedical",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 89,
@@ -1529,7 +2024,13 @@
    "http_status": 200,
    "final_url": "https://earthcode.esa.int/workflows",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Workflow registry",
+   "tags": [
+    "earth",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 90,
@@ -1546,7 +2047,12 @@
    "http_status": 200,
    "final_url": "https://notebooks.dandiarchive.org/index.html",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "dataset"
+   ]
   },
   {
    "id": 91,
@@ -1563,7 +2069,15 @@
    "http_status": 200,
    "final_url": "https://datadryad.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "api",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 92,
@@ -1580,7 +2094,12 @@
    "http_status": 200,
    "final_url": "https://f1000research.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Software journal",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 93,
@@ -1597,7 +2116,15 @@
    "http_status": 200,
    "final_url": "https://opendata.cern.ch/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "earth",
+    "physics",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 94,
@@ -1614,7 +2141,12 @@
    "http_status": 200,
    "final_url": "https://data.mendeley.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper, data, notebook, and software portals"
+   "section_title": "Paper, data, notebook, and software portals",
+   "kategori": "Dataset repository",
+   "tags": [
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 95,
@@ -1631,7 +2163,12 @@
    "http_status": 200,
    "final_url": "https://secartifacts.github.io/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "security",
+    "code"
+   ]
   },
   {
    "id": 96,
@@ -1648,7 +2185,12 @@
    "http_status": 200,
    "final_url": "https://reproducibility.sigmod.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "open science",
+    "benchmark"
+   ]
   },
   {
    "id": 97,
@@ -1665,7 +2207,12 @@
    "http_status": 200,
    "final_url": "https://conf.researchr.org/track/icse-2026/icse-2026-artifact-evaluation",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 98,
@@ -1682,7 +2229,13 @@
    "http_status": 200,
    "final_url": "https://conf.researchr.org/track/issta-2026/issta-2026-artifact-evaluation",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "code",
+    "benchmark",
+    "licence"
+   ]
   },
   {
    "id": 99,
@@ -1699,7 +2252,12 @@
    "http_status": 200,
    "final_url": "https://popl26.sigplan.org/track/POPL-2026-artifact-evaluation",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 100,
@@ -1716,7 +2274,11 @@
    "http_status": 200,
    "final_url": "https://pldi26.sigplan.org/track/pldi-2026-pldi-research-artifacts",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 101,
@@ -1733,7 +2295,11 @@
    "http_status": 200,
    "final_url": "https://icfp26.sigplan.org/track/icfp-2026-artifact-evaluation",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "benchmark"
+   ]
   },
   {
    "id": 102,
@@ -1750,7 +2316,11 @@
    "http_status": 200,
    "final_url": "https://sysartifacts.github.io/eurosys2026/index",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "general"
+   ]
   },
   {
    "id": 103,
@@ -1767,7 +2337,12 @@
    "http_status": 200,
    "final_url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-artifacts.html",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "security",
+    "code"
+   ]
   },
   {
    "id": 104,
@@ -1784,7 +2359,13 @@
    "http_status": 200,
    "final_url": "https://iscaconf.org/isca2026/submit/artifactevaluation.php",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Conferences and artifact evaluation"
+   "section_title": "Conferences and artifact evaluation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "earth",
+    "open science",
+    "benchmark"
+   ]
   },
   {
    "id": 105,
@@ -1801,7 +2382,13 @@
    "http_status": 200,
    "final_url": "https://drops.dagstuhl.de/entities/journal/DARTS",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 106,
@@ -1818,7 +2405,12 @@
    "http_status": 403,
    "final_url": "https://www.sciencedirect.com/journal/softwarex",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Software journal",
+   "tags": [
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 107,
@@ -1835,7 +2427,13 @@
    "http_status": 200,
    "final_url": "https://github.com/ElsevierSoftwareX",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Software journal",
+   "tags": [
+    "open science",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 108,
@@ -1852,7 +2450,11 @@
    "http_status": 200,
    "final_url": "https://proceedings.scipy.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 109,
@@ -1869,7 +2471,11 @@
    "http_status": 200,
    "final_url": "https://github.com/scipy-conference/scipy_proceedings",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Proceedings & publisher",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 110,
@@ -1886,7 +2492,11 @@
    "http_status": 200,
    "final_url": "https://github.com/papers-we-love/papers-we-love",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Paper discovery",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 111,
@@ -1903,7 +2513,13 @@
    "http_status": 429,
    "final_url": "https://github.com/topics/reproducible-paper",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "DARTS, software journals, and further code curation"
+   "section_title": "DARTS, software journals, and further code curation",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "earth",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 112,
@@ -1920,7 +2536,11 @@
    "http_status": 200,
    "final_url": "https://www.netlib.org/toms/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 113,
@@ -1937,7 +2557,12 @@
    "http_status": null,
    "final_url": "https://modeldb.science/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 114,
@@ -1954,7 +2579,12 @@
    "http_status": 200,
    "final_url": "https://models.physiomeproject.org/welcome",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 115,
@@ -1971,7 +2601,14 @@
    "http_status": 200,
    "final_url": "https://www.comses.net/codebases/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "earth",
+    "social",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 116,
@@ -1988,7 +2625,11 @@
    "http_status": 200,
    "final_url": "https://ccl.northwestern.edu/netlogo/models/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 117,
@@ -2005,7 +2646,15 @@
    "http_status": 200,
    "final_url": "https://www.opensourcebrain.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "ml",
+    "biomedical",
+    "open science",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 118,
@@ -2022,7 +2671,13 @@
    "http_status": 403,
    "final_url": "https://biomodels.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "biomedical",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 119,
@@ -2039,7 +2694,11 @@
    "http_status": 200,
    "final_url": "https://github.com/reanahub/reana",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "open science"
+   ]
   },
   {
    "id": 120,
@@ -2056,7 +2715,12 @@
    "http_status": 200,
    "final_url": "https://github.com/reanahub/reana-demo-bsm-search",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithm and computational model archives"
+   "section_title": "Algorithm and computational model archives",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "materials",
+    "physics"
+   ]
   },
   {
    "id": 121,
@@ -2073,7 +2737,13 @@
    "http_status": 200,
    "final_url": "https://linkedpaperswithcode.com/resource/LPWC",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper-to-repository knowledge graphs"
+   "section_title": "Paper-to-repository knowledge graphs",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "ml",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 122,
@@ -2090,7 +2760,14 @@
    "http_status": 200,
    "final_url": "https://semrepo.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper-to-repository knowledge graphs"
+   "section_title": "Paper-to-repository knowledge graphs",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "ml",
+    "open science",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 123,
@@ -2107,7 +2784,13 @@
    "http_status": 200,
    "final_url": "https://github.com/faerber-lab/semrepo",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Paper-to-repository knowledge graphs"
+   "section_title": "Paper-to-repository knowledge graphs",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "ml",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 124,
@@ -2125,7 +2808,14 @@
    "final_url": "https://www.sota2.com/research",
    "checked_at": "2026-10-12T14:21:35Z",
    "correction": "2026-10-12: wizwand.com now redirects to sota2.com/research, possibly a rebrand. The URL still works as an entry point.",
-   "section_title": "Paper-to-repository knowledge graphs"
+   "section_title": "Paper-to-repository knowledge graphs",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 125,
@@ -2142,7 +2832,12 @@
    "http_status": 200,
    "final_url": "https://github.com/google-research/google-research",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Official AI lab repositories"
+   "section_title": "Official AI lab repositories",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "earth",
+    "code"
+   ]
   },
   {
    "id": 126,
@@ -2159,7 +2854,14 @@
    "http_status": 200,
    "final_url": "https://github.com/google-deepmind/deepmind-research",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Official AI lab repositories"
+   "section_title": "Official AI lab repositories",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "dataset",
+    "code",
+    "benchmark",
+    "licence"
+   ]
   },
   {
    "id": 127,
@@ -2176,7 +2878,11 @@
    "http_status": 200,
    "final_url": "https://github.com/facebookresearch",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Official AI lab repositories"
+   "section_title": "Official AI lab repositories",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 128,
@@ -2193,7 +2899,11 @@
    "http_status": 200,
    "final_url": "https://allenai.org/papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Official AI lab repositories"
+   "section_title": "Official AI lab repositories",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 129,
@@ -2210,7 +2920,11 @@
    "http_status": 200,
    "final_url": "https://research.google/pubs/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Official AI lab repositories"
+   "section_title": "Official AI lab repositories",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 130,
@@ -2227,7 +2941,11 @@
    "http_status": 403,
    "final_url": "https://www.catalyzex.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 131,
@@ -2244,7 +2962,13 @@
    "http_status": 403,
    "final_url": "https://codeocean.com/explore/capsules/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "earth",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 132,
@@ -2261,7 +2985,12 @@
    "http_status": 200,
    "final_url": "https://huggingface.co/papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Paper discovery",
+   "tags": [
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 133,
@@ -2278,7 +3007,11 @@
    "http_status": 429,
    "final_url": "https://github.com/topics/paper-implementations",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "general"
+   ]
   },
   {
    "id": 134,
@@ -2295,7 +3028,14 @@
    "http_status": 403,
    "final_url": "https://zenodo.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Dataset repository",
+   "tags": [
+    "dataset",
+    "code",
+    "doi",
+    "licence"
+   ]
   },
   {
    "id": 135,
@@ -2312,7 +3052,13 @@
    "http_status": 200,
    "final_url": "https://hyper.ai/en/papers",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "api",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 136,
@@ -2329,7 +3075,14 @@
    "http_status": 202,
    "final_url": "https://figshare.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 137,
@@ -2346,7 +3099,13 @@
    "http_status": 200,
    "final_url": "https://www.codesota.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 138,
@@ -2363,7 +3122,15 @@
    "http_status": 200,
    "final_url": "https://github.com/paperswithcode/paperswithcode-data",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "ml",
+    "api",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 139,
@@ -2380,7 +3147,15 @@
    "http_status": 202,
    "final_url": "https://dataverse.harvard.edu/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Dataset repository",
+   "tags": [
+    "open science",
+    "api",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 140,
@@ -2398,7 +3173,13 @@
    "final_url": "https://huggingface.co/papers/trending",
    "checked_at": "2026-10-12T14:21:35Z",
    "correction": "2026-10-12: redirect to huggingface.co/papers/trending confirmed, consistent with the historical note. Use the archive in entry 138 for data.",
-   "section_title": "Earlier sources plus duplicate markers"
+   "section_title": "Earlier sources plus duplicate markers",
+   "kategori": "Paper-to-code lookup",
+   "tags": [
+    "ml",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 141,
@@ -2415,7 +3196,13 @@
    "http_status": 403,
    "final_url": "https://workflowhub.eu/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "biomedical",
+    "api",
+    "dataset"
+   ]
   },
   {
    "id": 142,
@@ -2432,7 +3219,15 @@
    "http_status": 200,
    "final_url": "https://dockstore.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "ml",
+    "biomedical",
+    "open science",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 143,
@@ -2449,7 +3244,12 @@
    "http_status": 200,
    "final_url": "https://nf-co.re/pipelines/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 144,
@@ -2466,7 +3266,11 @@
    "http_status": 200,
    "final_url": "https://isa-afp.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Software directory",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 145,
@@ -2484,7 +3288,14 @@
    "final_url": "https://csdms.colorado.edu/wiki/Model_portal",
    "checked_at": "2026-10-12T14:21:35Z",
    "correction": "2026-10-12: /wiki/Model_download_portal returned 404. Changed to /wiki/Model_portal (the official model download page).",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "earth",
+    "api",
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 146,
@@ -2501,7 +3312,13 @@
    "http_status": 200,
    "final_url": "https://data.usgs.gov/modelcatalog/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "earth",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 147,
@@ -2518,7 +3335,16 @@
    "http_status": 200,
    "final_url": "https://www.nitrc.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Software directory",
+   "tags": [
+    "ml",
+    "biomedical",
+    "open science",
+    "dataset",
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 148,
@@ -2535,7 +3361,13 @@
    "http_status": 200,
    "final_url": "https://bioimage.io/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "ml",
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 149,
@@ -2552,7 +3384,13 @@
    "http_status": 200,
    "final_url": "https://brainlife.io/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Workflows, research code, and model directories"
+   "section_title": "Workflows, research code, and model directories",
+   "kategori": "Software directory",
+   "tags": [
+    "biomedical",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 150,
@@ -2569,7 +3407,13 @@
    "http_status": 200,
    "final_url": "https://gmd.copernicus.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Software journal",
+   "tags": [
+    "earth",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 151,
@@ -2586,7 +3430,14 @@
    "http_status": 403,
    "final_url": "https://zbmath.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "ml",
+    "open science",
+    "api",
+    "code"
+   ]
   },
   {
    "id": 152,
@@ -2603,7 +3454,16 @@
    "http_status": 200,
    "final_url": "https://www.replicabilitystamp.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "ml",
+    "materials",
+    "open science",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 153,
@@ -2620,7 +3480,12 @@
    "http_status": 200,
    "final_url": "https://graphicsreplicability.github.io/replicability.graphics/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Artifact evaluation",
+   "tags": [
+    "ml",
+    "dataset"
+   ]
   },
   {
    "id": 154,
@@ -2637,7 +3502,12 @@
    "http_status": 403,
    "final_url": "https://www.mathworks.com/matlabcentral/fileexchange/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Software directory",
+   "tags": [
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 155,
@@ -2654,7 +3524,12 @@
    "http_status": 200,
    "final_url": "https://juliapackages.com/packages",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Package index",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 156,
@@ -2671,7 +3546,12 @@
    "http_status": 200,
    "final_url": "https://toolshed.g2.bx.psu.edu/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Algorithms, software journals, and reproducibility"
+   "section_title": "Algorithms, software journals, and reproducibility",
+   "kategori": "Reproducibility platform",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 157,
@@ -2688,7 +3568,14 @@
    "http_status": 200,
    "final_url": "https://data.4tu.nl/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Dataset repository",
+   "tags": [
+    "earth",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 158,
@@ -2705,7 +3592,14 @@
    "http_status": 200,
    "final_url": "https://dataverse.no/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Dataset repository",
+   "tags": [
+    "open science",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 159,
@@ -2722,7 +3616,15 @@
    "http_status": 200,
    "final_url": "https://borealisdata.ca/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Dataset repository",
+   "tags": [
+    "open science",
+    "dataset",
+    "code",
+    "doi",
+    "licence"
+   ]
   },
   {
    "id": 160,
@@ -2739,7 +3641,14 @@
    "http_status": 200,
    "final_url": "https://www.ebi.ac.uk/biostudies/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Dataset repository",
+   "tags": [
+    "biomedical",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 161,
@@ -2756,7 +3665,15 @@
    "http_status": 200,
    "final_url": "https://www.pangaea.de/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "earth",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 162,
@@ -2773,7 +3690,14 @@
    "http_status": 429,
    "final_url": "https://commons.datacite.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "api",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 163,
@@ -2790,7 +3714,12 @@
    "http_status": 200,
    "final_url": "https://www.re3data.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 164,
@@ -2807,7 +3736,15 @@
    "http_status": 200,
    "final_url": "https://fairsharing.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Metadata & knowledge graph",
+   "tags": [
+    "biomedical",
+    "open science",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 165,
@@ -2824,7 +3761,12 @@
    "http_status": 200,
    "final_url": "https://github.com/datalad/datasets.datalad.org",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Academic repositories and data networks"
+   "section_title": "Academic repositories and data networks",
+   "kategori": "Dataset repository",
+   "tags": [
+    "biomedical",
+    "dataset"
+   ]
   },
   {
    "id": 166,
@@ -2841,7 +3783,14 @@
    "http_status": 200,
    "final_url": "https://journals.plos.org/ploscompbiol/s/code-availability",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Software journal",
+   "tags": [
+    "biomedical",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 167,
@@ -2858,7 +3807,12 @@
    "http_status": 403,
    "final_url": "https://academic.oup.com/bioinformatics",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Software journal",
+   "tags": [
+    "biomedical",
+    "code"
+   ]
   },
   {
    "id": 168,
@@ -2875,7 +3829,16 @@
    "http_status": 200,
    "final_url": "https://archive.materialscloud.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "physics",
+    "open science",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 169,
@@ -2892,7 +3855,13 @@
    "http_status": 200,
    "final_url": "https://ogb.stanford.edu/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "dataset",
+    "benchmark"
+   ]
   },
   {
    "id": 170,
@@ -2909,7 +3878,15 @@
    "http_status": 200,
    "final_url": "https://neurips.cc/Conferences/2026/CallForEvaluationsDatasets",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "materials",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 171,
@@ -2926,7 +3903,12 @@
    "http_status": 200,
    "final_url": "https://nlpprogress.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 172,
@@ -2943,7 +3925,14 @@
    "http_status": 403,
    "final_url": "https://www.timeseriesclassification.com/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 173,
@@ -2960,7 +3949,12 @@
    "http_status": 200,
    "final_url": "https://github.com/aeon-toolkit/aeon",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Journals, ML benchmarks, and paper code"
+   "section_title": "Journals, ML benchmarks, and paper code",
+   "kategori": "Software directory",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 174,
@@ -2977,7 +3971,14 @@
    "http_status": 200,
    "final_url": "https://huggingface.co/datasets",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Dataset repository",
+   "tags": [
+    "ml",
+    "dataset",
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 175,
@@ -2994,7 +3995,13 @@
    "http_status": 200,
    "final_url": "https://github.com/tensorflow/models",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "ml",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 176,
@@ -3011,7 +4018,13 @@
    "http_status": 200,
    "final_url": "https://github.com/pytorch/examples",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "ml",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 177,
@@ -3028,7 +4041,12 @@
    "http_status": 200,
    "final_url": "https://github.com/huggingface/pytorch-image-models",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "ml",
+    "benchmark"
+   ]
   },
   {
    "id": 178,
@@ -3045,7 +4063,12 @@
    "http_status": 200,
    "final_url": "https://github.com/facebookresearch/detectron2",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "ml",
+    "benchmark"
+   ]
   },
   {
    "id": 179,
@@ -3062,7 +4085,12 @@
    "http_status": 200,
    "final_url": "https://github.com/open-mmlab/mmdetection",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 180,
@@ -3079,7 +4107,11 @@
    "http_status": 200,
    "final_url": "https://opennmt.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "general"
+   ]
   },
   {
    "id": 181,
@@ -3096,7 +4128,11 @@
    "http_status": 200,
    "final_url": "https://github.com/facebookresearch/fairseq",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Lab & organization repository",
+   "tags": [
+    "code"
+   ]
   },
   {
    "id": 182,
@@ -3113,7 +4149,12 @@
    "http_status": 200,
    "final_url": "https://github.com/EleutherAI/lm-evaluation-harness",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Deep learning and NLP implementations"
+   "section_title": "Deep learning and NLP implementations",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 183,
@@ -3130,7 +4171,14 @@
    "http_status": 200,
    "final_url": "https://opencatalystproject.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "materials",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 184,
@@ -3147,7 +4195,14 @@
    "http_status": 200,
    "final_url": "https://github.com/materialsproject/matbench",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "materials",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 185,
@@ -3164,7 +4219,14 @@
    "http_status": 200,
    "final_url": "https://nomad-lab.eu/nomad-lab/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 186,
@@ -3181,7 +4243,14 @@
    "http_status": 200,
    "final_url": "https://github.com/materialsproject",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "materials",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 187,
@@ -3198,7 +4267,14 @@
    "http_status": 200,
    "final_url": "https://aiida.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Workflow registry",
+   "tags": [
+    "ml",
+    "materials",
+    "open science",
+    "code"
+   ]
   },
   {
    "id": 188,
@@ -3215,7 +4291,15 @@
    "http_status": 200,
    "final_url": "https://github.com/PyPSA/PyPSA",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Software directory",
+   "tags": [
+    "materials",
+    "open science",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 189,
@@ -3232,7 +4316,14 @@
    "http_status": 200,
    "final_url": "https://github.com/pangeo-forge/pangeo-forge-recipes",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Materials science, energy, and research software"
+   "section_title": "Materials science, energy, and research software",
+   "kategori": "Software directory",
+   "tags": [
+    "earth",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 190,
@@ -3249,7 +4340,14 @@
    "http_status": 200,
    "final_url": "https://github.com/mlcommons/dataperf",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 191,
@@ -3266,7 +4364,13 @@
    "http_status": 200,
    "final_url": "https://archive.ics.uci.edu/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Dataset repository",
+   "tags": [
+    "ml",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 192,
@@ -3283,7 +4387,15 @@
    "http_status": 200,
    "final_url": "https://forecastingdata.org/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "ml",
+    "api",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 193,
@@ -3300,7 +4412,12 @@
    "http_status": 200,
    "final_url": "https://www.nature.com/sdata/?error=cookies_not_supported&code=9dac59a1-1d39-4d5c-b839-01fc1d388f06",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Dataset repository",
+   "tags": [
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 194,
@@ -3317,7 +4434,16 @@
    "http_status": 200,
    "final_url": "https://inspirehep.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Paper discovery",
+   "tags": [
+    "materials",
+    "physics",
+    "api",
+    "dataset",
+    "code",
+    "doi"
+   ]
   },
   {
    "id": 195,
@@ -3334,7 +4460,16 @@
    "http_status": 200,
    "final_url": "https://www.hepdata.net/",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Dataset repository",
+   "tags": [
+    "materials",
+    "physics",
+    "open science",
+    "api",
+    "dataset",
+    "code"
+   ]
   },
   {
    "id": 196,
@@ -3351,7 +4486,13 @@
    "http_status": 200,
    "final_url": "https://wiki.openmod-initiative.org/wiki/Open_Models",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "materials",
+    "code",
+    "licence"
+   ]
   },
   {
    "id": 197,
@@ -3368,7 +4509,14 @@
    "http_status": 200,
    "final_url": "https://github.com/numenta/NAB",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "earth",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 198,
@@ -3385,7 +4533,15 @@
    "http_status": 200,
    "final_url": "https://github.com/pyg-team/pytorch_geometric",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "ml",
+    "earth",
+    "dataset",
+    "code",
+    "benchmark"
+   ]
   },
   {
    "id": 199,
@@ -3402,7 +4558,12 @@
    "http_status": 200,
    "final_url": "https://github.com/dmlc/dgl/tree/master/examples",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Model & algorithm repository",
+   "tags": [
+    "ml",
+    "code"
+   ]
   },
   {
    "id": 200,
@@ -3419,7 +4580,13 @@
    "http_status": 200,
    "final_url": "https://github.com/TimeEval/TimeEval",
    "checked_at": "2026-10-12T14:21:35Z",
-   "section_title": "Benchmarks, datasets, and paper implementation research"
+   "section_title": "Benchmarks, datasets, and paper implementation research",
+   "kategori": "Benchmark & leaderboard",
+   "tags": [
+    "open science",
+    "dataset",
+    "benchmark"
+   ]
   }
  ],
  "audit": {
